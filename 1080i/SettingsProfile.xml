@@ -1,112 +1,121 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window id="34">
+<window type="dialog" id="34">
   <defaultcontrol always="true">2</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <include>OpenClose</include>
+  
   <controls>
-    <include>MiniBackground</include>
-    <control type="label" description="Heading">
-      <include>HeadingR</include>
+    <include>Settings_Art</include>
+	<control type="group" description="Content">
+	<include>DialogOpenClose</include>
+	<posx>560</posx>
+	<posy>180</posy>
+	<control type="image">
+      <posx>-14</posx>
+      <posy>0</posy>
+      <width>828</width>
+      <height>650</height>
+      <texture border="20,40,20,40">dialogs/DialogProgressBG.png</texture>
+    </control>
+	<control type="label" description="Heading">
+      <posx>0</posx>
+      <posy>50</posy>
+      <width>800</width>
+      <height>40</height>
+	  <align>center</align>
+	  <textcolor>Orange</textcolor>
       <label>10034</label>
     </control>
     <control type="togglebutton" id="4" description="Enable Login Screen">
-      <posx>1020</posx>
-      <posy>141</posy>
-      <height>81</height>
-      <width>802</width>
+      <posx>0</posx>
+      <posy>120</posy>
+      <width>800</width>
       <label>$LOCALIZE[20096]:  $LOCALIZE[1223]</label>
       <altlabel>$LOCALIZE[20096]:  $LOCALIZE[305]</altlabel>
-      <align>left</align>
       <onright>-</onright>
       <onleft>-</onleft>
-      <onup>2</onup>
+      <onup>-</onup>
       <ondown>2</ondown>
-      <font>size24</font>
-      <textoffsetx>20</textoffsetx>
-      <texturenofocus border="5">img/SettingsButtonNF.png</texturenofocus>
-      <texturefocus border="5">img/SettingsButtonFO.png</texturefocus>
-      <alttexturenofocus border="5">img/SettingsButtonNF.png</alttexturenofocus>
-      <alttexturefocus border="5">img/SettingsButtonFO.png</alttexturefocus>
-    </control>
-    <control type="image">
-      <animation effect="fade" time="300">VisibleChange</animation>
-      <posx>990</posx>
-      <posy>256</posy>
-      <width>897</width>
-      <height>1</height>
-      <texture>img/Line.png</texture>
-      <aspectratio>stretch</aspectratio>
+      <textoffsetx>30</textoffsetx>
     </control>
     <control type="group" description="Slider and List">
-      <posx>1020</posx>
-      <posy>282</posy>
+      <posx>0</posx>
+      <posy>180</posy>
       <control type="list" id="2">
         <posx>0</posx>
         <posy>0</posy>
-        <width>802</width>
-        <height>891</height>
+        <width>800</width>
+        <height>360</height>
         <onleft>-</onleft>
         <onright>-</onright>
         <onup>4</onup>
         <ondown>-</ondown>
         <pagecontrol>60</pagecontrol>
         <scrolltime>280</scrolltime>
-        <itemlayout width="802" height="81">
-          <control type="label" description="Main Label">
-            <posx>30</posx>
+        <itemlayout width="800" height="60">
+          <control type="image">
+			  <posx>0</posx>
+			  <posy>0</posy>
+			  <width>800</width>
+			  <height>60</height>
+			  <texture border="3" flipy="true">list/ListNF.png</texture>
+			</control>
+		  <control type="label" description="Label2">
+            <posx>30r</posx>
             <posy>0</posy>
-            <height>81</height>
-            <width>502</width>
-            <aligny>center</aligny>
-            <font>size24</font>
-            <textcolor>White</textcolor>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-          <control type="label" description="Label2">
-            <posx>42r</posx>
-            <posy>0</posy>
-            <height>81</height>
-            <width>420</width>
-            <font>size18</font>
+            <height>60</height>
+            <width>800</width>
+            <font>Label2</font>
             <scroll>false</scroll>
-            <textcolor>Grey</textcolor>
             <align>right</align>
             <label>$INFO[ListItem.Label2]</label>
           </control>
+		  <control type="label" description="Main Label">
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>800</width>
+            <textoffsetx>30</textoffsetx>
+			<label>$INFO[ListItem.Label]</label>
+          </control>
+          
         </itemlayout>
-        <focusedlayout width="802" height="81">
+        <focusedlayout width="800" height="60">
           <control type="image">
+			  <posx>0</posx>
+			  <posy>0</posy>
+			  <width>800</width>
+			  <height>60</height>
+			  <texture border="3" flipy="true">list/ListNF.png</texture>
+			</control>
+			<control type="image">
             <visible>!Control.HasFocus(4)</visible>
             <posx>0</posx>
             <posy>0</posy>
-            <width>802</width>
-            <height>81</height>
-            <texture border="8">img/ButtonFO.png</texture>
-            <aspectratio>stretch</aspectratio>
-          </control>
-          <control type="label" description="Main Label">
-            <posx>30</posx>
-            <posy>0</posy>
-            <height>81</height>
-            <width>502</width>
-            <aligny>center</aligny>
-            <font>size24</font>
-            <textcolor>White2</textcolor>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
+            <width>800</width>
+            <height>60</height>
+            <texture border="2">common/ButtonFO.png</texture>
+           </control>
           <control type="label" description="Label2">
-            <posx>42r</posx>
+            <posx>30r</posx>
             <posy>0</posy>
-            <height>81</height>
-            <width>420</width>
-            <font>size18</font>
-            <scroll>false</scroll>
-            <textcolor>White2</textcolor>
+            <height>60</height>
+            <width>800</width>
+            <font>Label2</font>
             <align>right</align>
             <label>$INFO[ListItem.Label2]</label>
           </control>
+		  <control type="label" description="Main Label">
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>800</width>
+            <textoffsetx>30</textoffsetx>
+			<label>$INFO[ListItem.Label]</label>
+          </control>
+          
         </focusedlayout>
       </control>
     </control>
+	</control>
   </controls>
 </window>

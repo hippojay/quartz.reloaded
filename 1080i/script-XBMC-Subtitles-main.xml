@@ -8,14 +8,15 @@
   </coordinates>
   <include>OpenClose</include>
   <controls>
+  	<include>DimBG</include>
     <control type="group" id="250">
       <posx>-90</posx>
       <control type="image" description="BG">
-        <posx>165</posx>
-        <posy>-25</posy>
-        <width>1750</width>
-        <height>1080</height>
-        <texture border="136,127,128,139">img/Dialog.png</texture>
+        <posx>265</posx>
+        <posy>75</posy>
+        <width>1550</width>
+        <height>880</height>
+        <texture>dialogs/DialogBG.png</texture>
       </control>
       <control type="button" id="666">
         <posx>1629</posx>
@@ -220,13 +221,20 @@
           </control>
         </focusedlayout>
       </control>
-      <control type="scrollbar" id="60">
-        <posx>330</posx>
-        <posy>303</posy>
-        <height>522</height>
-        <onleft>120</onleft>
-        <onright>120</onright>
+	  <control type="scrollbar" id="60">
+        <posx>273</posx>
+        <posy>330</posy>
+        <width>36</width>
+		<height>500</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
         <showonepage>true</showonepage>
+        <orientation>vertical</orientation>
+		<onleft>-</onleft>
+        <onright>120</onright>
       </control>
     </control>
     <control type="group" id="250">
@@ -234,11 +242,11 @@
 	  <posy>90</posy>
 	  <animation effect="slide" start="0,0" end="-450,0" time="400" reversible="true" condition="Control.HasFocus(150) | Control.HasFocus(122)">Conditional</animation>
       <control type="image" description="BG">
-        <posx>1827</posx>
-        <posy>45</posy>
-        <width>708</width>
-        <height>810</height>
-        <texture border="136,127,128,139">img/Dialog.png</texture>
+        <posx>1927</posx>
+        <posy>145</posy>
+        <width>508</width>
+        <height>610</height>
+        <texture>dialogs/DialogBG.png</texture>
       </control>
       <control type="label" description="XBMC Subtitles label">
         <posx>2000</posx>

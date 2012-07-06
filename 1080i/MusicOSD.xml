@@ -251,21 +251,20 @@
     <control type="group" description="All dialog content">
       <animation effect="fade" start="100" end="0" time="100" condition="!ControlGroup(100).HasFocus()">Conditional</animation>
       <control type="image">
-        <posx>480</posx>
-        <posy>120</posy>
-        <width>950</width>
-        <height>900</height>
-        <texture border="136,127,128,139">img/Dialog.png</texture>
+        <posx>655</posx>
+        <posy>240</posy>
+        <width>600</width>
+        <height>630</height>
+        <texture>dialogs/DialogBG.png</texture>
       </control>
       <control type="label" description="Dialog heading">
         <posx>615</posx>
         <posy>276</posy>
         <width>690</width>
         <height>52</height>
-        <label>33063</label>
+        <textcolor>Orange</textcolor>
+		<label>33063</label>
         <align>center</align>
-        <aligny>center</aligny>
-        <include>TitleCommons</include>
       </control>
       <control type="grouplist" id="100" description="Music OSD Options">
         <posx>698</posx>
@@ -278,51 +277,45 @@
         <ondown>100</ondown>
         <itemgap>0</itemgap>
         <scrolltime>280</scrolltime>
-        <control type="button" id="555">
-          <description>Playlist</description>
-          <include>ButtonMenu</include>
+        <control type="button" id="555" description="Playlist">
+		<width>525</width>
           <label>559</label>
           <onclick>Close</onclick>
           <onclick>ActivateWindow(MusicPlaylist)</onclick>
         </control>
         <control type="button" id="556" description="Fanart">
-          <include>ButtonMenu</include>
+          <width>525</width>
           <label>$LOCALIZE[20445]</label>
           <label2>[COLOR=Grey2]$VAR[MusicPlayingFanartLabel2][/COLOR]</label2>
           <onclick>Skin.ToggleSetting(MusicPlayingFanart)</onclick>
         </control>
-        <control type="button" id="500">
-          <description>Visualisation</description>
-          <include>ButtonMenu</include>
+        <control type="button" id="500" description="Visualisation">
+          <width>525</width>
           <label>24010</label>
         </control>
-        <control type="button" id="19">
-          <description>Visualisation settings</description>
-          <include>ButtonMenu</include>
+        <control type="button" id="19" description="Visualisation settings">
+          <width>525</width>
           <label>$LOCALIZE[250] $LOCALIZE[10004]</label>
           <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
           <enable>Visualisation.Enabled</enable>
           <animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.Enabled">Conditional</animation>
         </control>
-        <control type="button" id="20">
-          <description>Visualisation Presets</description>
-          <include>ButtonMenu</include>
+        <control type="button" id="20" description="Visualisation Presets">
+          <width>525</width>
           <label>31048</label>
           <onclick>ActivateWindow(122)</onclick>
           <enable>Visualisation.Enabled</enable>
           <animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.Enabled">Conditional</animation>
         </control>
-        <control type="button" id="9">
-          <description>Lyrics</description>
-          <include>ButtonMenu</include>
+        <control type="button" id="9" description="Lyrics">
+          <width>525</width>
           <label>24013</label>
           <onclick>Close</onclick>
           <onclick condition="IsEmpty(Skin.String(LyricPath))">Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
           <onclick condition="!IsEmpty(Skin.String(LyricPath))">XBMC.RunScript($INFO[Skin.String(LyricPath)])</onclick>
         </control>
-        <control type="button" id="301">
-          <description>CodecInfo</description>
-          <include>ButtonMenu</include>
+        <control type="button" id="301" description="CodecInfo">
+          <width>525</width>
           <label>21446</label>
           <onclick>CodecInfo</onclick>
         </control>

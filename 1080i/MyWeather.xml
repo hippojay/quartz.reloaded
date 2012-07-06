@@ -13,7 +13,44 @@
       <texture>img/Vignette_57.png</texture>
       <animation condition="true" effect="fade" start="100" end="88" time="0" reversible="false">Conditional</animation>
     </control>
-    <include>Header</include>
+    <control type="label">
+        <posx>49r</posx>
+        <posy>12</posy>
+        <width>500</width>
+        <height>40</height>
+        <align>right</align>
+        
+		<textcolor>Shadow</textcolor>
+        <label>$INFO[System.Date]$INFO[System.Time,  ]</label>
+      </control>
+	  <control type="label">
+        <posx>50r</posx>
+        <posy>12</posy>
+        <width>500</width>
+        <height>40</height>
+        <align>right</align>
+        
+		<textcolor>White</textcolor>
+        <label>[COLOR=Grey3]$INFO[System.Date][/COLOR]$INFO[System.Time,  ]</label>
+      </control>
+	  <control type="label" description="provider">
+        <posx>49</posx>
+        <posy>12</posy>
+        <width>500</width>
+        <height>40</height>
+        <align>left</align>
+       <textcolor>Shadow</textcolor>
+        <label>$VAR[GlobalHeadings]</label>
+      </control>
+	  <control type="label" description="provider">
+        <posx>50</posx>
+        <posy>12</posy>
+        <width>500</width>
+        <height>40</height>
+        <align>left</align>
+       <textcolor>White</textcolor>
+        <label>$VAR[GlobalHeadings]</label>
+      </control>
     <control type="group" description="Bottom NAV">
       <posy>0</posy>
       <posx>0</posx>
@@ -64,6 +101,7 @@
           <onright>9000</onright>
           <onleft>9000</onleft>
           <width>300</width>
+		  <align>center</align>
           <font>size22</font>
           <label>-</label>
         </control>
@@ -344,7 +382,7 @@
         <width>1182</width>
         <height>1023</height>
         <aspectratio>stretch</aspectratio>
-        <texture border="136,127,128,139">img/Dialog.png</texture>
+        <texture border="136,127,128,139">dialogs/DialogBG.png</texture>
       </control>
       <control type="grouplist" id="9000">
         <posx>600</posx>

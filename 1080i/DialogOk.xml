@@ -1,52 +1,73 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window id="2002">
-  <type>dialog</type>
+<window type="dialog" id="2002">
   <defaultcontrol always="true">10</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <include>DialogOpenClose</include>
+  <include>OpenClose</include>
   <controls>
+  	<include>DimBG</include>
     <control type="group">
-      <posx>480</posx>
-      <posy>360</posy>
-      <control type="image">
-        <posx>-210</posx>
-        <posy>-150</posy>
-        <width>1360</width>
-        <height>740</height>
-        <texture border="136,127,128,139">img/Dialog.png</texture>
+      <animation type="WindowOpen">
+      <effect type="fade" start="0" end="100" time="240" />
+      <effect type="zoom" tween="cubic" easing="out" start="30" end="100" center="960,660" time="240" />
+    </animation>
+    <animation type="WindowClose">
+      <effect type="fade" start="100" end="0" time="140" />
+      <effect type="zoom" tween="cubic" easing="in" start="100" end="30" center="960,660" time="140" />
+    </animation>
+	 <posx>429</posx>
+      <posy>500</posy>
+      <control type="image" description="Dialog BG">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1062</width>
+        <height>330</height>
+        <texture border="0,30,0,30">dialogs/DialogProgressBG.png</texture>
       </control>
-      <control type="label" id="1" description="Heading">
-        <width>960</width>
-        <label>-</label>
-        <font>size28</font>
-        <shadowcolor>black</shadowcolor>
+	  <control type="label" id="1" description="Heading">
+        <posx>51</posx>
+        <posy>40</posy>
+		<height>40</height>
+		<width>960</width>
+		<textcolor>Orange</textcolor>
         <align>center</align>
       </control>
       <control type="label" id="2" description="Line 1">
-        <posy>75</posy>
-        <width>960</width>
-        <align>center</align>
+        <posx>51</posx>
+        <posy>100</posy>
+		<height>30</height>
+		<width>960</width>
         <label>-</label>
+		<font>SetContent</font>
+        <align>center</align>
       </control>
       <control type="label" id="3" description="Line 2">
-        <posy>120</posy>
-        <width>960</width>
-        <align>center</align>
+        <posx>51</posx>
+        <posy>136</posy>
+		<height>30</height>
+		<width>960</width>
         <label>-</label>
+		<font>SetContent</font>
+        <align>center</align>
       </control>
       <control type="label" id="4" description="Line 3">
-        <posy>165</posy>
-        <width>960</width>
-        <align>center</align>
+        <posx>51</posx>
+        <posy>172</posy>
+		<height>30</height>
+		<width>960</width>
         <label>-</label>
+		<font>SetContent</font>
+        <align>center</align>
       </control>
-      <control type="button" id="10" description="Ok">
-        <posx>330</posx>
-        <posy>330</posy>
+	  <control type="button" id="10" description="OK">
+        <posx>381</posx>
+        <posy>230</posy>
+		<height>60</height>
         <width>300</width>
         <label>186</label>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+		<align>center</align>
+		<pulseonselect>true</pulseonselect>
       </control>
     </control>
+	
   </controls>
 </window>

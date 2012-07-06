@@ -2,35 +2,52 @@
 <window id="106">
   <defaultcontrol always="true">996</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <include>DialogOpenClose</include>
+  <include>OpenClose</include>
   <coordinates>
     <system>1</system>
-    <origin x="668" y="80" />
+    <origin x="729" y="210" />
   </coordinates>
   <controls>
-    <control type="image" id="999" description="Background image">
-      <posx>-19</posx>
-      <posy>-45</posy>
-      <height>1140</height>
-      <width>554</width>
-      <texture border="60,60,60,60">img/ContextMenu.png</texture>
+    <control type="group" description="BG OVERLAY">
+	 <posx>-729</posx>
+     <posy>-210</posy>
+	  <include>DimBG</include>
+    </control>
+	<control type="group" description="MENU">
+	<animation type="WindowOpen">
+            <effect type="zoom" start="80" end="100" center="220,340" tween="back" time="280" />
+            <effect type="fade" start="0" end="100" time="280"/>
+        </animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="80" center="220,340" time="200" />
+			<effect type="fade" start="100" end="0" time="200"/>
+		</animation>
+	<control type="image" id="999" description="Menu BG">
+      <posx>0</posx>
+      <posy>0</posy>
+      <height>977</height>
+      <width>462</width>
+	  <texture border="20,42,20,42">dialogs/ContextMenu.png</texture>
     </control>
     <control type="grouplist" id="996" description="Context menu container">
-      <posx>18</posx>
-      <posy>45</posy>
-      <width>480</width>
-      <height max="960">auto</height>
-      <itemgap>3</itemgap>
+      <posx>21</posx>
+      <posy>39</posy>
+      <width>420</width>
+	  <height max="900">auto</height>
+      <itemgap>0</itemgap>
     </control>
     <control type="button" id="1000" description="Buttons">
       <posx>-</posx>
       <posy>-</posy>
-      <width>480</width>
+      <width>420</width>
       <height>60</height>
-      <shadowcolor>BlackT</shadowcolor>
-      <focusedcolor>White2</focusedcolor>
-      <texturefocus border="5">img/ContextButtonFO.png</texturefocus>
-      <texturenofocus>-</texturenofocus>
+      <textoffsetx>10</textoffsetx>
+	  <align>center</align>
+	  <shadowcolor>Shadow</shadowcolor>
+      <focusedcolor>Orange</focusedcolor>
+      <texturefocus>img/WhiteDotT.png</texturefocus>
+      
     </control>
+	</control>
   </controls>
 </window>

@@ -2,9 +2,72 @@
 <fonts>
   <fontset id="Default" unicode="true">
     <font>
+      <name>MainMenu</name>
+      <filename>BebasNeue.ttf</filename>
+      <size>90</size>
+    </font>
+	<font>
+      <name>Volume</name>
+      <filename>BebasNeue.ttf</filename>
+      <size>42</size>
+    </font>
+	<font>
+      <name>Slider</name>
+      <filename>BebasNeue.ttf</filename>
+      <size>32</size>
+    </font>
+    <font>
+      <name>Header</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>33</size>
+	</font>
+    <font>
+      <name>ItemCount</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>22</size>
+    </font>
+	<font>
+      <name>Sublist</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>33</size>
+    </font>
+	<font>
+      <name>MainLabel</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>33</size>
+    </font>
+	<font>
+      <name>MainLabelBig</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>39</size>
+	  <style>bold</style>
+    </font>
+	<font>
+      <name>MainLabelBigTitle</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>44</size>
+	  <style>bold</style>
+    </font>
+	<font>
+      <name>InfoTitle</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>36</size>
+	  <style>bold</style>
+    </font>
+	<font>
+      <name>ListDetails</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>26</size>
+    </font>
+    <font>
+      <name>Details</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>26</size>
+    </font>
+    <font>
       <name>font13</name>
-      <filename>Default.ttf</filename>
-      <size>27</size>
+      <filename>Arial.ttf</filename>
+      <size>24</size>
       <color>White</color>
     </font>
     <font>
@@ -32,358 +95,110 @@
       <filename>Default.ttf</filename>
       <size>27</size>
     </font>
-    <font>
-      <name>size19</name>
+	<font>
+      <name>InfoPlot</name>
       <filename>Default.ttf</filename>
       <size>28</size>
     </font>
-    <font>
-      <name>size20</name>
-      <filename>Default.ttf</filename>
-      <size>30</size>
-    </font>
-    <font>
-      <name>size22</name>
-      <filename>Default.ttf</filename>
-      <size>33</size>
-    </font>
-    <font>
-      <name>size22B</name>
-      <filename>Default.ttf</filename>
-      <size>33</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size23</name>
-      <filename>Default.ttf</filename>
-      <size>34</size>
-    </font>
-    <font>
-      <name>size24</name>
-      <filename>Default.ttf</filename>
-      <size>36</size>
-    </font>
-    <font>
-      <name>size24B</name>
-      <filename>Default.ttf</filename>
-      <size>36</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size25</name>
-      <filename>Default.ttf</filename>
-      <size>38</size>
-    </font>
-    <font>
-      <name>size26</name>
-      <filename>Default.ttf</filename>
-      <size>39</size>
-    </font>
-    <font>
-      <name>size26B</name>
-      <filename>Default.ttf</filename>
-      <size>39</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size28</name>
-      <filename>Default.ttf</filename>
-      <size>42</size>
-    </font>
-    <font>
-      <name>size28B</name>
-      <filename>Default.ttf</filename>
-      <size>42</size>
-      <style>bold</style>
-    </font>
-  </fontset>
-  <fontset id="Strong" unicode="true">
-    <font>
-      <name>font13</name>
-      <filename>Strong.ttf</filename>
-      <size>27</size>
-      <color>White</color>
-    </font>
-    <font>
-      <name>size14</name>
-      <filename>Strong.ttf</filename>
-      <size>21</size>
-    </font>
-    <font>
-      <name>size15</name>
-      <filename>Strong.ttf</filename>
+	<font>
+      <name>InfoPath</name>
+      <filename>UbuntuCaps.ttf</filename>
       <size>22</size>
     </font>
     <font>
-      <name>size16</name>
-      <filename>Strong.ttf</filename>
-      <size>24</size>
-    </font>
-    <font>
-      <name>size17</name>
-      <filename>Strong.ttf</filename>
-      <size>26</size>
-    </font>
-    <font>
-      <name>size18</name>
-      <filename>Strong.ttf</filename>
-      <size>27</size>
-    </font>
-    <font>
       <name>size19</name>
-      <filename>Strong.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>28</size>
     </font>
     <font>
       <name>size20</name>
-      <filename>Strong.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>30</size>
     </font>
     <font>
       <name>size22</name>
-      <filename>Strong.ttf</filename>
-      <size>33</size>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>32</size>
     </font>
-    <font>
-      <name>size22B</name>
-      <filename>Strong.ttf</filename>
-      <size>33</size>
-      <style>bold</style>
+	<font>
+      <name>Label2</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>28</size>
     </font>
-    <font>
-      <name>size23</name>
-      <filename>Strong.ttf</filename>
-      <size>34</size>
+	<font>
+      <name>52Label2</name>
+      <filename>UbuntuCaps.ttf</filename>
+      <size>25</size>
     </font>
-    <font>
-      <name>size24</name>
-      <filename>Strong.ttf</filename>
+	<font>
+      <name>52Title</name>
+      <filename>UbuntuCaps.ttf</filename>
       <size>36</size>
     </font>
-    <font>
-      <name>size24B</name>
-      <filename>Strong.ttf</filename>
-      <size>36</size>
-      <style>bold</style>
+	<font>
+      <name>FManager</name>
+      <filename>Arial.ttf</filename>
+      <size>26</size>
     </font>
-    <font>
-      <name>size25</name>
-      <filename>Strong.ttf</filename>
-      <size>38</size>
-    </font>
-    <font>
-      <name>size26</name>
-      <filename>Strong.ttf</filename>
-      <size>39</size>
-    </font>
-    <font>
-      <name>size26B</name>
-      <filename>Strong.ttf</filename>
-      <size>39</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size28</name>
-      <filename>Strong.ttf</filename>
-      <size>42</size>
-    </font>
-    <font>
-      <name>size28B</name>
-      <filename>Strong.ttf</filename>
-      <size>42</size>
-      <style>bold</style>
-    </font>
-  </fontset>
-  <fontset id="Light" unicode="true">
-    <font>
-      <name>font13</name>
-      <filename>Light.ttf</filename>
-      <size>27</size>
-      <color>White</color>
-    </font>
-    <font>
-      <name>size14</name>
-      <filename>Light.ttf</filename>
-      <size>21</size>
-    </font>
-    <font>
-      <name>size15</name>
-      <filename>Light.ttf</filename>
+	<font>
+      <name>FManager2</name>
+      <filename>Arial.ttf</filename>
       <size>22</size>
     </font>
-    <font>
-      <name>size16</name>
-      <filename>Light.ttf</filename>
-      <size>24</size>
-    </font>
-    <font>
-      <name>size17</name>
-      <filename>Light.ttf</filename>
+	<font>
+      <name>SetContent</name>
+      <filename>UbuntuCaps.ttf</filename>
       <size>26</size>
     </font>
     <font>
-      <name>size18</name>
-      <filename>Light.ttf</filename>
-      <size>27</size>
-    </font>
-    <font>
-      <name>size19</name>
-      <filename>Light.ttf</filename>
-      <size>28</size>
-    </font>
-    <font>
-      <name>size20</name>
-      <filename>Light.ttf</filename>
-      <size>30</size>
-    </font>
-    <font>
-      <name>size22</name>
-      <filename>Light.ttf</filename>
-      <size>33</size>
-    </font>
-    <font>
       <name>size22B</name>
-      <filename>Light.ttf</filename>
-      <size>33</size>
+      <filename>UbuntuCaps.ttf</filename>
       <style>bold</style>
+	  <size>32</size>
+    </font>
+	<font>
+      <name>Keyboard</name>
+      <filename>Arial.ttf</filename>
+      <size>33</size>
     </font>
     <font>
       <name>size23</name>
-      <filename>Light.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>34</size>
     </font>
     <font>
       <name>size24</name>
-      <filename>Light.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>36</size>
     </font>
     <font>
       <name>size24B</name>
-      <filename>Light.ttf</filename>
+      <filename>UbuntuCaps.ttf</filename>
       <size>36</size>
-      <style>bold</style>
     </font>
     <font>
       <name>size25</name>
-      <filename>Light.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>38</size>
     </font>
     <font>
       <name>size26</name>
-      <filename>Light.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>39</size>
     </font>
     <font>
       <name>size26B</name>
-      <filename>Light.ttf</filename>
+      <filename>UbuntuCaps.ttf</filename>
       <size>39</size>
-      <style>bold</style>
     </font>
     <font>
       <name>size28</name>
-      <filename>Light.ttf</filename>
+      <filename>Default.ttf</filename>
       <size>42</size>
     </font>
     <font>
       <name>size28B</name>
-      <filename>Light.ttf</filename>
-      <size>42</size>
-      <style>bold</style>
-    </font>
-  </fontset>
-  <fontset id="Arial" idloc="31392" unicode="true">
-    <font>
-      <name>font13</name>
-      <filename>arial.ttf</filename>
-      <size>27</size>
-      <color>White</color>
-    </font>
-    <font>
-      <name>size14</name>
-      <filename>arial.ttf</filename>
-      <size>21</size>
-    </font>
-    <font>
-      <name>size15</name>
-      <filename>arial.ttf</filename>
-      <size>22</size>
-    </font>
-    <font>
-      <name>size16</name>
-      <filename>arial.ttf</filename>
-      <size>24</size>
-    </font>
-    <font>
-      <name>size17</name>
-      <filename>arial.ttf</filename>
-      <size>26</size>
-    </font>
-    <font>
-      <name>size18</name>
-      <filename>arial.ttf</filename>
-      <size>27</size>
-    </font>
-    <font>
-      <name>size19</name>
-      <filename>arial.ttf</filename>
-      <size>28</size>
-    </font>
-    <font>
-      <name>size20</name>
-      <filename>arial.ttf</filename>
-      <size>30</size>
-    </font>
-    <font>
-      <name>size22</name>
-      <filename>arial.ttf</filename>
-      <size>33</size>
-    </font>
-    <font>
-      <name>size22B</name>
-      <filename>arial.ttf</filename>
-      <size>33</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size23</name>
-      <filename>arial.ttf</filename>
-      <size>34</size>
-    </font>
-    <font>
-      <name>size24</name>
-      <filename>arial.ttf</filename>
-      <size>36</size>
-    </font>
-    <font>
-      <name>size24B</name>
-      <filename>arial.ttf</filename>
-      <size>36</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size25</name>
-      <filename>arial.ttf</filename>
-      <size>38</size>
-    </font>
-    <font>
-      <name>size26</name>
-      <filename>arial.ttf</filename>
-      <size>39</size>
-    </font>
-    <font>
-      <name>size26B</name>
-      <filename>arial.ttf</filename>
-      <size>39</size>
-      <style>bold</style>
-    </font>
-    <font>
-      <name>size28</name>
-      <filename>arial.ttf</filename>
-      <size>42</size>
-    </font>
-    <font>
-      <name>size28B</name>
-      <filename>arial.ttf</filename>
+      <filename>UbuntuCaps.ttf</filename>
       <size>42</size>
       <style>bold</style>
     </font>

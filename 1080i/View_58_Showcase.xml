@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="MovieShowcaseThumbDimensions">
+    <posx>17</posx>
+    <posy>105</posy>
+    <width>260</width>
+    <height>381</height>
+  </include>
+  <include name="MovieShowcaseThumbReflectionDimensions">
+    <posx>17</posx>
+    <posy>486</posy>
+    <width>260</width>
+    <height>381</height>
+  </include>
+  <include name="MusicShowcaseThumbDimensions">
+    <posx>6</posx>
+    <posy>204</posy>
+    <width>282</width>
+    <height>282</height>
+  </include>
+  <include name="MusicShowcaseThumbReflectionDimensions">
+    <posx>6</posx>
+    <posy>486</posy>
+    <width>282</width>
+    <height>282</height>
+  </include>
+  <include name="MovieShowcaseThumbMain">
+    <include>MovieShowcaseThumbDimensions</include>
+    <texture background="true" diffuse="showcase/PosterMask.png">$INFO[ListItem.Icon]</texture>
+    <aspectratio scalediffuse="false">scale</aspectratio>
+  </include>
+  <include name="MovieShowcaseThumbReflection">
+    <include>MovieShowcaseThumbReflectionDimensions</include>
+    <texture background="true" flipy="true" diffuse="showcase/PosterReflection.png">$INFO[ListItem.Icon]</texture>
+    <aspectratio scalediffuse="false">scale</aspectratio>
+  </include>
+  <include name="MovieShowcaseGlassOverlay">
+    <include>MovieShowcaseThumbDimensions</include>
+    <bordertexture border="-48">showcase/PosterShadow.png</bordertexture>
+    <texture>showcase/PosterGlass.png</texture>
+  </include>
+  <include name="MusicShowcaseThumbMain">
+    <include>MusicShowcaseThumbDimensions</include>
+    <texture background="true" diffuse="showcase/SquareMask.png">DefaultAudio.png</texture>
+    <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+  </include>
+  <include name="MusicShowcaseThumbReflectionMain">
+    <include>MusicShowcaseThumbReflectionDimensions</include>
+    <texture background="true" flipy="true" diffuse="showcase/SquareReflection.png">DefaultAudio.png</texture>
+    <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+  </include>
+  <include name="MusicShowcaseGlassOverlayMain">
+    <include>MusicShowcaseThumbDimensions</include>
+    <bordertexture border="-27">showcase/SquareShadow.png</bordertexture>
+    <texture>showcase/SquareGlass.png</texture>
+  </include>
+  <include name="View_58_Showcase">
+   <control type="group" description="Showcase">
+      <visible>Control.IsVisible(58)</visible>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1920</width>
+        <height>1080</height>
+        <texture>showcase/ShowcaseStage2.png</texture>
+      </control>
+	  <control type="fixedlist" id="58">
+        <visible>!IsEmpty(Container.FolderName)</visible>
+		<posx>-69</posx>
+        <posy>439</posy>
+        <width>2058</width>
+        <height>660</height>
+        <onleft>58</onleft>
+        <onright>58</onright>
+        <onup>9000</onup>
+        <ondown>60</ondown>
+        <viewtype label="Showcase">Showcase</viewtype>
+        <pagecontrol>60</pagecontrol>
+        <orientation>horizontal</orientation>
+        <scrolltime>250</scrolltime>
+     	<focusposition>3</focusposition>
+		<movement>2</movement>
+        <preloaditems>4</preloaditems>
+        <itemlayout height="660" width="294" condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(Tvshows)">
+          <control type="image">
+            <include>MovieShowcaseThumbMain</include>
+          </control>
+          <control type="image">
+            <description>Glass overlay</description>
+            <include>MovieShowcaseGlassOverlay</include>
+          </control>
+          <control type="image">
+            <include>MovieShowcaseThumbReflection</include>
+          </control>
+          </itemlayout>
+        <focusedlayout height="660" width="294" condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(Tvshows)">
+          <control type="group">
+		  <animation effect="zoom" easing="out" start="100" end="115" time="350" delay="0" center="147,330">Focus</animation>
+          <animation effect="zoom" easing="in" start="115" end="100" time="250" delay="0" center="147,330">UnFocus</animation>
+		 	<control type="image">
+            <include>MovieShowcaseThumbMain</include>
+          </control>
+          <control type="image">
+            <description>Glass overlay</description>
+            <include>MovieShowcaseGlassOverlay</include>
+          </control>
+          <control type="image">
+            <animation effect="fade" start="100" end="50" time="350">Focus</animation>
+			<animation effect="fade" start="50" end="100" time="150">UnFocus</animation>
+			<include>MovieShowcaseThumbReflection</include>
+          </control>
+		  </control>
+		  </focusedlayout>
+        <itemlayout height="660" width="294">
+          <control type="image">
+            <include>MusicShowcaseThumbMain</include>
+            <info>ListItem.Icon</info>
+          </control>
+          <control type="image">
+            <description>Glass overlay</description>
+            <include>MusicShowcaseGlassOverlayMain</include>
+          </control>
+          <control type="image">
+            <include>MusicShowcaseThumbReflectionMain</include>
+            <info>ListItem.Icon</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="660" width="294">
+            <control type="group">
+            <animation effect="zoom" start="100" end="120" center="147,390" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+            <animation effect="zoom" start="120" end="100" center="147,390" time="400" easing="out" reversible="false" tween="cubic">Unfocus</animation>
+			<control type="image">
+            <include>MusicShowcaseThumbMain</include>
+            <info>ListItem.Icon</info>
+          </control>
+          <control type="image">
+            <description>Glass overlay</description>
+            <include>MusicShowcaseGlassOverlayMain</include>
+          </control>
+          <control type="image">
+            <include>MusicShowcaseThumbReflectionMain</include>
+            <info>ListItem.Icon</info>
+          </control>
+          </control>
+        </focusedlayout>
+      </control>
+	  <control type="group" description="Media Info Lite">
+	   <posy>987</posy>
+	     <control type="label" description="Title Label">
+            <posx>460</posx>
+            <posy>0</posy>
+            <width>1000</width>
+            <height>36</height>
+			<align>center</align>
+			<textcolor>White2</textcolor>
+            <font>InfoTitle</font>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+		  <control type="label" description="Details">
+            <posx>460</posx>
+            <posy>36</posy>
+            <width>1000</width>
+            <height>30</height>
+            <align>center</align>
+			<font>Details</font>
+            <label>$VAR[500TopLabel]</label>
+          </control>
+      </control>
+      <!--<control type="group" description="Media Info">
+        <posy>428</posy>
+        <control type="image">
+          <posx>64</posx>
+          <posy>60</posy>
+          <width>30</width>
+          <height>30</height>
+          <texture>$VAR[Overlay]</texture>
+          <aspectratio>keep</aspectratio>
+        </control>
+        <control type="group" description="Left">
+          <posx>98</posx>
+          <posy>63</posy>
+          <control type="label" description="Item Title">
+            <font>size22B</font>
+            <textcolor>White2</textcolor>
+            <width>750</width>
+            <include>Genre51Commons</include>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="image" description="Line Split">
+            <posx>0</posx>
+            <posy>189</posy>
+            <width>1725</width>
+            <height>1</height>
+            <texture>img/LineST.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="textbox" description="Plot">
+            <posy>51</posy>
+            <posx>0</posx>
+            <width>802</width>
+            <height>132</height>
+            <font>size20</font>
+            <textcolor>Silver</textcolor>
+            <align>justify</align>
+            <aligny>bottom</aligny>
+            <autoscroll delay="8000" time="4300" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+            <label>$VAR[Plots]</label>
+          </control>
+        </control>
+        <control type="group" description="Right">
+          <posx>1020</posx>
+          <posy>30</posy>
+          <control type="label" description="MPAA">
+            <posy>90</posy>
+            <include>Genre500Commons</include>
+            <label>[COLOR=Grey]$LOCALIZE[20074]:[/COLOR] $INFO[ListItem.MPAA]</label>
+          </control>
+          <control type="grouplist">
+            <posx>0</posx>
+            <posy>130</posy>
+            <width>auto</width>
+            <height>33</height>
+            <orientation>horizontal</orientation>
+            <align>left</align>
+            <itemgap>30</itemgap>
+            <control type="label" description="Details">
+              <height>33</height>
+              <width max="735">auto</width>
+              <include>Genre500Commons</include>
+              <label>[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $VAR[500TopLabel]$VAR[Trailer, • ]</label>
+            </control>
+            <control type="image">
+              <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
+              <width>40</width>
+              <height>39</height>
+              <aspectratio>keep</aspectratio>
+              <texture>$INFO[ListItem.VideoResolution,badges/,.png]</texture>
+            </control>
+          </control>
+          <control type="label" description="Genre">
+            <posy>171</posy>
+            <include>Genre500Commons</include>
+            <label>[COLOR=Grey]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+          </control>
+        </control>
+      </control>-->
+      <control type="image">
+		<visible>Control.HasFocus(60)</visible>
+        <include>VisibleFadeEffect</include>
+		<posx>261</posx>
+        <posy>1048</posy>
+		<height>36</height>
+		<width>1398</width>
+		<aspectratio>stretch</aspectratio>
+		<texture>common/LineScroll2H.png</texture>
+	  </control>
+      <control type="scrollbar" id="60">
+        <animation effect="slide" start="0,0" end="0,-8" time="150">Focus</animation>
+        <animation effect="slide" start="0,-8" end="0,0" time="300">UnFocus</animation>
+		<posx>261</posx>
+        <posy>1056</posy>
+        <width>1398</width>
+		<height>36</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>horizontal</orientation>
+		<onup>58</onup>
+        <onright>-</onright>
+      </control>
+    </control>
+</include>
+</includes>

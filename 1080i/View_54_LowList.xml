@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+<include name="View_54_LowList">
+<control type="group" description="List">
+      <visible>Control.IsVisible(54)</visible>
+      <control type="image" description="fa overlay">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1920</width>
+        <height>1080</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>common/LowListOverlay.png</texture>
+      </control>
+        <control type="list" id="54">
+          <visible>!IsEmpty(Container.FolderName)</visible>
+		  <posx>1260</posx>
+          <posy>633</posy>
+          <width>660</width>
+          <height>431</height>
+          <onleft>9000</onleft>
+          <onright>60</onright>
+          <onup>54</onup>
+          <ondown>54</ondown>
+          <pagecontrol>60</pagecontrol>
+          <viewtype label="Low List">Low List</viewtype>
+          <preloaditems>4</preloaditems>
+          <scrolltime tween="sine" easing="inout">280</scrolltime>
+          <itemlayout height="72">
+            <control type="image" description="BG">
+              <width>660</width>
+              <height>72</height>
+              <texture flipy="true" border="3">list/ListNF.png</texture>
+            </control>
+            <control type="label" description="Main Label">
+              <posx>20</posx>
+			  <height>72</height>
+              <width>600</width>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+			<control type="image">
+                <posx>630</posx>
+                <posy>0</posy>
+                <width>30</width>
+                <height>72</height>
+			    <info>ListItem.Overlay</info>
+				<aspectratio>keep</aspectratio>
+              </control>
+          </itemlayout>
+          <focusedlayout height="72">
+            <control type="image" description="BG">
+            <posy>0</posy>
+            <width>660</width>
+            <height>72</height>
+            <texture border="0,0,100,0">list/ListFO.png</texture>
+		  </control>
+		   <control type="label" description="Main Label">
+              <posx>20</posx>
+			  <height>72</height>
+              <width>600</width>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+			<control type="image">
+                <posx>630</posx>
+                <posy>0</posy>
+                <width>30</width>
+                <height>72</height>
+			    <info>ListItem.Overlay</info>
+				<aspectratio>keep</aspectratio>
+              </control>
+          </focusedlayout>
+        </control>
+		<control type="image" description="Thumb">
+          <visible>![container.content(movies) | container.content(seasons) | container.content(tvshows)]</visible>
+		  <posx>30</posx>
+          <posy>620</posy>
+          <width>450</width>
+          <height>450</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+           <include>ThumbBorder</include>
+		   <aspectratio>scale</aspectratio>
+        </control>
+		<control type="image" description="Thumb">
+          <visible>container.content(movies) | container.content(seasons) | container.content(tvshows)</visible>
+		  <posx>30</posx>
+          <posy>524</posy>
+          <width>450</width>
+          <height>540</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+           <include>ThumbBorder</include>
+		   <aspectratio aligny="bottom">keep</aspectratio>
+        </control>
+		
+		
+		
+<control type="group" description="Metadata v2">
+	  <posx>472</posx>
+	  <posy>147</posy>
+	  <control type="group" description="Songs and videos">
+        <visible>Container.Content(songs) | Container.Content(musicvideos)</visible>
+        <posx>60</posx>
+        <posy>400</posy>
+        <!--<control type="label" description="Title Label">
+          <posy>6</posy>
+          <width>672</width>
+          <height>90</height>
+          <wrapmultiline>true</wrapmultiline>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Title]</label>
+        </control>-->
+        <control type="label" description="Title Label">
+          <posx>-5</posx>
+		  <posy>120</posy>
+          <width>672</width>
+          <textcolor>White2</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Artist]</label>
+        </control>
+        <control type="grouplist" description="Labels">
+          <posx>-5</posx>
+          <posy>264</posy>
+          <width>600</width>
+          <height>500</height>
+          <itemgap>24</itemgap>
+          <orientation>vertical</orientation>
+          <control type="label" description="Type label 1">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.FileExtension,[COLOR=Grey]$LOCALIZE[564]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Genre label 2">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Genre,[COLOR=Grey]$LOCALIZE[515]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Album label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Album,[COLOR=Grey]$LOCALIZE[558]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Duration label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Duration,[COLOR=Grey]$LOCALIZE[180]:[/COLOR]  ]</label>
+          </control>
+        </control>
+      </control>
+      <control type="group" description="Media info">
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
+        <posx>50</posx>
+        <posy>400</posy>
+        <!--<control type="label" description="Title Label">
+          <posy>0</posy>
+          <width>672</width>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Label]</label>
+        </control>-->
+        
+        <control type="label" description="Genre">
+          <posy>90</posy>
+          <width>670</width>
+          <font>Details</font>
+          <include>Genre500Commons</include>
+          <label>$VAR[Genres]</label>
+        </control>
+        <control type="label" description="Details">
+          <posy>130</posy>
+          <height>33</height>
+          <width>670</width>
+          <font>Details</font>
+          <include>Genre500Commons</include>
+          <label>$VAR[500TopLabel]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <visible>Window.IsActive(MyVideoNav.xml) + !container.content(addons)</visible>
+          <posx>0</posx>
+          <posy>206</posy>
+          <width>670</width>
+          <height>230</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <visible>!Window.IsActive(MyVideoNav.xml) | container.content(addons)</visible>
+          <posx>0</posx>
+          <posy>210</posy>
+          <width>670</width>
+          <height>300</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+      </control>
+	  <control type="image" description="Studios">
+          <visible>!IsEmpty(ListItem.Studio) + [Container.content(Seasons) | Container.content(tvshows)]</visible>
+          <posx>36</posx>
+          <posy>840</posy>
+          <height>70</height>
+          <width>400</width>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+        </control>
+      <control type="grouplist" description="Flags">
+        <!--<animation effect="slide" start="0,0" end="-480,0" condition="container.content(musicvideos) | container.content(episodes) | container.content(songs) | container.content(albums)">Conditional</animation>-->
+		<posx>50</posx>
+        <posy>861</posy>
+        <width min="90" max="450">auto</width>
+        <height>45</height>
+        <itemgap>30</itemgap>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <aligny>center</aligny>
+        <control type="image">
+          <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+          <height>45</height>
+          <width>90</width>
+          <posx>0</posx>
+          <posy>0</posy>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+      </control>
+	  <control type="image">
+          <visible>[container.content(songs) | container.content(albums)]</visible>
+          <posx>48</posx>
+          <posy>575</posy>
+		  <height>24</height>
+          <width>150</width>
+          <aspectratio>keep</aspectratio>
+          <texture>$INFO[ListItem.StarRating]</texture>
+        </control>
+	  </control>
+	  
+		
+		
+		<!--<control type="image" description="Default Thumb">
+		  <visible>![container.content(episodes) | container.content(Movies) | container.content(TVshows) | container.content(seasons)]</visible>
+		  <posx>45</posx>
+          <posy>660</posy>
+          <width>380</width>
+          <height>380</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+          <include>ThumbBorder</include>
+		  <aspectratio aligny="bottom">scale</aspectratio>
+        </control>-->
+		<!--<control type="group" description="Metadata">
+	  <posx>472</posx>
+	  <posy>186</posy>
+	  <control type="group" description="Songs and videos">
+        <visible>Container.Content(songs) | Container.Content(musicvideos)</visible>
+        <posx>60</posx>
+        <posy>400</posy>
+        <control type="label" description="Title Label">
+          <posy>6</posy>
+          <width>672</width>
+          <height>90</height>
+          <wrapmultiline>true</wrapmultiline>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Title]</label>
+        </control>
+        <control type="label" description="Title Label">
+          <posy>186</posy>
+          <width>672</width>
+          <textcolor>White2</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Artist]</label>
+        </control>
+        <control type="grouplist" description="Labels">
+          <posx>0</posx>
+          <posy>264</posy>
+          <width>600</width>
+          <height>500</height>
+          <itemgap>24</itemgap>
+          <orientation>vertical</orientation>
+          <control type="label" description="Type label 1">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.FileExtension,[COLOR=Grey]$LOCALIZE[564]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Genre label 2">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Genre,[COLOR=Grey]$LOCALIZE[515]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Album label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Album,[COLOR=Grey]$LOCALIZE[558]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Duration label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Duration,[COLOR=Grey]$LOCALIZE[180]:[/COLOR]  ]</label>
+          </control>
+        </control>
+        <control type="image" description="Stars">
+          <visible>!container.content(musicvideos)</visible>
+		  <posx>0</posx>
+          <posy>567</posy>
+          <height>27</height>
+          <width>159</width>
+          <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
+        </control>
+      </control>
+      <control type="group" description="Media info">
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
+        <posx>50</posx>
+        <posy>400</posy>
+        <control type="label" description="Title Label">
+          <posy>0</posy>
+          <width>672</width>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="image" description="Studios">
+          <visible>![IsEmpty(ListItem.Studio) | Container.content(Movies)]</visible>
+          <posx>0</posx>
+          <posy>558</posy>
+          <height>70</height>
+          <width>400</width>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+        </control>
+        <control type="label" description="Genre">
+          <posy>90</posy>
+          <width>670</width>
+          <font>Details</font>
+          <include>Genre500Commons</include>
+          <label>$VAR[Genres]</label>
+        </control>
+        <control type="label" description="Details">
+          <posy>130</posy>
+          <height>33</height>
+          <width>670</width>
+          <font>Details</font>
+          <include>Genre500Commons</include>
+          <label>$VAR[500TopLabel]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <visible>Window.IsActive(MyVideoNav.xml)</visible>
+          <posx>0</posx>
+          <posy>206</posy>
+          <width>670</width>
+          <height>336</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <visible>!Window.IsActive(MyVideoNav.xml)</visible>
+          <posx>0</posx>
+          <posy>196</posy>
+          <width>670</width>
+          <height>410</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+      </control>
+      <control type="grouplist" description="Flags">
+        <visible>Window.IsActive(MyVideoNav.xml) | container.content(musicvideos)</visible>
+        <posx>50</posx>
+        <posy>990</posy>
+        <width min="90" max="450">auto</width>
+        <height>45</height>
+        <itemgap>30</itemgap>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <aligny>center</aligny>
+        <control type="image">
+          <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+          <height>45</height>
+          <width>90</width>
+          <posx>0</posx>
+          <posy>0</posy>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+      </control>
+	  </control>-->
+		<!--<control type="group" description="Episodes">
+        <visible>container.content(episodes)</visible>
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <posx>50</posx>
+        <posy>556</posy>
+        <control type="group" description="Episodes">
+          <posy>120</posy>
+          <control type="image" description="Thumb">
+            <posx>-24</posx>
+            <posy>-30</posy>
+            <width>468</width>
+            <height>400</height>
+            <include>Icon_Fade</include>
+            <texture background="true">$INFO[ListItem.Icon]</texture>
+            <include>ThumbBorder</include>
+			<aspectratio>scale</aspectratio>
+          </control>
+        </control>
+        <control type="group" description="Media info">
+          <animation effect="fade" delay="100" time="300">Visible</animation>
+          <animation effect="fade" time="0">Hidden</animation>
+          <posx>500</posx>
+          <posy>0</posy>
+		  <control type="label" description="Details">
+            <posy>130</posy>
+            <height>33</height>
+            <width>670</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>$VAR[500TopLabel]$INFO[ListItem.Premiered, • ]$INFO[ListItem.MPAA, • ]</label>
+          </control>
+          <control type="textbox" description="Plot51">
+            <posx>0</posx>
+            <posy>198</posy>
+            <width>650</width>
+            <height>186</height>
+            <include>Plot51Commons</include>
+            <label>$VAR[Plots]</label>
+          </control>
+        </control>
+        <control type="grouplist" description="Flags">
+          <posx>500</posx>
+          <posy>420</posy>
+          <width min="90" max="450">auto</width>
+          <height>45</height>
+          <itemgap>30</itemgap>
+          <orientation>horizontal</orientation>
+          <align>left</align>
+          <aligny>center</aligny>
+          <control type="image">
+            <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+            <height>45</height>
+            <width>90</width>
+            <posx>0</posx>
+            <posy>0</posy>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+            <height>45</height>
+            <width>90</width>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+            <height>45</height>
+            <width>90</width>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+            <height>45</height>
+            <width>90</width>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+          </control>
+        </control>
+		
+      </control>
+        <control type="group" description="Posters">
+       <visible>container.content(Movies) | container.content(TVshows) | container.content(seasons)</visible>
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <posx>50</posx>
+        <posy>421</posy>
+        <control type="image" description="Default Thumb">
+		  <posx>-9</posx>
+          <posy>100</posy>
+          <width>360</width>
+          <height>540</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+          <include>ThumbBorder</include>
+		  <aspectratio aligny="bottom">keep</aspectratio>
+        </control>
+        <control type="group" description="Media info">
+          <animation effect="fade" delay="100" time="300">Visible</animation>
+          <animation effect="fade" time="0">Hidden</animation>
+          <posx>400</posx>
+          <posy>120</posy>
+		  <width>770</width>
+		  <control type="image" description="Studios">
+           <visible>![IsEmpty(ListItem.Studio) | Container.content(Movies) | Container.content(episodes)]</visible>
+		    <posx>0</posx>
+            <posy>418</posy>
+			<height>70</height>
+		    <width>400</width>
+		    <aspectratio align="left">keep</aspectratio>
+	    	<texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+          </control>
+          <control type="label" description="Genre">
+            <posy>120</posy>
+            <width>720</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>$VAR[Genres]</label>
+          </control>
+          <control type="label" description="Details">
+            <posy>160</posy>
+            <height>33</height>
+            <width>720</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>$VAR[500TopLabel]</label>
+          </control>
+          <control type="textbox" description="Plot51">
+            <posx>0</posx>
+            <posy>222</posy>
+            <width>720</width>
+            <height>186</height>
+            <include>Plot51Commons</include>
+            <label>$VAR[Plots]</label>
+          </control>
+		  <control type="grouplist" description="Flags">
+          <posy>436</posy>
+          <width min="90" max="450">auto</width>
+          <height>45</height>
+          <itemgap>30</itemgap>
+          <orientation>horizontal</orientation>
+          <align>left</align>
+          <aligny>center</aligny>
+          <control type="image">
+            <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+            <height>45</height>
+            <width>90</width>
+            <posx>0</posx>
+            <posy>0</posy>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+            <height>45</height>
+            <width>90</width>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+            <height>45</height>
+            <width>90</width>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+          </control>
+          <control type="image">
+            <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+            <height>45</height>
+            <width>90</width>
+            <bordersize>3</bordersize>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>Silver</colordiffuse>
+            <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+          </control>
+        </control>
+        </control>
+        
+      </control>
+      
+	  <control type="group" description="Songs and videos">
+        <visible>Container.Content(songs) | Container.Content(musicvideos)</visible>
+        <posx>500</posx>
+        <posy>525</posy>
+        <control type="label" description="Title Label">
+          <posy>186</posy>
+          <width>672</width>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Artist]</label>
+        </control>
+        <control type="grouplist" description="Info Labels">
+          <posx>0</posx>
+          <posy>264</posy>
+          <width>600</width>
+          <height>500</height>
+          <itemgap>18</itemgap>
+          <orientation>vertical</orientation>
+          <control type="label" description="Type label 1">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.FileExtension,[COLOR=Grey]$LOCALIZE[564]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Genre label 2">
+            <width>600</width>
+            <height>30</height>
+			<scroll>false</scroll>
+            <label>$INFO[ListItem.Genre,[COLOR=Grey]$LOCALIZE[515]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Album label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Album,[COLOR=Grey]$LOCALIZE[558]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Duration label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Duration,[COLOR=Grey]$LOCALIZE[180]:[/COLOR]  ]</label>
+          </control>
+        </control>
+		<control type="grouplist" description="Video Flags">
+         <visible>container.content(musicvideos)</visible>
+        <posx>0</posx>
+        <posy>468</posy>
+        <width min="90" max="450">auto</width>
+        <height>45</height>
+        <itemgap>30</itemgap>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <aligny>center</aligny>
+        <control type="image">
+          <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+          <height>45</height>
+          <width>90</width>
+          <posx>0</posx>
+          <posy>0</posy>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+      </control>
+      </control>-->
+	  
+	  <!--<control type="group" description="Media info">
+          <visible>![container.content(movies) | container.content(tvShows) | container.content(seasons)]</visible>
+		  <animation effect="fade" delay="100" time="300">Visible</animation>
+          <animation effect="fade" time="0">Hidden</animation>
+          <posx>500</posx>
+          <posy>0</posy>
+		  <control type="label" description="Genre">
+            <posy>130</posy>
+            <width>672</width>
+            <font>Details</font>
+            <textcolor>Shadow</textcolor>
+            <include>Genre500Commons</include>
+            <label>$LOCALIZE[20416]: $INFO[ListItem.Premiered]</label>
+          </control>
+          <control type="label" description="Details">
+            <posy>170</posy>
+            <height>33</height>
+            <width>670</width>
+            <font>Details</font>
+            <textcolor>Shadow</textcolor>
+            <include>Genre500Commons</include>
+            <label>$LOCALIZE[33029]: $VAR[500TopLabel]$VAR[Trailer, • ]$INFO[ListItem.MPAA, • ]</label>
+          </control>
+          <control type="label" description="Genre">
+            <posy>130</posy>
+            <width>670</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>[COLOR=Grey]$LOCALIZE[20416]:[/COLOR] $INFO[ListItem.Premiered]</label>
+          </control>
+          <control type="label" description="Details">
+            <posy>170</posy>
+            <height>33</height>
+            <width>670</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $VAR[500TopLabel]$VAR[Trailer, • ]$INFO[ListItem.MPAA, • ]</label>
+          </control>
+          <control type="textbox" description="Plot51">
+            <posx>0</posx>
+            <posy>246</posy>
+            <width>650</width>
+            <height>370</height>
+            <include>Plot51Commons</include>
+            <label>$VAR[Plots]</label>
+          </control>
+        </control>-->
+      
+		<!--<control type="grouplist" description="Video Flags">
+         <visible>![container.content(Movies) | container.content(TVshows) | container.content(seasons)]</visible>
+        <posx>518</posx>
+        <posy>960</posy>
+        <width min="90" max="450">auto</width>
+        <height>45</height>
+        <itemgap>30</itemgap>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <aligny>center</aligny>
+        <control type="image">
+          <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+          <height>45</height>
+          <width>90</width>
+          <posx>0</posx>
+          <posy>0</posy>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+      </control>-->
+	  
+	  
+	  
+     <!--<control type="group" description="Media info">
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <visible>!Window.IsActive(MyVideo.xml)</visible>
+		<visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
+        <posx>530</posx>
+        <posy>426</posy>
+        <control type="label" description="Title Label">
+          <posy>0</posy>
+          <width>672</width>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="image" description="Studios">
+          <visible>![IsEmpty(ListItem.Studio) | Container.content(Movies)]</visible>
+          <posx>0</posx>
+          <posy>558</posy>
+          <height>70</height>
+          <width>400</width>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+        </control>
+        <control type="label" description="Genre">
+          <posy>90</posy>
+          <width>670</width>
+          <font>Details</font>
+          <include>Genre500Commons</include>
+          <label>$VAR[Genres]</label>
+        </control>
+        <control type="label" description="Details">
+          <posy>130</posy>
+          <height>33</height>
+          <width>670</width>
+          <font>Details</font>
+          <include>Genre500Commons</include>
+          <label>$VAR[500TopLabel]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <visible>Window.IsActive(MyVideoNav.xml)</visible>
+          <posx>0</posx>
+          <posy>206</posy>
+          <width>670</width>
+          <height>336</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <visible>!Window.IsActive(MyVideoNav.xml)</visible>
+          <posx>0</posx>
+          <posy>196</posy>
+          <width>670</width>
+          <height>410</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+      </control>-->
+	  <!--<control type="image" description="Stars">
+          <visible>container.content(songs) | container.content(albums)</visible>
+		  <posx>500</posx>
+          <posy>999</posy>
+          <height>27</height>
+          <width>159</width>
+          <texture>$INFO[ListItem.StarRating]</texture>
+        </control>-->
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <control type="image">
+		<visible>Control.HasFocus(60)</visible>
+		<include>VisibleFadeEffect</include>
+		<posx>28r</posx>
+        <posy>678</posy>
+        <height>359</height>
+		<width>36</width>
+		<aspectratio>stretch</aspectratio>
+		<texture>OSD/LineScroll2.png</texture>
+	  </control>
+      <control type="scrollbar" id="60">
+        <animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+		<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+		<posx>20r</posx>
+        <posy>678</posy>
+        <height>359</height>
+        <width>36</width>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+		<onleft>54</onleft>
+        <onright>-</onright>
+      </control>
+    </control>
+</include>
+</includes>

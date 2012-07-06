@@ -4,14 +4,13 @@
     <posx>0</posx>
     <posy>0</posy>
     <label>-</label>
-    <height>75</height>
+    <height>60</height>
     <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
     <scroll>true</scroll>
     <scrollspeed>50</scrollspeed>
@@ -20,16 +19,15 @@
   <default type="fadelabel">
     <posx>0</posx>
     <posy>0</posy>
-    <height>75</height>
+    <height>60</height>
     <label>-</label>
     <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>0</textoffsetx>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
     <scrollout>false</scrollout>
     <pauseatend>3000</pauseatend>
@@ -37,105 +35,94 @@
   </default>
   <default type="textbox">
     <label>-</label>
-    <font>size20</font>
+    <font>InfoPlot</font>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
     <pagecontrol>61</pagecontrol>
     <pulseonselect></pulseonselect>
     <autoscroll delay="6000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
   </default>
   <default type="image">
-    <posx>0</posx>
-    <posy>0</posy>
-    <width>-</width>
-    <height>-</height>
     <align>center</align>
     <aligny>center</aligny>
-    <texture>-</texture>
     <aspectratio>stretch</aspectratio>
   </default>
   <default type="button">
     <posx>0</posx>
     <posy>0</posy>
     <width>390</width>
-    <height>75</height>
-    <align>center</align>
+    <height>60</height>
+    <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
-    <label>-</label>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>10</textoffsetx>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <texturefocus border="5">img/ButtonFO.png</texturefocus>
-    <!--<texturenofocus border="8">img/ButtonNF.png</texturenofocus>-->
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+    <texturenofocus border="3">common/ButtonNF.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="edit">
     <posx>0</posx>
     <posy>0</posy>
     <width>390</width>
-    <height>75</height>
-    <align>center</align>
+    <height>60</height>
+    <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
     <label>-</label>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>10</textoffsetx>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
-    <texturefocus flipy="true" border="5">img/ButtonFO.png</texturefocus>
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+	<texturenofocus border="3">common/ButtonNF.png</texturenofocus>
   </default>
   <default type="togglebutton">
     <posx>0</posx>
     <posy>0</posy>
     <width>450</width>
-    <height>75</height>
-    <align>center</align>
+    <height>60</height>
+    <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
     <label>-</label>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>10</textoffsetx>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
     <selectedcolor>White2</selectedcolor>
-    <altselectedcolor>Blue</altselectedcolor>
+    <altselectedcolor>Orange</altselectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <texturefocus border="5">img/ButtonFO.png</texturefocus>
-    <alttexturefocus border="5">img/ButtonFO.png</alttexturefocus>
-    <align>center</align>
-    <aligny>center</aligny>
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+    <texturenofocus border="3">common/ButtonNF.png</texturenofocus>
+	<alttexturefocus border="2">common/ButtonFO.png</alttexturefocus>
+    <alttexturenofocus border="3">common/ButtonNF.png</alttexturenofocus>
+	<aligny>center</aligny>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="radiobutton">
     <posx>0</posx>
     <posy>6</posy>
-    <height>75</height>
+    <height>60</height>
     <align>left</align>
     <aligny>center</aligny>
     <font>size22</font>
-    <label>-</label>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <radiowidth>30</radiowidth>
+    <radiowidth>70</radiowidth>
     <radioheight>30</radioheight>
-    <texturefocus border="5">img/ButtonFO.png</texturefocus>
-    <textureradiofocus>img/RadioON.png</textureradiofocus>
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+    <texturenofocus border="3">common/ButtonNF.png</texturenofocus>
+	<textureradiofocus>img/RadioON.png</textureradiofocus>
     <textureradionofocus>-</textureradionofocus>
-    <textoffsetx>20</textoffsetx>
-    <!--<radioposx>262</radioposx>-->
+    <textoffsetx>10</textoffsetx>
     <pulseonselect>false</pulseonselect>
   </default>
   <default type="spincontrol">
@@ -145,16 +132,16 @@
     <textureupfocus>img/ArrowUpFO.png</textureupfocus>
     <texturedown>img/ArrowDownNF.png</texturedown>
     <texturedownfocus>img/ArrowDownFO.png</texturedownfocus>
-    <texturefocus border="5">img/ButtonFO.png</texturefocus>
-    <spinwidth>18</spinwidth>
-    <spinheight>18</spinheight>
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+    <texturenofocus border="3">common/ButtonNF.png</texturenofocus>
+	<spinwidth>21</spinwidth>
+    <spinheight>21</spinheight>
     <font>size22</font>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>10</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
     <reverse>yes</reverse>
@@ -164,54 +151,51 @@
     <posx>0</posx>
     <posy>0</posy>
     <width>450</width>
-    <height>75</height>
+    <height>60</height>
     <label>-</label>
     <font>size22</font>
     <textureup>img/ArrowUpNF.png</textureup>
     <textureupfocus>img/ArrowUpFO.png</textureupfocus>
     <texturedown>img/ArrowDownNF.png</texturedown>
     <texturedownfocus>img/ArrowDownFO.png</texturedownfocus>
-    <texturefocus border="5">img/ButtonFO.png</texturefocus>
-    <spinwidth>18</spinwidth>
-    <spinheight>18</spinheight>
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+    <texturenofocus border="3">common/ButtonNF.png</texturenofocus>
+	<spinwidth>21</spinwidth>
+    <spinheight>21</spinheight>
     <textcolor>White</textcolor>
-    <shadowcolor>Shadow</shadowcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>10</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
     <reverse>yes</reverse>
     <pulseonselect>true</pulseonselect>
   </default>
-  <default type="slider" description="Seek Slider">
+  <default type="slider" description="Default Slider">
     <visible>true</visible>
-    <width>711</width>
-    <height>36</height>
-    <texturesliderbar>OSD/SeekSliderBack.png</texturesliderbar>
-    <textureslidernib>OSD/ScrollBarNibFO.png</textureslidernib>
-    <textureslidernibfocus>OSD/ScrollBarNibFO.png</textureslidernibfocus>
-    <texturesliderbar>OSD/SliderBackground2.png</texturesliderbar>
+    <sliderwidth>100</sliderwidth>
+    <sliderheight>24</sliderheight>
+    <texturesliderbar>OSD/SliderBackground.png</texturesliderbar>
+    <textureslidernib>OSD/SliderNibNF.png</textureslidernib>
+    <textureslidernibfocus>OSD/SliderNibFO.png</textureslidernibfocus>
   </default>
   <default type="sliderex" description="Default Slider">
-    <posx>795</posx>
-    <posy>225</posy>
-    <height>75</height>
+    <height>60</height>
     <width>450</width>
     <sliderwidth>100</sliderwidth>
     <sliderheight>24</sliderheight>
     <texturesliderbar>OSD/SliderBackground.png</texturesliderbar>
     <textureslidernib>OSD/SliderNibNF.png</textureslidernib>
     <textureslidernibfocus>OSD/SliderNibFO.png</textureslidernibfocus>
-    <texturefocus border="5">img/ButtonFO.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturefocus border="2">common/ButtonFO.png</texturefocus>
+    <texturenofocus border="3">common/ButtonNF.png</texturenofocus>
     <font>size22</font>
     <textcolor>White</textcolor>
     <focusedcolor>White2</focusedcolor>
-    <selectedcolor>White2</selectedcolor>
+    <selectedcolor>Orange</selectedcolor>
     <disabledcolor>Disabled</disabledcolor>
-    <textoffsetx>20</textoffsetx>
+    <textoffsetx>10</textoffsetx>
   </default>
   <default type="scrollbar">
     <posx>0</posx>

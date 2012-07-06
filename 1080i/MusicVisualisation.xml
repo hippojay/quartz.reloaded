@@ -62,7 +62,7 @@
           <animation effect="fade" time="200">Hidden</animation>
         </control>
         <control type="group" description="Info panel LEFT">
-          <posy>30</posy>
+          <posy>60</posy>
           <animation type="Conditional" condition="!IntegerGreaterThan(Control.GetLabel(23),0)" reversible="false">
             <effect type="zoom" tween="quadratic" start="0" end="100" time="800" center="640,360" />
             <effect type="fade" start="0" end="100" time="800" center="640,360" />
@@ -91,7 +91,7 @@
               <width>600</width>
               <fadetime>300</fadetime>
               <aspectratio aligny="top">stretch</aspectratio>
-              <texture flipy="true" diffuse="img/Reflection1Long.png">$INFO[MusicPlayer.Cover]</texture>
+              <texture flipy="true" diffuse="thumbs/Reflection1Long.png">$INFO[MusicPlayer.Cover]</texture>
             </control>
             <control type="image" description="MusicAlbum">
               <posx>0</posx>
@@ -100,7 +100,7 @@
               <width>600</width>
               <fadetime>300</fadetime>
               <aspectratio aligny="bottom">stretch</aspectratio>
-              <texture diffuse="img/Diffuse1.png">$INFO[MusicPlayer.Cover]</texture>
+              <texture diffuse="thumbs/Diffuse1.png">$INFO[MusicPlayer.Cover]</texture>
             </control>
             <control type="image" description="MusicAlbum">
               <visible>!IsEmpty(MusicPlayer.Cover)</visible>
@@ -109,7 +109,7 @@
               <height>600</height>
               <width>600</width>
               <fadetime>300</fadetime>
-              <texture border="4">img/CoverOverlay1.png</texture>
+              <texture border="4">thumbs/CoverOverlay1.png</texture>
               <aspectratio aligny="bottom">stretch</aspectratio>
             </control>
           </control>
@@ -121,9 +121,9 @@
               <width>900</width>
               <scroll>true</scroll>
               <align>left</align>
-              <font>size28B</font>
+              <font>MainLabelBigTitle</font>
               <textcolor>White2</textcolor>
-              <shadowcolor>Black</shadowcolor>
+              <shadowcolor>ShadowDark</shadowcolor>
               <animation effect="fade" time="200">VisibleChange</animation>
               <label>$INFO[MusicPlayer.Title]</label>
             </control>
@@ -134,16 +134,18 @@
               <label>$INFO[MusicPlayer.Artist]</label>
               <scroll>true</scroll>
               <align>left</align>
-              <font>size25</font>
-              <textcolor>Grey3</textcolor>
+              <font>MainLabelBig</font>
+              <textcolor>White</textcolor>
+			  <shadowcolor>ShadowDark</shadowcolor>
             </control>
             <control type="label" description="Album">
               <posy>636</posy>
               <width>900</width>
               <label>$INFO[MusicPlayer.Album]</label>
               <align>left</align>
-              <font>size25</font>
-              <textcolor>Grey3</textcolor>
+			  <font>MainLabelBig</font>
+              <textcolor>White</textcolor>
+			  <shadowcolor>ShadowDark</shadowcolor>
             </control>
             <control type="label" description="Track position">
               <posx>0</posx>
@@ -151,6 +153,7 @@
               <width>900</width>
               <align>left</align>
               <textcolor>Grey</textcolor>
+			  <shadowcolor>Shadow</shadowcolor>
               <animation effect="fade" time="200">VisibleChange</animation>
               <label>[B]$INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>
               <font>size17</font>
@@ -205,7 +208,7 @@
           </control>
         </control>
         <control type="group" description="Info panel RIGHT">
-          <posy>30</posy>
+          <posy>60</posy>
           <visible>IntegerGreaterThan(Control.GetLabel(23),30) + !IntegerGreaterThan(Control.GetLabel(23),60)</visible>
           <animation type="Visible" reversible="false">
             <effect type="rotatey" tween="quadratic" start="-180" end="0" time="1000" center="960," />
@@ -228,7 +231,7 @@
               <width>600</width>
               <fadetime>300</fadetime>
               <aspectratio aligny="top">stretch</aspectratio>
-              <texture flipy="true" diffuse="img/Reflection1Long.png">$INFO[MusicPlayer.Cover]</texture>
+              <texture flipy="true" diffuse="thumbs/Reflection1Long.png">$INFO[MusicPlayer.Cover]</texture>
             </control>
             <control type="image" description="MusicAlbum">
               <posx>0</posx>
@@ -237,7 +240,7 @@
               <width>600</width>
               <fadetime>300</fadetime>
               <aspectratio aligny="bottom">stretch</aspectratio>
-              <texture diffuse="img/Diffuse1.png">$INFO[MusicPlayer.Cover]</texture>
+              <texture diffuse="thumbs/Diffuse1.png">$INFO[MusicPlayer.Cover]</texture>
             </control>
             <control type="image" description="MusicAlbum">
               <visible>!IsEmpty(MusicPlayer.Cover)</visible>
@@ -246,7 +249,7 @@
               <height>600</height>
               <width>600</width>
               <fadetime>300</fadetime>
-              <texture border="4">img/CoverOverlay1.png</texture>
+              <texture border="4">thumbs/CoverOverlay1.png</texture>
               <aspectratio aligny="bottom">stretch</aspectratio>
             </control>
           </control>
@@ -258,8 +261,9 @@
               <width>900</width>
               <scroll>true</scroll>
               <align>right</align>
-              <font>size28B</font>
+              <font>MainLabelBigTitle</font>
               <textcolor>White2</textcolor>
+			  <shadowcolor>ShadowDark</shadowcolor>
               <animation effect="fade" time="200">VisibleChange</animation>
               <label>$INFO[MusicPlayer.Title]</label>
             </control>
@@ -270,16 +274,18 @@
               <label>$INFO[MusicPlayer.Artist]</label>
               <scroll>true</scroll>
               <align>right</align>
-              <font>size25</font>
-              <textcolor>Grey3</textcolor>
+			  <font>MainLabelBig</font>
+              <textcolor>White</textcolor>
+			  <shadowcolor>ShadowDark</shadowcolor>
             </control>
             <control type="label" description="Album">
               <posy>636</posy>
               <width>900</width>
               <label>$INFO[MusicPlayer.Album]</label>
               <align>right</align>
-              <font>size25</font>
-              <textcolor>Grey3</textcolor>
+              <font>MainLabelBig</font>
+			  <textcolor>White2</textcolor>
+			  <shadowcolor>ShadowDark</shadowcolor>
             </control>
             <control type="label" description="Track position">
               <posx>0</posx>
@@ -287,10 +293,10 @@
               <width>900</width>
               <align>right</align>
               <textcolor>Grey</textcolor>
+			  <shadowcolor>Shadow</shadowcolor>
               <animation effect="fade" time="200">VisibleChange</animation>
               <label>[B]$INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>
               <font>size17</font>
-              <shadowcolor>Black</shadowcolor>
             </control>
           </control>
           <control type="group">

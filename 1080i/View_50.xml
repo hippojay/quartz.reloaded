@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="View_50">
+    <control type="group">
+      <visible>Control.IsVisible(50)</visible>
+      <control type="image" description="fa overlay">
+        <posx>0</posx>
+        <posy>360</posy>
+        <width>1920</width>
+        <height>720</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>common/ListPanel.png</texture>
+      </control>
+      <control type="list" id="50">
+        <viewtype label="535">List</viewtype>
+        <posx>720</posx>
+        <posy>507</posy>
+        <width>1200</width>
+        <height>540</height>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>0</scrolltime>
+        <onleft>9000</onleft>
+        <onright>60</onright>
+        <onup>50</onup>
+        <ondown>50</ondown>
+        <itemlayout height="60">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>1200</width>
+            <texture flipy="true" border="3">list/ListNF.png</texture>
+          </control>
+          <control type="label">
+            <posx>30</posx>
+            <posy>0</posy>
+            <width>1140</width>
+            <height>60</height>
+            <scroll>false</scroll>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <posx>1140</posx>
+            <posy>0</posy>
+            <width>700</width>
+            <height>60</height>
+            <scroll>false</scroll>
+            <font>Label2</font>
+            <textcolor>Grey</textcolor>
+            <align>right</align>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="image">
+            <posx>1150</posx>
+            <posy>0</posy>
+            <width>30</width>
+            <height>60</height>
+            <info>ListItem.Overlay</info>
+            <aspectratio>keep</aspectratio>
+          </control>
+        </itemlayout>
+        <focusedlayout height="60">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1200</width>
+            <height>60</height>
+            <texture border="0,0,100,0">list/ListFO.png</texture>
+            <visible>Control.HasFocus(50)</visible>
+            <include>VisibleFadeEffect</include>
+          </control>
+          <control type="label">
+            <posx>30</posx>
+            <posy>0</posy>
+            <width>1140</width>
+            <height>60</height>
+            <textcolor>White2</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <posx>1140</posx>
+            <posy>0</posy>
+            <width>700</width>
+            <height>60</height>
+            <font>Label2</font>
+            <textcolor>Silver</textcolor>
+            <align>right</align>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="image">
+            <posx>1150</posx>
+            <posy>0</posy>
+            <width>30</width>
+            <height>60</height>
+            <info>ListItem.Overlay</info>
+            <aspectratio>keep</aspectratio>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="image" description="Generic thumb">
+        <visible>!Control.IsVisible(70050)</visible>
+        <posx>60</posx>
+        <posy>426</posy>
+        <width>570</width>
+        <height>621</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Icon]</texture>
+        <include>ThumbBorder</include>
+        <aspectratio aligny="bottom">keep</aspectratio>
+      </control>
+      <control type="image">
+        <visible>Control.HasFocus(60)</visible>
+        <include>VisibleFadeEffect</include>
+        <posx>28r</posx>
+        <posy>420</posy>
+        <height>600</height>
+        <width>36</width>
+        <aspectratio>stretch</aspectratio>
+        <texture>OSD/LineScroll2.png</texture>
+      </control>
+      <control type="scrollbar" id="60">
+        <animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+        <animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+        <posx>20r</posx>
+        <posy>420</posy>
+        <width>36</width>
+        <height>600</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <onleft>50</onleft>
+        <onright>9000</onright>
+      </control>
+    </control>
+  </include>
+</includes>

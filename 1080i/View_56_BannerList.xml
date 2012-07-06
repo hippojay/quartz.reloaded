@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  
+  <include name="View_56_BannerList">
+    <control type="group" description="List">
+      <visible>Control.IsVisible(56)</visible>
+      <control type="image" description="fa overlay">
+        <posx>0</posx>
+        <posy>430</posy>
+        <width>1920</width>
+        <height>650</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>common/ListPanel.png</texture>
+      </control>
+      <control type="list" id="56">
+          <visible>Container.Content(TVShows)</visible>
+		  <posx>1200</posx>
+          <posy>534</posy>
+          <width>720</width>
+          <height>504</height>
+          <onleft>9000</onleft>
+          <onright>60</onright>
+          <onup>56</onup>
+          <ondown>56</ondown>
+          <pagecontrol>60</pagecontrol>
+          <viewtype label="Banner List">Banner List</viewtype>
+          <focusposition>0</focusposition>
+          <movement>0</movement>
+          <preloaditems>4</preloaditems>
+          <scrolltime tween="sine" easing="inout">280</scrolltime>
+          <itemlayout height="72">
+            <control type="image" description="BG">
+              <width>720</width>
+              <height>72</height>
+              <texture flipy="true" border="3">list/ListNF.png</texture>
+            </control>
+            <control type="label" description="Main Label">
+              <posx>20</posx>
+			  <height>72</height>
+              <width>660</width>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </itemlayout>
+          <focusedlayout height="72">
+            <control type="image" description="BG">
+            <visible>Control.HasFocus(56)</visible>
+			<include>VisibleFadeEffect</include>
+			<width>720</width>
+            <height>73</height>
+            <texture border="0,0,100,0">list/ListFO.png</texture>
+		  </control>
+		  <control type="label" description="Main Label">
+              <posx>20</posx>
+			  <height>72</height>
+              <width>660</width>
+              <textcolor>White2</textcolor>
+			  <label>$INFO[ListItem.Label]</label>
+            </control>
+          </focusedlayout>
+        </control>
+      <control type="group" description="Banners">
+        <posx>50</posx>
+        <posy>531</posy>
+        <control type="image" description="Thumb">
+          <posx>-9</posx>
+          <posy>-9</posy>
+          <width>1050</width>
+          <height>207</height>
+          <include>Icon_Fade</include>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+          <include>ThumbBorder</include>
+		  <aspectratio>scale</aspectratio>
+        </control>
+        <control type="group" description="Media info">
+          <animation effect="fade" delay="100" time="300">Visible</animation>
+          <animation effect="fade" time="0">Hidden</animation>
+          <posx>0</posx>
+          <posy>80</posy>
+		  <control type="image" description="Studios">
+           <visible>![IsEmpty(ListItem.Studio) | Container.content(Movies)]</visible>
+		    <posx>800</posx>
+            <posy>129</posy>
+			<height>90</height>
+		    <width>300</width>
+		    <aspectratio>keep</aspectratio>
+	    	<texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+          </control>
+          <control type="label" description="Genre">
+            <posy>139</posy>
+            <width>670</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>[COLOR=Grey]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+          </control>
+          <control type="label" description="Details">
+            <posy>179</posy>
+            <height>33</height>
+            <width>670</width>
+            <font>Details</font>
+            <include>Genre500Commons</include>
+            <label>[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $VAR[500TopLabel]</label>
+          </control>
+          <control type="textbox" description="Plot51">
+            <posx>0</posx>
+            <posy>231</posy>
+            <width>1030</width>
+            <height>189</height>
+            <include>Plot51Commons</include>
+            <label>$VAR[Plots]</label>
+          </control>
+        </control>
+      </control>
+      <control type="image">
+        <visible>Control.HasFocus(60)</visible>
+        <include>VisibleFadeEffect</include>
+        <posx>28r</posx>
+        <posy>534</posy>
+        <height>504</height>
+        <width>36</width>
+        <aspectratio>stretch</aspectratio>
+        <texture>OSD/LineScroll2.png</texture>
+      </control>
+      <control type="scrollbar" id="60">
+        <animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+        <animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+        <posx>20r</posx>
+        <posy>534</posy>
+        <width>36</width>
+        <height>504</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <onleft>56</onleft>
+        <onright>-</onright>
+      </control>
+    </control>
+  </include>
+</includes>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="142">
-  <defaultcontrol always="false">9000</defaultcontrol>
+  <defaultcontrol always="true">9000</defaultcontrol>
   <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
   <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
   <zorder>2</zorder>
@@ -8,6 +8,10 @@
     <control type="button" id="9000">
       <include>HiddenButton</include>
       <onclick>close</onclick>
+	  <ondown>close</ondown>
+	  <onup>close</onup>
+	  <onleft>close</onleft>
+	  <onright>close</onright>
     </control>
     <control type="group">
       <control type="image" description="Background">
@@ -90,37 +94,33 @@
           </control>
           <control type="label" description="Label 2">
             <visible>VideoPlayer.Content(MusicVideos)</visible>
-            <font>size17</font>
             <include>FullscreenInfoLabel2</include>
             <label>$INFO[VideoPlayer.Album]</label>
           </control>
           <control type="label" description="Label 2">
             <visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
-            <font>size17</font>
             <include>FullscreenInfoLabel2</include>
             <label>$LOCALIZE[21396]$INFO[Player.Chapter, : ]$INFO[Player.ChapterCount, / ]</label>
           </control>
           <control type="label" description="Label 2">
             <visible>VideoPlayer.Content(Episodes)</visible>
-            <font>size17</font>
             <include>FullscreenInfoLabel2</include>
             <label>$INFO[VideoPlayer.TVShowTitle] - $LOCALIZE[20373] $INFO[VideoPlayer.Season], $LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
           </control>
           <control type="label" description="Label 2">
             <visible>VideoPlayer.Content(LiveTV)</visible>
-            <font>size17</font>
             <include>FullscreenInfoLabel2</include>
             <label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[31509]: ]</label>
           </control>
           <control type="textbox">
             <posx>300</posx>
-            <posy>105</posy>
+            <posy>118</posy>
             <width>1275</width>
-            <height>129</height>
+            <height>120</height>
             <label>$INFO[VideoPlayer.Plot]</label>
             <align>jistify</align>
             <autoscroll>false</autoscroll>
-            <font>size20</font>
+            <font>InfoPlot</font>
           </control>
         </control>
         <control type="grouplist">

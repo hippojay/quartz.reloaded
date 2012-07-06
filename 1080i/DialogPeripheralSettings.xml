@@ -1,153 +1,83 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="123">
   <defaultcontrol>5</defaultcontrol>
-  <include>DialogOpenClose</include>
+  <include>OpenClose</include>
   <coordinates>
     <system>1</system>
   </coordinates>
   <controls>
-    <control type="image">
-      <posx>150</posx>
-      <posy>-75</posy>
-      <width>1620</width>
-      <height>1230</height>
-      <texture border="136,127,128,139">img/Dialog.png</texture>
-    </control>
-    <control type="group">
-      <posx>435</posx>
+    <include>DimBG</include>
+    <control type="group" description="Content">
+      <include>DialogOpenClose</include>
+      <posx>312</posx>
       <posy>180</posy>
-      <control type="label">
-        <description>header label</description>
-        <posx>60</posx>
-        <posy>-30</posy>
-        <width>930</width>
-        <height>45</height>
-        <font>size28</font>
-        <label>$LOCALIZE[5]</label>
-        <align>center</align>
-        <aligny>center</aligny>
+      <control type="image">
+        <posx>-14</posx>
+        <posy>-20</posy>
+        <width>1293</width>
+        <height>720</height>
+        <texture border="55">dialogs/DialogRightSmall.png</texture>
       </control>
-      <control type="label" id="3">
-        <description>No Settings Label</description>
-        <posx>30</posx>
-        <posy>270</posy>
-        <width>960</width>
+	  <control type="label" description="Title">
+        <posx>0</posx>
+        <posy>50</posy>
+        <width>1010</width>
+        <height>40</height>
         <align>center</align>
-        <label>35004</label>
-        <font>size17</font>
+        <textcolor>Orange</textcolor>
+		<label>$LOCALIZE[5] - $LOCALIZE[35000]</label>
       </control>
       <control type="grouplist" id="5">
-        <animation effect="slide" start="0,0" end="8,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
-        <description>control area</description>
-        <posx>45</posx>
-        <posy>105</posy>
-        <width>945</width>
-        <height>480</height>
-        <itemgap>8</itemgap>
-        <pagecontrol>60</pagecontrol>
-        <onleft>28</onleft>
-        <onright>60</onright>
-        <onup>28</onup>
-        <ondown>28</ondown>
-      </control>
-      <control type="scrollbar" id="60">
-        <posx>987</posx>
-        <posy>105</posy>
-        <width>36</width>
-        <onleft>3</onleft>
-        <onright>3</onright>
-        <ondown>60</ondown>
-        <onup>60</onup>
-        <showonepage>false</showonepage>
+        <description>Control Area</description>
+        <posx>0</posx>
+        <posy>100</posy>
+        <width>1010</width>
+        <height>540</height>
+        <itemgap>0</itemgap>
         <orientation>vertical</orientation>
+        <onleft>-</onleft>
+        <onright>9000</onright>
+        <onup>5</onup>
+        <ondown>5</ondown>
       </control>
       <control type="button" id="7">
-        <description>Default Button</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <height>60</height>
-        <font>size18</font>
-        <!--<texturefocus border="5">button-focus2.png</texturefocus>-->
+        <textoffsetx>30</textoffsetx>
       </control>
       <control type="radiobutton" id="8">
-        <description>Default RadioButton</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <height>60</height>
-        <font>size18</font>
-        <!--<texturefocus border="5">button-focus2.png</texturefocus>-->
+        <textoffsetx>30</textoffsetx>
       </control>
       <control type="spincontrolex" id="9">
-        <description>Default SpinControlex</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <height>60</height>
-        <font>size18</font>
-        <!--<texturefocus border="5">button-focus2.png</texturefocus>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>-->
+        <textoffsetx>30</textoffsetx>
       </control>
-      <control type="sliderex" id="10">
-        <description>Default Slider</description>
-        <height>60</height>
-        <!--<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<texturefocus border="5">button-focus2.png</texturefocus>-->
-        <font>size18</font>
-      </control>
-      <control type="image" id="11">
-        <description>separator image</description>
-        <height>3</height>
-        <texture>-</texture>
+	  <control type="sliderex" id="10">
+        <textoffsetx>30</textoffsetx>
       </control>
       <control type="group" id="9000">
-        <posx>60</posx>
-        <posy>638</posy>
-        <control type="button" id="29">
-          <description>Cancel Button</description>
-          <posy>0</posy>
-          <posx>0</posx>
-          <width>300</width>
-          <height>60</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size17</font>
-          <label>222</label>
-          <onleft>50</onleft>
-          <onright>28</onright>
-          <onup>5</onup>
-          <ondown>5</ondown>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
-        </control>
-        <control type="button" id="28">
-          <description>OK Button</description>
-          <posy>0</posy>
-          <posx>315</posx>
-          <width>300</width>
-          <height>60</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size17</font>
-          <label>186</label>
-          <onleft>29</onleft>
-          <onright>50</onright>
-          <onup>5</onup>
-          <ondown>5</ondown>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
-        </control>
-        <control type="button" id="50">
-          <description>Defaults Button</description>
-          <posy>0</posy>
-          <posx>630</posx>
-          <width>300</width>
-          <height>60</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>size17</font>
+        <posx>1011</posx>
+        <control type="button" id="50" description="Defaults">
+          <posy>450</posy>
+          <width>254</width>
           <label>409</label>
-          <onleft>28</onleft>
-          <onright>29</onright>
-          <onup>5</onup>
-          <ondown>5</ondown>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <onleft>5</onleft>
+          <onup>29</onup>
+          <ondown>28</ondown>
+        </control>
+		<control type="button" id="28" description="OK">
+          <posy>510</posy>
+          <width>254</width>
+          <label>186</label>
+          <onleft>5</onleft>
+          <onup>50</onup>
+          <ondown>29</ondown>
+        </control>
+        <control type="button" id="29" description="Cancel">
+          <posy>570</posy>
+          <width>254</width>
+          <label>222</label>
+          <onleft>5</onleft>
+          <onright>-</onright>
+          <onup>28</onup>
+          <ondown>50</ondown>
         </control>
       </control>
     </control>

@@ -4,74 +4,68 @@
   <include>OpenClose</include>
   <allowoverlay>no</allowoverlay>
   <controls>
-    <include>MiniBackground</include>
-    <control type="label" description="Header Label">
-      <include>HeadingR</include>
-      <label>20043</label>
-    </control>
-    <control type="group">
-      <posx>1020</posx>
-      <posy>147</posy>
+    <include>DimBG</include>
+    <control type="group" description="Content">
+      <include>DialogOpenClose</include>
+      <posx>312</posx>
+      <posy>180</posy>
+      <control type="image">
+        <posx>-14</posx>
+        <posy>-20</posy>
+        <width>1293</width>
+        <height>720</height>
+        <texture border="55">dialogs/DialogRightSmall.png</texture>
+      </control>
+	  <control type="label" description="Title">
+        <posx>0</posx>
+        <posy>50</posy>
+        <width>1010</width>
+        <height>40</height>
+        <align>center</align>
+        <textcolor>Orange</textcolor>
+		<label>20043</label>
+      </control>
       <control type="grouplist" id="5">
         <description>Control Area</description>
         <posx>0</posx>
-        <posy>0</posy>
-        <width>802</width>
-        <height>810</height>
+        <posy>150</posy>
+        <width>1010</width>
+        <height>540</height>
         <itemgap>0</itemgap>
-        <aligny>top</aligny>
         <orientation>vertical</orientation>
         <onleft>-</onleft>
-        <onright>-</onright>
-        <onup>29</onup>
-        <ondown>28</ondown>
+        <onright>9000</onright>
+        <onup>5</onup>
+        <ondown>5</ondown>
       </control>
       <control type="button" id="7">
-        <height>81</height>
-        <width>802</width>
-        <texturefocus border="8">img/ButtonFO.png</texturefocus>
+        <textoffsetx>30</textoffsetx>
       </control>
       <control type="radiobutton" id="8">
-        <height>81</height>
-        <width>802</width>
-        <texturefocus border="8">img/ButtonFO.png</texturefocus>
+        <textoffsetx>30</textoffsetx>
       </control>
       <control type="spincontrolex" id="9">
-        <height>81</height>
-        <width>802</width>
-        <texturefocus border="8">img/ButtonFO.png</texturefocus>
+        <textoffsetx>30</textoffsetx>
       </control>
-      <control type="image" description="Line split">
-        <posx>0</posx>
-        <posy>692</posy>
-        <width>802</width>
-        <height>1</height>
-        <texture>img/Line.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-      <control type="button" id="28" description="OK">
-        <posx>225</posx>
-        <posy>711</posy>
-        <width>352</width>
-        <label>186</label>
-        <onleft>-</onleft>
-        <onright>-</onright>
-        <onup>5</onup>
-        <ondown>29</ondown>
-        <texturefocus border="8">img/ButtonFO.png</texturefocus>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-      </control>
-      <control type="button" id="29" description="Cancel">
-        <posx>225</posx>
-        <posy>807</posy>
-        <width>352</width>
-        <label>222</label>
-        <onleft>-</onleft>
-        <onright>-</onright>
-        <onup>28</onup>
-        <ondown>-</ondown>
-        <texturefocus border="8">img/ButtonFO.png</texturefocus>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+      <control type="group" id="9000">
+        <posx>1011</posx>
+        <control type="button" id="28" description="OK">
+          <posy>510</posy>
+          <width>254</width>
+          <label>186</label>
+          <onleft>5</onleft>
+          <onup>29</onup>
+          <ondown>29</ondown>
+        </control>
+        <control type="button" id="29" description="Cancel">
+          <posy>570</posy>
+          <width>254</width>
+          <label>222</label>
+          <onleft>5</onleft>
+          <onright>-</onright>
+          <onup>28</onup>
+          <ondown>28</ondown>
+        </control>
       </control>
     </control>
   </controls>

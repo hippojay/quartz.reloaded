@@ -2,209 +2,229 @@
 <window id="3">
   <defaultcontrol always="true">20</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <include>OpenClose</include>
+  
   <controls>
-    <include>MiniBackground</include>
-    <include>Header</include>
-    <control type="label" description="Heading">
-      <include>Heading</include>
-      <label>7</label>
+    <control type="image">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>special://skin/backgrounds/System.jpg</texture>
     </control>
-    <control type="image" description="Line Splitter">
-      <posx>960</posx>
-      <posy>225</posy>
-      <height>810</height>
-      <width>1</width>
-      <texture>img/LineV.png</texture>
+	<control type="group" description="Content">
+    <include>OpenClose</include>
+	<control type="image">
+      <posx>0</posx>
+      <posy>473</posy>
+      <width>1920</width>
+      <height>607</height>
+      <texture>dialogs/ListFloor.png</texture>
     </control>
+	<control type="image" description="Left panel">
+      <posx>50</posx>
+      <posy>90</posy>
+      <width>900</width>
+      <height>970</height>
+      <texture border="66">dialogs/FileManagerPanel.png</texture>
+    </control>
+	<control type="image" description="Right panel">
+      <posx>950r</posx>
+      <posy>90</posy>
+      <width>900</width>
+      <height>970</height>
+      <texture border="66">dialogs/FileManagerPanel.png</texture>
+    </control>
+    <include>Time</include>
     <control type="group" description="Left panel">
       <posx>75</posx>
-      <posy>78</posy>
-      <animation condition="!Control.HasFocus(20)" effect="fade" start="100" end="60" time="200" reversible="true">Conditional</animation>
+      <posy>90</posy>
       <control type="label" id="101" description="Header Label">
-        <posx>-60</posx>
-        <width>900</width>
-        <align>left</align>
-        <label>-</label>
-        <font>size17</font>
+        <posx>6</posx>
+		<posy>24</posy>
+        <width>860</width>
+        <align>center</align>
         <haspath>true</haspath>
-        <textcolor>Blue</textcolor>
-        <shadowcolor>black</shadowcolor>
+        <font>FManager</font>
+		<textcolor>Orange</textcolor>
+        <shadowcolor>-</shadowcolor>
       </control>
-      <control type="list" id="20" description="Left File List">
-        <posx>30</posx>
-        <posy>96</posy>
-        <width>840</width>
-        <height>810</height>
+      <control type="panel" id="20" description="Left File List">
+        <posx>0</posx>
+        <posy>120</posy>
+        <width>860</width>
+        <height>660</height>
         <onleft>60</onleft>
         <onright>21</onright>
         <onup>20</onup>
         <ondown>20</ondown>
         <pagecontrol>60</pagecontrol>
-        <itemlayout height="90" width="840">
+        <itemlayout height="60" width="860">
           <control type="image">
+            <width>860</width>
+            <height>60</height>
+            <texture border="3">list/ListNF.png</texture>
+          </control>
+          <control type="label">
+            <posx>850</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>800</width>
+            <align>right</align>
+            <font>FManager2</font>
+			<info>ListItem.Label2</info>
+          </control>
+		  <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
             <width>840</width>
-            <height>92</height>
-            <texture border="4">img/MediaItemBG.png</texture>
-          </control>
-          <control type="label">
-            <posx>15</posx>
-            <posy>6</posy>
-            <width>810</width>
-            <height>36</height>
-            <font>size17</font>
+            <height>60</height>
+			<font>FManager</font>
             <info>ListItem.Label</info>
           </control>
-          <control type="label">
-            <posx>15</posx>
-            <posy>54</posy>
-            <height>30</height>
-            <width>810</width>
-            <font>size18</font>
-            <textcolor>Silver</textcolor>
-            <info>ListItem.Label2</info>
-          </control>
+          
         </itemlayout>
-        <focusedlayout height="90" width="840">
+        <focusedlayout height="90" width="860">
           <control type="image">
-            <visible>Control.HasFocus(20)</visible>
-            <width>750</width>
-            <height>90</height>
-            <texture border="8">img/ButtonFO.png</texture>
+            <width>860</width>
+            <height>60</height>
+            <texture border="2">common/ButtonFO.png</texture>
           </control>
           <control type="label">
-            <posx>15</posx>
-            <posy>6</posy>
-            <width>810</width>
-            <height>36</height>
-            <font>size17</font>
-            <textcolor>White</textcolor>
+            <posx>850</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>800</width>
+            <align>right</align>
+            <font>FManager2</font>
+			<info>ListItem.Label2</info>
+          </control>
+		  <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
+            <width>840</width>
+            <height>60</height>
+			<font>FManager</font>
             <info>ListItem.Label</info>
-          </control>
-          <control type="label">
-            <posx>15</posx>
-            <posy>54</posy>
-            <height>30</height>
-            <width>810</width>
-            <font>size18</font>
-            <textcolor>Silver</textcolor>
-            <info>ListItem.Label2</info>
           </control>
         </focusedlayout>
       </control>
       <control type="label" id="12" description="Footer Label">
-        <posx>15</posx>
-        <posy>930</posy>
-        <width>480</width>
+        <posx>6</posx>
+        <posy>840</posy>
+        <width>860</width>
+		<font>FManager2</font>
         <align>left</align>
-        <font>size17</font>
-        <textcolor>Silver</textcolor>
-        <label>-</label>
       </control>
+	  <control type="scrollbar" id="60">
+        <posx>-30</posx>
+        <posy>0</posy>
+        <width>36</width>
+		<height>900</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>true</showonepage>
+        <orientation>vertical</orientation>
+		<onright>20</onright>
+     </control>
     </control>
     <control type="group" description="Right panel">
-      <posx>975</posx>
-      <posy>78</posy>
-      <animation condition="!Control.HasFocus(21)" effect="fade" start="100" end="60" time="200" reversible="true">Conditional</animation>
-      <control type="label" id="102" description="Right Header Label">
-        <posx>930</posx>
-        <width>900</width>
-        <align>right</align>
-        <label>-</label>
-        <font>size17</font>
+      <posx>984</posx>
+      <posy>90</posy>
+      <control type="label" id="102" description="Header Label">
+        <posx>6</posx>
+		<posy>24</posy>
+        <width>860</width>
+        <align>center</align>
         <haspath>true</haspath>
-        <textcolor>Blue</textcolor>
-        <shadowcolor>black</shadowcolor>
+		<font>FManager</font>
+        <textcolor>Orange</textcolor>
+        <shadowcolor>-</shadowcolor>
       </control>
-      <control type="list" id="21" description="Right File List">
+      <control type="panel" id="21" description="Right File List">
         <posx>0</posx>
-        <posy>96</posy>
-        <width>840</width>
-        <height>810</height>
+        <posy>120</posy>
+        <width>860</width>
+        <height>660</height>
         <onleft>20</onleft>
         <onright>61</onright>
         <onup>21</onup>
         <ondown>21</ondown>
         <pagecontrol>61</pagecontrol>
-        <itemlayout height="90" width="840">
+        <itemlayout height="60" width="860">
           <control type="image">
+            <width>860</width>
+            <height>60</height>
+            <texture border="3">list/ListNF.png</texture>
+          </control>
+          <control type="label">
+            <posx>850</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>800</width>
+            <align>right</align>
+			<font>FManager2</font>
+            <info>ListItem.Label2</info>
+          </control>
+		  <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
             <width>840</width>
-            <height>92</height>
-            <texture border="4">img/MediaItemBG.png</texture>
-          </control>
-          <control type="label">
-            <posx>15r</posx>
-            <posy>6</posy>
-            <width>810</width>
-            <height>36</height>
-            <align>right</align>
-            <font>size17</font>
+            <height>60</height>
+			<font>FManager</font>
             <info>ListItem.Label</info>
           </control>
-          <control type="label">
-            <posx>15r</posx>
-            <posy>54</posy>
-            <height>30</height>
-            <width>810</width>
-            <align>right</align>
-            <font>size18</font>
-            <textcolor>Silver</textcolor>
-            <info>ListItem.Label2</info>
-          </control>
+          
         </itemlayout>
-        <focusedlayout height="90" width="840">
+        <focusedlayout height="90" width="860">
           <control type="image">
-            <visible>Control.HasFocus(21)</visible>
-            <posx>90</posx>
-            <width>750</width>
-            <height>90</height>
-            <texture flipx="true" border="8">img/ButtonFO.png</texture>
+            <width>860</width>
+            <height>60</height>
+            <texture border="2">common/ButtonFO.png</texture>
           </control>
           <control type="label">
-            <posx>15r</posx>
-            <posy>6</posy>
-            <width>810</width>
-            <height>36</height>
+            <posx>850</posx>
+            <posy>0</posy>
+            <height>60</height>
+            <width>800</width>
             <align>right</align>
-            <font>size17</font>
-            <textcolor>White</textcolor>
-            <info>ListItem.Label</info>
-          </control>
-          <control type="label">
-            <posx>15r</posx>
-            <posy>54</posy>
-            <height>30</height>
-            <width>810</width>
-            <align>right</align>
-            <font>size18</font>
-            <textcolor>Silver</textcolor>
+			<font>FManager2</font>
             <info>ListItem.Label2</info>
+          </control>
+		  <control type="label">
+            <posx>10</posx>
+            <posy>0</posy>
+            <width>840</width>
+            <height>60</height>
+			<font>FManager</font>
+            <info>ListItem.Label</info>
           </control>
         </focusedlayout>
       </control>
       <control type="label" id="13" description="Footer Label">
-        <posx>855</posx>
-        <posy>930</posy>
-        <width>480</width>
+        <posx>860</posx>
+        <posy>840</posy>
+        <width>860</width>
+		<font>FManager2</font>
         <align>right</align>
-        <font>size17</font>
-        <textcolor>Silver</textcolor>
-        <label>-</label>
       </control>
+	  <control type="scrollbar" id="61">
+        <posx>857</posx>
+        <posy>0</posy>
+        <width>36</width>
+		<height>900</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>true</showonepage>
+        <orientation>vertical</orientation>
+		<onleft>21</onleft>
+     </control>
     </control>
-    <control type="scrollbar" id="60">
-      <posx>30</posx>
-      <posy>165</posy>
-      <height>810</height>
-      <onleft>20</onleft>
-      <onright>20</onright>
-    </control>
-    <control type="scrollbar" id="61">
-      <posx>66r</posx>
-      <posy>165</posy>
-      <height>810</height>
-      <onleft>21</onleft>
-      <onright>21</onright>
-    </control>
+	</control>
   </controls>
 </window>

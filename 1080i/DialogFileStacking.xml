@@ -8,11 +8,11 @@
       <posx>510</posx>
       <posy>210</posy>
       <control type="image">
-        <posx>-30</posx>
-        <posy>-30</posy>
-        <width>1440</width>
-        <height>744</height>
-        <texture border="22">img/Dialog.png</texture>
+        <posx>70</posx>
+        <posy>70</posy>
+        <width>1240</width>
+        <height>544</height>
+        <texture>dialogs/DialogBG.png</texture>
       </control>
       <control type="label">
         <posx>15</posx>

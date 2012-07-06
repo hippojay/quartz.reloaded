@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="List52Label">
+    <posx>50</posx>
+    <posy>0</posy>
+    <height>60</height>
+    <width>800</width>
+    <font>52Title</font>
+    <aligny>center</aligny>
+  </include>
+  <include name="List52Label2">
+    <posx>50</posx>
+    <posy>33</posy>
+    <height>76</height>
+    <width>800</width>
+    <font>52Label2</font>
+    <align>left</align>
+    <aligny>center</aligny>
+    <textcolor>Grey</textcolor>
+  </include>
+  <include name="List52Detail">
+    <posx>1129</posx>
+    <posy>0</posy>
+    <width>140</width>
+    <height>62</height>
+    <font>52Label2</font>
+    <align>center</align>
+    <aligny>center</aligny>
+  </include>
+  <include name="List52Rating">
+    <posx>1080</posx>
+    <posy>60</posy>
+    <width>98</width>
+    <height>18</height>
+  </include>
+  <include name="List52Overlay">
+    <visible>![Container.Content(Seasons) | Container.Content(TVShows)]</visible>
+    <posx>1020</posx>
+    <posy>31</posy>
+    <height>36</height>
+    <width>36</width>
+    <texture>$INFO[ListItem.Overlay]</texture>
+  </include>
+  <include name="View_52_InfoList">
+    <control type="group" description="Large Infolist2">
+      <visible>Control.IsVisible(52)</visible>
+      <control type="image" description="fanart">
+        <visible>!Window.IsActive(MyPics.xml)</visible>
+		<posx>702</posx>
+        <posy>0</posy>
+        <width>1218</width>
+        <height>920</height>
+        <include>Fanart_Fade</include>
+        <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+        <aspectratio aligny="top">scale</aspectratio>
+      </control>
+	  <control type="image" description="fanart">
+        <visible>Window.IsActive(MyPics.xml)</visible>
+		<posx>702</posx>
+        <posy>0</posy>
+        <width>1218</width>
+        <height>920</height>
+        <include>Fanart_Fade</include>
+        <texture background="true">$INFO[ListItem.Thumb]</texture>
+        <aspectratio aligny="top">scale</aspectratio>
+      </control>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1920</width>
+        <height>1080</height>
+        <texture>common/BigListOverlayFull.png</texture>
+      </control>
+     <control type="list" id="52">
+        <viewtype label="Large List">Large List</viewtype>
+        <posx>703</posx>
+        <posy>181</posy>
+        <width>1215</width>
+        <height>881</height>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>0</scrolltime>
+        <onleft>9000</onleft>
+        <onright>60</onright>
+        <onup>52</onup>
+        <ondown>52</ondown>
+        <itemlayout condition="container.content(albums) | container.content(songs) | container.content(addons) | Window.IsActive(MyPics.xml)" height="98">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>98</height>
+            <width>1215</width>
+            <texture flipy="true" border="3">list/ListNF.png</texture>
+          </control>
+          <control type="image">
+            <posx>21</posx>
+            <posy>7</posy>
+            <width>84</width>
+            <height>84</height>
+            <aspectratio aligny="top">scale</aspectratio>
+			<texture>$INFO[ListItem.Icon]</texture>
+          </control>
+          <control type="label">
+            <visible>!container.content(songs)</visible>
+			<posx>130</posx>
+            <include>List52Label</include>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+		  <control type="label">
+            <visible>container.content(songs)</visible>
+			<posx>130</posx>
+            <include>List52Label</include>
+            <label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</label>
+          </control>
+		  <control type="label">
+            <posx>130</posx>
+            <include>List52Label2</include>
+            <label>$VAR[52_Label2]</label>
+          </control>
+          <control type="label">
+            <include>List52Detail</include>
+            <label>$VAR[52_Details]</label>
+          </control>
+          <control type="label" description="PICS">
+            <visible>Window.IsActive(MyPics.xml)</visible>
+			<textcolor>Grey3</textcolor>
+			<posy>38</posy>
+			<include>List52Detail</include>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+		  <control type="image" description="Rating">
+            <visible>!Window.IsActive(MyPics.xml)</visible>
+			<include>List52Rating</include>
+            <texture>$VAR[52_Stars]</texture>
+            <colordiffuse>Grey3</colordiffuse>
+          </control>
+        </itemlayout>
+        <focusedlayout condition="container.content(albums) | container.content(songs) | container.content(addons) | Window.IsActive(MyPics.xml)" height="98">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1215</width>
+            <height>98</height>
+            <texture border="0,0,100,0">list/ListFO.png</texture>
+          </control>
+          <control type="image">
+            <posx>21</posx>
+            <posy>7</posy>
+            <width>84</width>
+            <height>84</height>
+			<aspectratio aligny="top">scale</aspectratio>
+            <texture>$INFO[ListItem.Icon]</texture>
+          </control>
+          <control type="label">
+            <visible>!container.content(songs)</visible>
+			<posx>130</posx>
+            <textcolor>White2</textcolor>
+            
+            <include>List52Label</include>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+		  <control type="label">
+            <visible>container.content(songs)</visible>
+			<posx>130</posx>
+            <textcolor>White2</textcolor>
+            
+            <include>List52Label</include>
+            <label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</label>
+          </control>
+          <control type="label">
+            <posx>130</posx>
+            <textcolor>Grey3</textcolor>
+            <include>List52Label2</include>
+            <label>$VAR[52_Label2]</label>
+          </control>
+          <control type="label">
+            <include>List52Detail</include>
+            <label>$VAR[52_Details]</label>
+          </control>
+		  <control type="label" description="PICS">
+            <visible>Window.IsActive(MyPics.xml)</visible>
+			<posy>38</posy>
+			<textcolor>Grey3</textcolor>
+			<include>List52Detail</include>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+		  <control type="image" description="Rating">
+            <visible>!Window.IsActive(MyPics.xml)</visible>
+			<include>List52Rating</include>
+            <texture>$VAR[52_Stars]</texture>
+          </control>
+        </focusedlayout>
+        <itemlayout height="98">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>98</height>
+            <width>1215</width>
+            <texture flipy="true" border="3">list/ListNF.png</texture>
+          </control>
+          <control type="label">
+            <include>List52Label</include>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <include>List52Label2</include>
+            <label>$VAR[52_Label2]</label>
+          </control>
+          <control type="label">
+            <include>List52Detail</include>
+            <label>$VAR[52_Details]</label>
+          </control>
+          <control type="image" description="Rating">
+            <include>List52Rating</include>
+            <texture>$VAR[52_Stars]</texture>
+            <colordiffuse>Grey3</colordiffuse>
+          </control>
+          <control type="image">
+            <include>List52Overlay</include>
+          </control>
+        </itemlayout>
+        <focusedlayout height="98">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1215</width>
+            <height>98</height>
+            <texture border="0,0,100,0">list/ListFO.png</texture>
+          </control>
+          <control type="label">
+            <textcolor>White2</textcolor>
+            
+            <include>List52Label</include>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <textcolor>Grey3</textcolor>
+            <include>List52Label2</include>
+            <label>$VAR[52_Label2]</label>
+          </control>
+          <control type="label">
+            <include>List52Detail</include>
+            <label>$VAR[52_Details]</label>
+          </control>
+          <control type="image" description="Rating">
+            <include>List52Rating</include>
+            <texture>$VAR[52_Stars]</texture>
+          </control>
+          <control type="image">
+            <include>List52Overlay</include>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="image" description="Thumb">
+        <visible>!Control.IsVisible(70052)</visible>
+		<posx>96</posx>
+        <posy>60</posy>
+        <width>540</width>
+        <height>600</height>
+        <include>Icon_Fade</include>
+        <texture background="true">$INFO[ListItem.Icon]</texture>
+        <include>ThumbBorder</include>
+        <aspectratio>keep</aspectratio>
+      </control>
+	  
+<control type="group" description="Metadata v2">
+	  <posx>15</posx>
+	  <posy>60</posy>
+	  <control type="group" description="Songs and videos">
+        <visible>Container.Content(songs) | Container.Content(musicvideos)</visible>
+        <posx>60</posx>
+        <posy>400</posy>
+        <!--<control type="label" description="Title Label">
+          <posy>6</posy>
+          <width>672</width>
+          <height>90</height>
+          <wrapmultiline>true</wrapmultiline>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Title]</label>
+        </control>-->
+        <control type="label" description="Title Label">
+          <posy>186</posy>
+          <width>672</width>
+          <textcolor>White2</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Artist]</label>
+        </control>
+        <control type="grouplist" description="Labels">
+          <posx>0</posx>
+          <posy>264</posy>
+          <width>600</width>
+          <height>500</height>
+          <itemgap>24</itemgap>
+          <orientation>vertical</orientation>
+          <control type="label" description="Type label 1">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.FileExtension,[COLOR=Grey]$LOCALIZE[564]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Genre label 2">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Genre,[COLOR=Grey]$LOCALIZE[515]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Album label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Album,[COLOR=Grey]$LOCALIZE[558]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Duration label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Duration,[COLOR=Grey]$LOCALIZE[180]:[/COLOR]  ]</label>
+          </control>
+        </control>
+      </control>
+      <control type="group" description="Media info">
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
+        <posx>50</posx>
+        <posy>400</posy>
+        <!--<control type="label" description="Title Label">
+          <posy>0</posy>
+          <width>672</width>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Label]</label>
+        </control>-->
+        <control type="textbox" description="Plot51">
+          <!--<visible>Window.IsActive(MyVideoNav.xml) + !container.content(addons)</visible>-->
+          <posx>0</posx>
+          <posy>206</posy>
+          <width>600</width>
+          <height>336</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>
+       <!-- <control type="textbox" description="Plot51">
+          <visible>!Window.IsActive(MyVideoNav.xml) | container.content(addons)</visible>
+          <posx>0</posx>
+          <posy>226</posy>
+          <width>600</width>
+          <height>336</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+        </control>-->
+      </control>
+      <control type="grouplist" description="Flags">
+        <posx>50</posx>
+        <posy>951</posy>
+        <width min="90" max="450">auto</width>
+        <height>45</height>
+        <itemgap>30</itemgap>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <aligny>center</aligny>
+        <control type="image">
+          <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+          <height>45</height>
+          <width>90</width>
+          <posx>0</posx>
+          <posy>0</posy>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+		
+      </control>
+	  <control type="image" description="Studios">
+          <visible>!IsEmpty(ListItem.Studio) + [Container.content(Seasons) | Container.content(tvshows)]</visible>
+          <posx>45</posx>
+          <posy>948</posy>
+          <height>66</height>
+          <width>400</width>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+        </control>
+		<control type="image">
+          <visible>container.content(songs) | container.content(albums)</visible>
+          <posx>45</posx>
+          <posy>970</posy>
+		  <height>27</height>
+          <width>189</width>
+          <aspectratio align="left">keep</aspectratio>
+          <texture>$INFO[ListItem.StarRating]</texture>
+        </control>
+	  </control>
+	  
+	  
+	  
+      <control type="image">
+        <visible>Control.HasFocus(60)</visible>
+        <include>VisibleFadeEffect</include>
+        <posx>28r</posx>
+        <posy>180</posy>
+        <height>840</height>
+        <width>36</width>
+        <aspectratio>stretch</aspectratio>
+        <texture>OSD/LineScroll2.png</texture>
+      </control>
+      <control type="scrollbar" id="60">
+        <animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+        <animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+        <posx>20r</posx>
+        <posy>180</posy>
+        <width>36</width>
+        <height>840</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <onleft>52</onleft>
+        <onright>-</onright>
+      </control>
+    </control>
+  </include>
+</includes>

@@ -4,7 +4,7 @@
   <include>OpenClose</include>
   <controls>
     <control type="group">
-      <posx>1080</posx>
+      <posx>50</posx>
       <posy>0</posy>
       <control type="image" description="Dialog BG">
         <posx>0</posx>

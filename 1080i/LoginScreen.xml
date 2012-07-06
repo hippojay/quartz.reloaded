@@ -4,156 +4,103 @@
   <allowoverlay>no</allowoverlay>
   <include>OpenClose</include>
   <controls>
-    <control type="group" description="BG and icons">
-      <posx>0</posx>
-      <posy>0</posy>
-      <control type="group">
-        <posy>75</posy>
-        <control type="fixedlist" id="52">
-          <animation effect="slide" start="0,0" end="-225,0" time="0" condition="StringCompare(Container(52).NumItems,2) | StringCompare(Container(52).NumItems,4)">conditional</animation>
-          <posx>285</posx>
-          <posy>249</posy>
-          <width>1350</width>
-          <height>450</height>
-          <onleft>-</onleft>
-          <onright>-</onright>
-          <onup>-</onup>
-          <ondown>11</ondown>
-          <pagecontrol>-</pagecontrol>
-          <scrolltime>300</scrolltime>
-          <focusposition>1</focusposition>
-          <movement>1</movement>
-          <orientation>horizontal</orientation>
-          <itemlayout width="450" height="450">
-            <control type="image">
-              <posx>75</posx>
-              <posy>302</posy>
-              <width>300</width>
-              <height>300</height>
-              <aspectratio scalediffuse="false">scale</aspectratio>
-              <texture flipy="true" diffuse="img/Reflection0XL.png" background="true">$INFO[ListItem.Icon]</texture>
-            </control>
-            <control type="image">
-              <posx>75</posx>
-              <posy>0</posy>
-              <width>300</width>
-              <height>300</height>
-              <aspectratio>scale</aspectratio>
-              <texture background="true">$INFO[ListItem.Icon]</texture>
-            </control>
-            <control type="image">
-              <posx>75</posx>
-              <posy>0</posy>
-              <width>300</width>
-              <height>300</height>
-              <aspectratio>stretch</aspectratio>
-              <texture border="3">img/CoverOverlay0.png</texture>
-            </control>
-          </itemlayout>
-          <focusedlayout width="450" height="450">
-            <control type="image">
-              <posx>75</posx>
-              <posy>302</posy>
-              <width>300</width>
-              <height>300</height>
-              <aspectratio scalediffuse="false">scale</aspectratio>
-              <texture flipy="true" diffuse="img/Reflection0XL.png" background="true">$INFO[ListItem.Icon]</texture>
-            </control>
-            <control type="image">
-              <posx>75</posx>
-              <posy>0</posy>
-              <width>300</width>
-              <height>300</height>
-              <aspectratio>scale</aspectratio>
-              <texture background="true">$INFO[ListItem.Icon]</texture>
-            </control>
-            <control type="image">
-              <posx>75</posx>
-              <posy>0</posy>
-              <width>300</width>
-              <height>300</height>
-              <aspectratio>stretch</aspectratio>
-              <texture border="3">img/CoverOverlay0.png</texture>
-            </control>
-          </focusedlayout>
-        </control>
-        <control type="image">
-          <visible>Control.HasFocus(52)</visible>
-          <animation effect="fade" time="300">VisibleChange</animation>
-          <animation effect="fade" time="200">Hidden</animation>
-          <posx>783</posx>
-          <posy>222</posy>
-          <width>354</width>
-          <height>354</height>
-          <aspectratio>stretch</aspectratio>
-          <texture border="28">img/Frame25.png</texture>
-          <animation effect="slide" start="0,0" end="-225,0" time="0" condition="StringCompare(Container(52).NumItems,2) | StringCompare(Container(52).NumItems,4)">conditional</animation>
-          <animation type="Conditional" condition="Container(52).Position(0)">
-            <effect type="slide" start="0,0" end="-450,0" center="auto" time="200" reversible="true" />
-          </animation>
-          <animation type="Conditional" condition="Container(52).Position(1)">
-            <effect type="slide" start="0,0" end="0,0" center="auto" time="200" reversible="true" />
-          </animation>
-          <animation type="Conditional" condition="Container(52).Position(2)">
-            <effect type="slide" start="0,0" end="450,0" center="auto" time="200" reversible="true" />
-          </animation>
-        </control>
-      </control>
+    <include>Default_Art</include>
+    <control type="group" description="Content">
+      <include>DialogOpenClose</include>
+      <posx>315</posx>
+      <posy>320</posy>
       <control type="image">
-        <visible>Control.HasFocus(11)</visible>
-        <animation effect="fade" time="300">Visible</animation>
-        <animation effect="fade" time="200">Hidden</animation>
-        <posx>774</posx>
-        <posy>810</posy>
-        <width>372</width>
-        <height>372</height>
-        <aspectratio aligny="center" align="center">stretch</aspectratio>
-        <texture border="13">img/Frame.png</texture>
-        <animation type="Conditional" condition="Control.HasFocus(11)">
-          <effect type="zoom" start="70" end="40" time="180" center="auto" delay="0" reversible="true" />
-        </animation>
+        <posx>-21</posx>
+        <posy>-20</posy>
+        <width>1271</width>
+        <height>432</height>
+        <texture border="0">dialogs/FavsBG.png</texture>
       </control>
-    </control>
-    <control type="group" description="Labels and button">
-      <posx>0</posx>
-      <posy>696</posy>
-      <control type="label" description="label 1">
-        <posx>0</posx>
-        <posy>30</posy>
-        <height>45</height>
-        <width>1920</width>
+      <control type="label" description="Title">
+        <posx>629</posx>
+        <posy>15</posy>
+        <width>608</width>
+        <height>40</height>
         <align>center</align>
-        <font>size22</font>
-        <textcolor>White2</textcolor>
-        <label>[B]$INFO[ListItem.Label][/B]</label>
+        <textcolor>Orange</textcolor>
+        <label>13200</label>
       </control>
-      <control type="label" description="Label 2">
-        <posx>0</posx>
-        <posy>69</posy>
-        <width>1920</width>
-        <font>size18</font>
+      <control type="label" description="Profile Directory">
+        <posx>629</posx>
+        <posy>336</posy>
+        <width>608</width>
         <align>center</align>
-        <textcolor>Grey</textcolor>
-        <label>$INFO[ListItem.Label2]</label>
+        <font>font13</font>
+        <info>Container(52).ListItem.Label2</info>
       </control>
-      <control type="button" id="11" description="Quit xbmc">
-        <posx>915</posx>
-        <posy>255</posy>
-        <width>90</width>
-        <height>90</height>
+      <control type="panel" id="52">
+        <posx>629</posx>
+        <posy>80</posy>
+        <width>608</width>
+        <height>240</height>
+        <onleft>11</onleft>
+        <onright>-</onright>
         <onup>52</onup>
         <ondown>52</ondown>
-        <onleft>Control.Move(52,-1)</onleft>
-        <onleft>52</onleft>
-        <onright>Control.Move(52,1)</onright>
+        <pagecontrol>-</pagecontrol>
+        <scrolltime>240</scrolltime>
+        <itemlayout width="608" height="60">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>600</width>
+            <height>60</height>
+            <texture border="3" flipy="true">list/ListNF.png</texture>
+          </control>
+          <control type="label">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>600</width>
+            <height>60</height>
+            <textoffsetx>30</textoffsetx>
+            <info>ListItem.Label</info>
+          </control>
+        </itemlayout>
+        <focusedlayout width="608" height="60">
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>608</width>
+            <height>60</height>
+            <texture border="2">common/ButtonFO.png</texture>
+          </control>
+          <control type="label">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>600</width>
+            <height>60</height>
+            <textoffsetx>30</textoffsetx>
+            <info>ListItem.Label</info>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="image">
+        <posx>252</posx>
+        <posy>30</posy>
+        <width>351</width>
+        <height>351</height>
+        <aspectratio>scale</aspectratio>
+        <texture>$INFO[Container(52).ListItem.Icon]</texture>
+      </control>
+      <control type="button" id="11" description="Quit xbmc">
+        <animation effect="fade" start="100" end="60" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
+        <animation effect="zoom" start="100" end="130" time="200" center="auto" condition="Control.HasFocus(11)">Conditional</animation>
+        <posx>48</posx>
+        <posy>248</posy>
+        <height>128</height>
+        <width>128</width>
         <onright>52</onright>
-        <texturefocus>img/QuitFO.png</texturefocus>
-        <texturenofocus>img/QuitNF.png</texturenofocus>
+        <textoffsetx>20</textoffsetx>
+        <texturenofocus>BMShutdown.png</texturenofocus>
+        <texturefocus>BMShutdown.png</texturefocus>
         <onclick>ActivateWindow(shutdownmenu)</onclick>
-        <font>-</font>
-        <label>$LOCALIZE[13009]</label>
+        <label>-</label>
       </control>
     </control>
-    <include>Header</include>
   </controls>
 </window>

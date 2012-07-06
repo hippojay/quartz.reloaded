@@ -4,132 +4,109 @@
   <allowoverlay>no</allowoverlay>
   <include>OpenClose</include>
   <controls>
-    <include>MiniBackground</include>
-    <control type="group">
-      <posx>510</posx>
+    <include>DimBG</include>
+    <control type="image">
+      <posx>295</posx>
       <posy>240</posy>
+      <width>1292</width>
+      <height>600</height>
+      <texture border="50">dialogs/SmartplaylistRule.png</texture>
+    </control>
+    <control type="group">
+      <posx>310</posx>
+      <posy>250</posy>
       <control type="label" id="2" description="Heading">
-        <posx>-510</posx>
-        <posy>-60</posy>
-        <width>1920</width>
-        <font>size26B</font>
-        <label>1007</label>
-        <align>center</align>
-      </control>
-      <control type="spincontrolex" id="10">
-        <description>Protocol</description>
-        <posx>15</posx>
-        <posy>81</posy>
-        <width>870</width>
-        <label>1008</label>
-        <onup>18</onup>
-        <ondown>11</ondown>
-        <onleft>10</onleft>
-        <onright>10</onright>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-      </control>
-      <control type="button" id="11" description="Server Name">
-        <posx>15</posx>
-        <posy>159</posy>
-        <width>615</width>
-        <align>left</align>
-        <label>-</label>
-        <textoffsetx>20</textoffsetx>
-        <onup>10</onup>
-        <onleft>12</onleft>
-        <onright>12</onright>
-        <ondown>16</ondown>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-        <texturefocus border="8" flipy="true">img/ButtonFO.png</texturefocus>
-      </control>
-      <control type="button" id="12">
-        <description>Server Browse</description>
-        <posx>660</posx>
-        <posy>159</posy>
-        <width>225</width>
-        <label>1024</label>
-        <onup>10</onup>
-        <onleft>11</onleft>
-        <onright>11</onright>
-        <ondown>16</ondown>
-        <texturenofocus border="3">img/ButtonNF.png</texturenofocus>
-      </control>
-      <control type="group">
         <posx>0</posx>
-        <posy>36</posy>
-        <control type="edit" id="16" description="Shared folder">
-          <posx>15</posx>
-          <posy>231</posy>
-          <width>870</width>
-          <label>-</label>
-          <onup>11</onup>
-          <onleft>16</onleft>
-          <onright>16</onright>
-          <ondown>13</ondown>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-          <texturefocus border="8" flipy="true">img/ButtonFO.png</texturefocus>
+        <posy>40</posy>
+        <width>1010</width>
+        <align>center</align>
+        <textcolor>Orange</textcolor>
+        <label>1007</label>
+      </control>
+      <control type="group" id="9001">
+        <posy>30</posy>
+        <control type="spincontrolex" id="10" description="Protocol">
+          <posy>90</posy>
+          <width>1010</width>
+          <textoffsetx>30</textoffsetx>
+          <onright>9000</onright>
+          <onup>15</onup>
+          <ondown>11</ondown>
         </control>
-        <control type="button" id="13">
-          <description>Port</description>
-          <posx>15</posx>
-          <posy>306</posy>
-          <width>870</width>
+        <control type="button" id="11" description="Server Name">
+          <posy>150</posy>
+          <width>1010</width>
+          <textoffsetx>30</textoffsetx>
+          <onright>9000</onright>
+          <onup>10</onup>
+          <ondown>16</ondown>
+        </control>
+        <control type="edit" id="16" description="Shared folder">
+          <posy>210</posy>
+          <width>1010</width>
+          <textoffsetx>30</textoffsetx>
+          <onright>12</onright>
+          <onup>11</onup>
+          <ondown>13</ondown>
+          <texturefocus border="16,6,16,6">dialogs/AddSourceBottomFrame.png</texturefocus>
+        </control>
+        <control type="button" id="13" description="Port">
           <label>1013</label>
+          <posy>270</posy>
+          <width>1010</width>
+          <textoffsetx>30</textoffsetx>
+          <onright>9000</onright>
           <onup>16</onup>
-          <onleft>13</onleft>
-          <onright>13</onright>
           <ondown>14</ondown>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-          <texturefocus border="8" flipy="true">img/ButtonFO.png</texturefocus>
         </control>
         <control type="edit" id="14" description="Username">
-          <posx>15</posx>
-          <posy>381</posy>
-          <width>870</width>
-          <align>left</align>
-          <label>1014</label>
+          <posy>330</posy>
+          <width>1010</width>
+          <textoffsetx>30</textoffsetx>
+          <hinttext>1014</hinttext>
+          <onright>19</onright>
           <onup>13</onup>
-          <onleft>14</onleft>
-          <onright>14</onright>
           <ondown>15</ondown>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-          <texturefocus border="8" flipy="true">img/ButtonFO.png</texturefocus>
+          <texturefocus border="16,6,16,6">dialogs/AddSourceBottomFrame.png</texturefocus>
         </control>
         <control type="edit" id="15" description="Password">
-          <posx>15</posx>
-          <posy>459</posy>
-          <width>870</width>
-          <align>left</align>
-          <label>15052</label>
+          <posy>390</posy>
+          <width>1010</width>
+          <textoffsetx>30</textoffsetx>
+          <onright>18</onright>
           <onup>14</onup>
-          <onleft>15</onleft>
-          <onright>15</onright>
-          <ondown>18</ondown>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-          <texturefocus border="8" flipy="true">img/ButtonFO.png</texturefocus>
+          <ondown>10</ondown>
+          <hinttext>15052</hinttext>
+          <texturefocus border="16,6,16,6">dialogs/AddSourceBottomFrame.png</texturefocus>
         </control>
       </control>
-      <control type="button" id="18" description="Ok">
-        <posx>90</posx>
-        <posy>630</posy>
-        <width>300</width>
-        <label>186</label>
-        <onup>15</onup>
-        <onleft>19</onleft>
-        <onright>19</onright>
-        <ondown>10</ondown>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
-      </control>
-      <control type="button" id="19" description="Cancel">
-        <posx>510</posx>
-        <posy>630</posy>
-        <width>300</width>
-        <label>222</label>
-        <onup>15</onup>
-        <onleft>18</onleft>
-        <onright>18</onright>
-        <ondown>10</ondown>
-        <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+      <control type="group" id="9000">
+        <posx>1010</posx>
+        <posy>30</posy>
+        <control type="button" id="12" description="Browse">
+          <posy>210</posy>
+          <width>231</width>
+          <label>1024</label>
+          <onup>18</onup>
+          <onleft>16</onleft>
+          <ondown>19</ondown>
+        </control>
+        <control type="button" id="19" description="Cancel">
+          <posy>330</posy>
+          <width>231</width>
+          <label>222</label>
+          <onup>12</onup>
+          <onleft>14</onleft>
+          <ondown>18</ondown>
+        </control>
+        <control type="button" id="18" description="OK">
+          <posy>390</posy>
+          <width>231</width>
+          <label>186</label>
+          <onup>19</onup>
+          <onleft>15</onleft>
+          <ondown>12</ondown>
+        </control>
       </control>
     </control>
   </controls>

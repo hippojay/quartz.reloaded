@@ -1,122 +1,103 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <window id="10140">
   <defaultcontrol always="true">9</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
-  <coordinates>
-    <posx>0</posx>
-    <posy>0</posy>
-  </coordinates>
   <include>OpenClose</include>
   <controls>
-    <include>MiniBackground</include>
-    <control type="label" id="20" description="Heading">
-      <include>Heading</include>
-      <label>-</label>
-    </control>
-    <control type="image" description="separator Left container">
-      <posy>0</posy>
-      <posx>600</posx>
-      <width>6</width>
-      <height>1080</height>
-      <texture>img/LineV.png</texture>
-      <aspectratio>stretch</aspectratio>
-    </control>
-    <control type="grouplist" id="9" description="Left Configure Panel">
-      <posx>112</posx>
-      <posy>165</posy>
-      <width>480</width>
-      <height>585</height>
-      <itemgap>9</itemgap>
-      <onleft>30</onleft>
-      <onright>2</onright>
-      <onup>9</onup>
-      <ondown>8999</ondown>
-    </control>
-    <control type="grouplist" id="8999" description="Left OK/Cancel Panel">
-      <posx>112</posx>
-      <posy>780</posy>
-      <width>480</width>
-      <height>250</height>
-      <itemgap>9</itemgap>
-      <onleft>-</onleft>
-      <onright>2</onright>
-      <onup>9</onup>
-      <ondown>-</ondown>
-      <align>center</align>
-      <aligny>top</aligny>
-      <orientation>vertical</orientation>
-      <control type="button" id="10" description="OK Button">
-        <width>390</width>
-        <label>186</label>
-        <texturenofocus>img/SettingsButtonNF.png</texturenofocus>
-      <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
+    <control type="group">
+      <control type="image" description="BG">
+        <posx>34</posx>
+        <posy>34</posy>
+        <width>1850</width>
+        <height>1010</height>
+        <texture>dialogs/AddonSettingsBG.png</texture>
       </control>
-      <control type="button" id="12" description="Defaults Button">
-        <width>390</width>
-        <label>409</label>
-        <texturenofocus>img/SettingsButtonNF.png</texturenofocus>
-      <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
+      <control type="grouplist" id="9" description="Left side">
+        <posx>63</posx>
+        <posy>180</posy>
+        <width>387</width>
+        <height>720</height>
+        <itemgap>0</itemgap>
+        <onleft>9001</onleft>
+        <onright>2</onright>
+        <onup>9</onup>
+        <ondown>9</ondown>
       </control>
-      <control type="button" id="11" description="Cancel Button">
-        <width>390</width>
-        <label>222</label>
-        <texturenofocus>img/SettingsButtonNF.png</texturenofocus>
-      <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-      </control>
-    </control>
-    <control type="button" id="13" description="Default Category Button">
-      <font>size22</font>
-	  <texturenofocus>img/SettingsButtonNF.png</texturenofocus>
-      <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-    </control>
-    <control type="group" description="Right Panel">
-      <posx>735</posx>
-      <posy>165</posy>
-      <control type="grouplist" id="2" description="Right controls">
+      <control type="button" id="13" description="Section buttons">
         <posx>0</posx>
         <posy>0</posy>
-        <width>1125</width>
-        <height>825</height>
+        <width>324</width>
+        <align>right</align>
+		<textoffsetx>10</textoffsetx>
+      </control>
+	  <control type="label" id="20" description="Header">
+        <posx>0</posx>
+        <posy>90</posy>
+        <width>1920</width>
+        <textcolor>Orange</textcolor>
+        <align>center</align>
+      </control>
+      <control type="grouplist" id="2" description="Controls for settings">
+        <posx>387</posx>
+        <posy>180</posy>
+        <width>1145</width>
+        <height>780</height>
         <itemgap>0</itemgap>
+        <pagecontrol>60</pagecontrol>
         <onup>2</onup>
         <ondown>2</ondown>
         <onleft>9</onleft>
-        <onright>60</onright>
-        <pagecontrol>60</pagecontrol>
+        <onright>9001</onright>
       </control>
-      <control type="button" id="3" description="Default Button">
-        <font>size22</font>
+      
+      <control type="button" id="3">
+        <textoffsetx>30</textoffsetx>
       </control>
-      <control type="radiobutton" id="4" description="Default RadioButton">
-        <font>size22</font>
-        <align>left</align>
-        <radioposx>1056</radioposx>
+      <control type="radiobutton" id="4">
+        <textoffsetx>30</textoffsetx>
       </control>
-      <control type="spincontrolex" id="5" description="Default spincontrolex">
-        <font>size22</font>
+      <control type="spincontrolex" id="5">
+        <textoffsetx>30</textoffsetx>
         <reverse>yes</reverse>
       </control>
+      <control type="image" id="6">
+        <description>Default Seperator</description>
+        <height>0</height>
+      </control>
       <control type="label" id="7">
-        <label>-</label>
-        <font>size24</font>
-        <textcolor>Blue</textcolor>
+        <description>separator label headline</description>
+        <textoffsetx>30</textoffsetx>
       </control>
-      <control type="image" id="6" description="Default Seperator">
-        <height>-3</height>
-        <texture>-</texture>
+      <control type="sliderex" id="8">
+        <align>left</align>
+        <textoffsetx>30</textoffsetx>
       </control>
-      <control type="sliderex" id="8" description="Default Slider Control">
-        <font>size22</font>
-        <width>900</width>
+      <control type="grouplist" id="9001" description="Right side">
+        <posx>1532</posx>
+        <posy>180</posy>
+        <width>387</width>
+        <height>780</height>
+        <itemgap>0</itemgap>
+        <onup>9001</onup>
+        <ondown>9001</ondown>
+        <onleft>2</onleft>
+        <onright>9</onright>
+        <orientation>vertical</orientation>
+        <control type="button" id="10" description="OK">
+          <label>186</label>
+          <width>324</width>
+          <textoffsetx>10</textoffsetx>
+        </control>
+        <control type="button" id="11" description="cancel">
+          <label>222</label>
+          <width>324</width>
+          <textoffsetx>10</textoffsetx>
+        </control>
+        <control type="button" id="12" description="defaults">
+          <label>409</label>
+          <width>324</width>
+          <textoffsetx>10</textoffsetx>
+        </control>
       </control>
-    </control>
-    <control type="scrollbar" id="60">
-      <posx>45r</posx>
-      <posy>165</posy>
-      <height>825</height>
-      <onleft>2</onleft>
-      <showonepage>false</showonepage>
-      <onright>8999</onright>
     </control>
   </controls>
 </window>

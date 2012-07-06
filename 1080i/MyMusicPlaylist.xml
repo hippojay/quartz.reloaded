@@ -4,175 +4,192 @@
   <allowoverlay>no</allowoverlay>
   <include>OpenClose</include>
   <controls>
-    <include>MiniBackground</include>
+    <include>Fanart_Art</include>
     <control type="group">
-      <posx>0</posx>
-      <posy>0</posy>
-      <control type="group" description="50 fatList">
-        <visible>Control.IsVisible(50)</visible>
-        <include>DefaultSquareThumbs</include>
-        <include>MusicInfo</include>
-        <control type="group" description="Slider and List">
-          <include>LargeListItemCount</include>
-          <posx>1020</posx>
-          <posy>141</posy>
-          <control type="fixedlist" id="50">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>802</width>
-            <height>888</height>
-            <onleft condition="!Skin.HasSetting(ViewOptions_Hide)">9000</onleft>
-            <onright condition="Skin.HasSetting(Scrollbars_Active)">60</onright>
+      <posy>25</posy>
+      <control type="image">
+        <posx>36</posx>
+        <posy>35</posy>
+        <width>1849</width>
+        <height>1010</height>
+        <texture flipx="true">dialogs/SettingsBG.png</texture>
+      </control>
+      <control type="label">
+        <posx>711</posx>
+        <posy>70</posy>
+        <width>820</width>
+        <align>center</align>
+        <font>Header</font>
+        <label>10517</label>
+        <textcolor>Orange</textcolor>
+      </control>
+      <control type="group">
+        <control type="group">
+          <width>609</width>
+          <height>834</height>
+          <control type="image" description="Thumb BG">
+            <posx>104</posx>
+            <posy>156</posy>
+            <width>609</width>
+            <height>873</height>
+            <texture>list/ListRibbon.png</texture>
+          </control>
+          <control type="image" description="Item Thumb">
+            <posx>158</posx>
+            <posy>150</posy>
+            <width>500</width>
+            <height>500</height>
+            <include>ThumbBorder</include>
+            <include>Icon_Fade</include>
+            <texture background="true">$INFO[ListItem.Icon]</texture>
+            <aspectratio aligny="top">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group" description="List">
+          <posx>0</posx>
+          <control type="panel" id="50" description="No Thumbs">
+            <viewtype label="List">list</viewtype>
+            <posx>711</posx>
+            <posy>156</posy>
+            <width>820</width>
+            <height>839</height>
+            <pagecontrol>60</pagecontrol>
+            <scrolltime>200</scrolltime>
+            <onleft>-</onleft>
+            <onright>9000</onright>
             <onup>50</onup>
             <ondown>50</ondown>
-            <pagecontrol>60</pagecontrol>
-            <viewtype label="535">List</viewtype>
-            <focusposition>3</focusposition>
-            <movement>4</movement>
-            <preloaditems>4</preloaditems>
-            <scrolltime tween="sine" easing="inout">280</scrolltime>
-            <itemlayout width="802" height="111">
-              <include>ListBG</include>
+            <itemlayout height="60" width="820">
               <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>
-                <height>111</height>
-                <width>111</width>
-                <bordersize>6</bordersize>
-                <texture background="true">$INFO[ListItem.Icon]</texture>
-                <aspectratio>scale</aspectratio>
+                <height>60</height>
+                <width>820</width>
+                <texture border="3">list/ListNF.png</texture>
               </control>
-              <control type="image">
-                <posx>0</posx>
+              <control type="label">
+                <posx>30</posx>
                 <posy>0</posy>
-                <height>111</height>
-                <width>111</width>
-                <bordersize>6</bordersize>
-                <texture border="3">img/CoverOverlay0.png</texture>
+                <width>740</width>
+                <height>60</height>
+                <aligny>center</aligny>
+                <info>ListItem.Label</info>
               </control>
-              <control type="label" description="Main Label">
-                <visible>StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
-                <width>600</width>
-                <include>51MainLabel</include>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="Main Label">
-                <visible>!StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
-                <width>645</width>
-                <include>51MainLabel</include>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="Label2">
-                <include>51Label2</include>
-                <label>$INFO[ListItem.Label2]</label>
-              </control>
-              <control type="image" description="playing">
-                <visible>Player.HasAudio</visible>
-                <visible>StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
-                <posx>750</posx>
+              <control type="label">
+                <posx>800</posx>
                 <posy>0</posy>
-                <height>111</height>
-                <width>36</width>
-                <aspectratio>keep</aspectratio>
-                <texture>img/NowPlayingNF.png</texture>
+                <width>795</width>
+                <height>60</height>
+                <aligny>center</aligny>
+                <align>right</align>
+                <info>ListItem.Label2</info>
               </control>
             </itemlayout>
-            <focusedlayout width="802" height="111">
-              <include>ListBG</include>
+            <focusedlayout height="60" width="820">
               <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>
-                <height>111</height>
-                <width>111</width>
-                <bordersize>6</bordersize>
-                <texture background="true">$INFO[ListItem.Icon]</texture>
-                <aspectratio>scale</aspectratio>
+                <width>820</width>
+                <height>60</height>
+                <texture border="2">common/ButtonFO.png</texture>
               </control>
-              <control type="image">
-                <posx>0</posx>
+              <control type="label">
+                <posx>30</posx>
                 <posy>0</posy>
-                <height>111</height>
-                <width>111</width>
-                <bordersize>6</bordersize>
-                <texture border="3">img/CoverOverlay0.png</texture>
+                <width>740</width>
+                <height>60</height>
+                <aligny>center</aligny>
+                <info>ListItem.Label</info>
               </control>
-              <control type="label" description="Main Label">
-                <visible>StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
-                <width>600</width>
-                <include>51MainLabel</include>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="Main Label">
-                <visible>!StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
-                <width>645</width>
-                <include>51MainLabelFO</include>
-                <label>$INFO[ListItem.Label]</label>
-              </control>
-              <control type="label" description="Label2">
-                <include>51Label2FO</include>
-                <label>$INFO[ListItem.Label2]</label>
-              </control>
-              <control type="image" description="playing">
-                <visible>Player.HasAudio</visible>
-                <visible>StringCompare(ListItem.Title,MusicPlayer.Title)</visible>
-                <animation effect="fade" start="50" end="100" time="100" delay="200">Focus</animation>
-                <posx>750</posx>
+              <control type="label">
+                <posx>800</posx>
                 <posy>0</posy>
-                <height>111</height>
-                <width>36</width>
-                <aspectratio>keep</aspectratio>
-                <texture>img/NowPlayingFO.png</texture>
+                <width>795</width>
+                <height>60</height>
+                <aligny>center</aligny>
+                <align>right</align>
+                <info>ListItem.Label2</info>
               </control>
             </focusedlayout>
           </control>
-          <include>LargeListSlider</include>
-        </control>
-        <include>LargeListFade</include>
-        <control type="scrollbar" id="60">
-          <posx>51r</posx>
-          <posy>135</posy>
-          <height>870</height>
-          <onleft>50</onleft>
-          <onright>-</onright>
+          <control type="grouplist" id="9000">
+            <posx>1533</posx>
+            <posy>156</posy>
+            <width>324</width>
+            <height>720</height>
+            <onleft>50</onleft>
+            <onright>60</onright>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+            <itemgap>0</itemgap>
+            <scrolltime>200</scrolltime>
+            <control type="radiobutton" id="20" description="shuffle">
+              <font>Label2</font>
+              <focusedcolor>Orange</focusedcolor>
+              <width>330</width>
+              <label>$LOCALIZE[191]</label>
+            </control>
+            <control type="button" id="21" description="save">
+              <font>Label2</font>
+              <focusedcolor>Orange</focusedcolor>
+              <width>330</width>
+              <label>$LOCALIZE[190]</label>
+            </control>
+            <control type="button" id="22" description="clear">
+              <font>Label2</font>
+              <focusedcolor>Orange</focusedcolor>
+              <width>330</width>
+              <label>$LOCALIZE[192]</label>
+            </control>
+            <control type="button" id="26" description="repeat">
+              <font>Label2</font>
+              <focusedcolor>Orange</focusedcolor>
+              <width>330</width>
+              <label>$LOCALIZE[486]</label>
+            </control>
+            <control type="button" id="3" description="sort method">
+              <width>330</width>
+              <focusedcolor>Orange</focusedcolor>
+            </control>
+            <control type="togglebutton" id="4" description="Sort direction">
+              <font>Label2</font>
+              <width>330</width>
+              <focusedcolor>Orange</focusedcolor>
+              <label>$LOCALIZE[21429]:  $LOCALIZE[21430]</label>
+              <altlabel>$LOCALIZE[21429]:  $LOCALIZE[21431]</altlabel>
+            </control>
+          </control>
         </control>
       </control>
-      <control type="group" description="Side menu 9000 group">
-      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-      <include>DialogOpenCloseVisible</include>
-      <control type="image" description="List back">
-        <posx>459</posx>
-        <posy>168</posy>
-        <width>1002</width>
-        <height>762</height>
-        <aspectratio>stretch</aspectratio>
-        <texture border="136,127,128,139">img/Dialog.png</texture>
+      <control type="label" id="12">
+        <posx>1560</posx>
+        <posy>960</posy>
+        <width>300</width>
+        <font>ItemCount</font>
       </control>
-      <control type="grouplist" id="9000">
-        <include>9000GrouplistParameters</include>
-          <control type="radiobutton" id="20" description="Shuffle">
-            <radioposx>630</radioposx>
-            <include>9000Buttons</include>
-            <label>191</label>
-          </control>
-          <control type="button" id="21" description="Save">
-            <include>9000Buttons</include>
-            <label>190</label>
-          </control>
-          <control type="button" id="22" description="Clear">
-            <include>9000Buttons</include>
-            <label>192</label>
-          </control>
-          <control type="button" id="23" description="Play">
-            <include>9000Buttons</include>
-            <label>208</label>
-          </control>
-          <control type="button" id="26" description="Repeat">
-            <include>9000Buttons</include>
-            <label>-</label>
-          </control>
-        </control>
+      <control type="image" description="Top line">
+        <posx>66</posx>
+        <posy>96</posy>
+        <width>1494</width>
+        <height>60</height>
+        <texture border="3">list/ListNF.png</texture>
+      </control>
+      <control type="scrollbar" id="60">
+        <posx>1836</posx>
+        <posy>0</posy>
+        <width>36</width>
+        <height>1020</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <onleft>9000</onleft>
+        <onright>50</onright>
       </control>
     </control>
-    <include>MediaHeader</include>
+    <include>Time</include>
   </controls>
 </window>

@@ -41,30 +41,28 @@
         <posx>45</posx>
         <posy>60</posy>
         <width>870</width>
-        <font>size22</font>
-        <align>left</align>
+        <textcolor>Orange</textcolor>
+		<align>left</align>
       </control>
       <control type="group">
         <posx>0</posx>
         <posy>150</posy>
         <control type="image" description="Edit area background">
-          <posx>45</posx>
-          <posy>0</posy>
-          <width>810</width>
-          <height>84</height>
+          <posx>40</posx>
+          <posy>1</posy>
+          <width>820</width>
+          <height>75</height>
           <aspectratio>stretch</aspectratio>
-          <texture border="8" flipy="true">img/ButtonFO.png</texture>
+          <texture border="8">dialogs/EditFrame.png</texture>
         </control>
         <control type="label" id="310" description="Edit Text">
           <posx>52</posx>
-          <posy>6</posy>
+          <posy>0</posy>
           <width>795</width>
-          <height>60</height>
-          <align>left</align>
-          <aligny>center</aligny>
-          <textcolor>White</textcolor>
-          <font>size22</font>
-          <scroll>true</scroll>
+          <height>75</height>
+          <textcolor>White2</textcolor>
+          <font>Keyboard</font>
+		  <scroll>true</scroll>
         </control>
         <control type="group">
           <posx>30</posx>
@@ -84,71 +82,51 @@
               <description>'B' button</description>
               <posx>75</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>65</onleft>
               <onright>67</onright>
               <onup>32</onup>
               <ondown>72</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="67">
               <description>'C' button</description>
               <posx>150</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>66</onleft>
               <onright>68</onright>
               <onup>32</onup>
               <ondown>73</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="68">
               <description>'D' button</description>
               <posx>225</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>67</onleft>
               <onright>69</onright>
               <onup>32</onup>
               <ondown>74</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="69">
               <description>'E' button</description>
               <posx>300</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>68</onleft>
               <onright>70</onright>
               <onup>32</onup>
               <ondown>75</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="70">
               <description>'F' button</description>
               <posx>375</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>69</onleft>
               <onright>8</onright>
               <onup>306</onup>
               <ondown>76</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
           </control>
           <control type="group" description="2nd row">
@@ -157,85 +135,61 @@
               <description>'G' button</description>
               <posx>0</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>304</onleft>
               <onright>72</onright>
               <onup>65</onup>
               <ondown>77</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="72">
               <description>'H' button</description>
               <posx>75</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>71</onleft>
               <onright>73</onright>
               <onup>66</onup>
               <ondown>78</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="73">
               <description>'I' button</description>
               <posx>150</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>72</onleft>
               <onright>74</onright>
               <onup>67</onup>
               <ondown>79</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="74">
               <description>'J' button</description>
               <posx>225</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>73</onleft>
               <onright>75</onright>
               <onup>68</onup>
               <ondown>80</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="75">
               <description>'K' button</description>
               <posx>300</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>74</onleft>
               <onright>76</onright>
               <onup>69</onup>
               <ondown>81</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="76">
               <description>'L' button</description>
               <posx>375</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>75</onleft>
               <onright>304</onright>
               <onup>70</onup>
               <ondown>82</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
           </control>
           <control type="group" description="3rd row">
@@ -244,85 +198,61 @@
               <description>'M' button</description>
               <posx>0</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>307</onleft>
               <onright>78</onright>
               <onup>71</onup>
               <ondown>83</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="78">
               <description>'N' button</description>
               <posx>75</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>77</onleft>
               <onright>79</onright>
               <onup>72</onup>
               <ondown>84</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="79">
               <description>'O' button</description>
               <posx>150</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>78</onleft>
               <onright>80</onright>
               <onup>73</onup>
               <ondown>85</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="80">
               <description>'P' button</description>
               <posx>225</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>79</onleft>
               <onright>81</onright>
               <onup>74</onup>
               <ondown>86</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="81">
               <description>'Q' button</description>
               <posx>300</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>80</onleft>
               <onright>82</onright>
               <onup>75</onup>
               <ondown>87</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="82">
               <description>'R' button</description>
               <posx>375</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>81</onleft>
               <onright>307</onright>
               <onup>76</onup>
               <ondown>88</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
           </control>
           <control type="group" description="4th row">
@@ -331,85 +261,61 @@
               <description>'S' button</description>
               <posx>0</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>303</onleft>
               <onright>84</onright>
               <onup>77</onup>
               <ondown>89</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="84">
               <description>'T' button</description>
               <posx>75</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>83</onleft>
               <onright>85</onright>
               <onup>78</onup>
               <ondown>90</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="85">
               <description>'U' button</description>
               <posx>150</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>84</onleft>
               <onright>86</onright>
               <onup>79</onup>
               <ondown>48</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="86">
               <description>'V' button</description>
               <posx>225</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>85</onleft>
               <onright>87</onright>
               <onup>80</onup>
               <ondown>49</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="87">
               <description>'W' button</description>
               <posx>300</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>86</onleft>
               <onright>88</onright>
               <onup>81</onup>
               <ondown>50</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="88">
               <description>'X' button</description>
               <posx>375</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>87</onleft>
               <onright>303</onright>
               <onup>82</onup>
               <ondown>51</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
           </control>
           <control type="group" description="5th row">
@@ -418,29 +324,21 @@
               <description>'Y' button</description>
               <posx>0</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>302</onleft>
               <onright>90</onright>
               <onup>83</onup>
               <ondown>52</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="90">
               <description>'Z' button</description>
               <posx>75</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <onleft>89</onleft>
               <onright>48</onright>
               <onup>84</onup>
               <ondown>53</ondown>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
-              <font>size26</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="48">
               <description>'0' button</description>
@@ -552,15 +450,11 @@
               <description>previous button</description>
               <posx>0</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <label>&lt;</label>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
               <onleft>300</onleft>
               <onright>32</onright>
               <onup>52</onup>
               <ondown>65</ondown>
-              <font>size26</font>
               <include>KeyboardButtons</include>
             </control>
             <control type="button" id="32">
@@ -568,29 +462,22 @@
               <posx>75</posx>
               <posy>0</posy>
               <width>300</width>
-              <height>75</height>
               <label>20182</label>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>0</textoffsetx>
               <onleft>305</onleft>
               <onright>306</onright>
               <onup>54</onup>
               <ondown>67</ondown>
-              <font>size22</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="306">
               <description>next button</description>
               <posx>375</posx>
               <posy>0</posy>
-              <width>75</width>
-              <height>75</height>
               <label>&gt;</label>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
               <onleft>32</onleft>
               <onright>300</onright>
               <onup>57</onup>
               <ondown>70</ondown>
-              <font>size26</font>
               <include>KeyboardButtons</include>
             </control>
           </control>
@@ -601,99 +488,74 @@
               <posx>0</posx>
               <posy>0</posy>
               <width>300</width>
-              <height>75</height>
               <label>$LOCALIZE[20181]</label>
               <onleft>70</onleft>
               <onright>65</onright>
               <onup>300</onup>
               <ondown>304</ondown>
-              <align>center</align>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>8</textoffsetx>
-              <font>size22</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="togglebutton" id="304">
               <description>Symbols button</description>
               <posx>0</posx>
               <posy>90</posy>
               <width>300</width>
-              <height>75</height>
               <label>$LOCALIZE[20180]</label>
-              <altlabel>[COLOR=Blue][UPPERCASE]$LOCALIZE[20180][/UPPERCASE][/COLOR]</altlabel>
-              <alttexturenofocus border="8">img/ButtonNF.png</alttexturenofocus>
+              <altlabel>[COLOR=Orange][UPPERCASE]$LOCALIZE[20180][/UPPERCASE][/COLOR]</altlabel>
               <onleft>76</onleft>
               <onright>71</onright>
               <onup>8</onup>
               <ondown>307</ondown>
-              <radioposy>18</radioposy>
-              <textoffsetx>8</textoffsetx>
-              <align>center</align>
-              <font>size22</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="307">
               <description>IP Input button</description>
               <posx>0</posx>
               <posy>180</posy>
               <width>300</width>
-              <height>75</height>
               <label>$LOCALIZE[1006]</label>
-              <altlabel>[UPPERCASE]$LOCALIZE[1006][/UPPERCASE]</altlabel>
-              <alttexturenofocus border="8">img/ButtonNF.png</alttexturenofocus>
-              <textoffsetx>8</textoffsetx>
-              <align>center</align>
+              <altlabel>[COLOR=Orange][UPPERCASE]$LOCALIZE[1006][/UPPERCASE][/COLOR]</altlabel>
               <onleft>82</onleft>
               <onright>77</onright>
               <onup>304</onup>
               <ondown>303</ondown>
-              <font>size22</font>
+              <include>KeyboardButtons</include>
             </control>
             <control type="togglebutton" id="303">
               <description>CAPS LOCK button</description>
               <posx>0</posx>
               <posy>270</posy>
               <width>300</width>
-              <height>75</height>
               <onleft>88</onleft>
               <onright>83</onright>
               <onup>307</onup>
               <ondown>302</ondown>
               <label>$LOCALIZE[20179]</label>
-              <altlabel>[COLOR=Blue][UPPERCASE]$LOCALIZE[20179][/UPPERCASE][/COLOR]</altlabel>
-              <alttexturenofocus border="4">img/ButtonNF.png</alttexturenofocus>
-              <radioposy>18</radioposy>
-              <textoffsetx>8</textoffsetx>
-              <font>size22</font>
+              <altlabel>[COLOR=Orange][UPPERCASE]$LOCALIZE[20179][/UPPERCASE][/COLOR]</altlabel>
+              <include>KeyboardButtons</include>
             </control>
             <control type="togglebutton" id="302" description="Shift">
               <posx>0</posx>
               <posy>360</posy>
               <width>300</width>
-              <height>75</height>
               <onleft>51</onleft>
               <onright>89</onright>
               <onup>303</onup>
               <ondown>300</ondown>
               <label>$LOCALIZE[20178]</label>
-              <altlabel>[COLOR=Blue][UPPERCASE]$LOCALIZE[20178][/UPPERCASE][/COLOR]</altlabel>
-              <alttexturenofocus border="4">img/ButtonNF.png</alttexturenofocus>
-              <radioposy>18</radioposy>
-              <textoffsetx>8</textoffsetx>
-              <font>size22</font>
+              <altlabel>[COLOR=Orange][UPPERCASE]$LOCALIZE[20178][/UPPERCASE][/COLOR]</altlabel>
+              <include>KeyboardButtons</include>
             </control>
             <control type="button" id="300" description="DONE button">
               <posx>0</posx>
               <posy>540</posy>
               <width>300</width>
-              <height>75</height>
               <label>[UPPERCASE]$LOCALIZE[20177][/UPPERCASE]</label>
               <onleft>306</onleft>
               <onright>305</onright>
               <onup>302</onup>
               <ondown>8</ondown>
-              <align>center</align>
-              <texturefocus border="8">img/ButtonFO.png</texturefocus>
-              <textoffsetx>8</textoffsetx>
-              <font>size22</font>
+              <include>KeyboardButtons</include>
             </control>
           </control>
         </control>

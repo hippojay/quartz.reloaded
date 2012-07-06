@@ -5,11 +5,11 @@
   <include>OpenClose</include>
   <controls>
     <control type="image">
-      <posx>225</posx>
-      <posy>0</posy>
-      <width>1470</width>
-      <height>1080</height>
-      <texture border="136,127,128,139">img/Dialog.png</texture>
+      <posx>325</posx>
+      <posy>100</posy>
+      <width>1270</width>
+      <height>880</height>
+      <texture>dialogs/DialogBG.png</texture>
     </control>
     <control type="group">
       <posx>360</posx>
@@ -20,8 +20,8 @@
         <posy>-15</posy>
         <width>1140</width>
         <align>center</align>
-        <label>[UPPERCASE]$LOCALIZE[298][/UPPERCASE] - ($INFO[Container(11).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages])</label>
-        <font>size24</font>
+        <label>[UPPERCASE]$LOCALIZE[298][/UPPERCASE] - $INFO[Container(11).NumItems,, $LOCALIZE[31025]]</label>
+         <textcolor>Orange</textcolor>       
       </control>
       <control type="panel" id="11">
         <posx>66</posx>
@@ -42,7 +42,7 @@
             <posy>3</posy>
             <width>330</width>
             <height>210</height>
-            <bordertexture border="1">img/ThumbBorder2.png</bordertexture>
+            <bordertexture border="1">thumbs/ThumbBorder2.png</bordertexture>
             <bordersize>4</bordersize>
             <aspectratio>scale</aspectratio>
             <info>ListItem.Icon</info>
@@ -53,7 +53,6 @@
             <width>338</width>
             <height>22</height>
             <align>center</align>
-            <font>size17</font>
             <info>ListItem.Label</info>
           </control>
         </itemlayout>
@@ -63,7 +62,7 @@
             <posy>3</posy>
             <width>330</width>
             <height>210</height>
-            <bordertexture border="1">img/ThumbBorder3.png</bordertexture>
+            <bordertexture border="1">thumbs/ThumbBorder3.png</bordertexture>
             <bordersize>4</bordersize>
             <info>ListItem.Icon</info>
             <aspectratio>scale</aspectratio>
@@ -74,7 +73,6 @@
             <width>338</width>
             <height>22</height>
             <align>center</align>
-            <font>size17</font>
             <info>ListItem.Label</info>
           </control>
         </focusedlayout>
@@ -95,19 +93,22 @@
           <description>Create Bookmark button</description>
           <label>294</label>
           <width>375</width>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+		  <align>center</align>
+          <texturenofocus>-</texturenofocus>
         </control>
         <control type="button" id="3">
           <description>Clear Bookmark button</description>
           <label>296</label>
           <width>375</width>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+		  <align>center</align>
+          <texturenofocus>-</texturenofocus>
         </control>
         <control type="button" id="4">
           <description>Clear Bookmark button</description>
           <label>20406</label>
           <width>375</width>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+		  <align>center</align>
+          <texturenofocus>-</texturenofocus>
           <visible>videoplayer.content(episodes)</visible>
         </control>
       </control>

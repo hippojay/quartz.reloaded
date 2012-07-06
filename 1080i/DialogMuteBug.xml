@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="113">
-  <defaultcontrol always="true">901</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <include>OpenClose</include>
   <controls>
-    <control type="group">
-      <posx>1800</posx>
-      <posy>30</posy>
-      <control type="image" id="901" description="Muted">
-        <posx>9</posx>
-        <posy>9</posy>
-        <width>78</width>
-        <height>78</height>
-        <aspectratio>keep</aspectratio>
-        <texture>img/SpeakerMuted.png</texture>
+      <control type="image">
+		  <posx>1725</posx>
+		  <posy>88</posy>
+		  <width>106</width>
+		  <height>100</height>
+		  <texture>volume/MuteBackground.png</texture>
+		</control>
+	  <control type="image" id="901">
+        <posx>1700</posx>
+        <posy>70</posy>
+        <width>159</width>
+        <height>153</height>
+        <texture>volume/VolumeMuted.png</texture>
       </control>
-    </control>
   </controls>
 </window>
