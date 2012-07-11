@@ -12,7 +12,6 @@
         <texture>common/LowListOverlay.png</texture>
       </control>
       <control type="list" id="54">
-        <visible>!IsEmpty(Container.FolderName)</visible>
         <posx>1260</posx>
         <posy>633</posy>
         <width>660</width>

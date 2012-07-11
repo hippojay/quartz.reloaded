@@ -65,7 +65,6 @@
         <texture>showcase/ShowcaseStage.png</texture>
       </control>
       <control type="fixedlist" id="58">
-        <visible>!IsEmpty(Container.FolderName)</visible>
         <posx>-69</posx>
         <posy>439</posy>
         <width>2058</width>

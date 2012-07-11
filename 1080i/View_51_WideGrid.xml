@@ -11,7 +11,6 @@
         <texture>common/FSOverlay.png</texture>
       </control>
       <control type="panel" id="51" description="Wide Grid">
-        <visible>!IsEmpty(Container.FolderPath)</visible>
         <viewtype label="Wide Grid">Wide Grid</viewtype>
         <posx>71</posx>
         <posy>180</posy>
@@ -72,6 +71,58 @@
             <posy>176</posy>
             <width>890</width>
             <height>45</height>
+            <textcolor>White2</textcolor>
+            <align>center</align>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </focusedlayout>
+		<itemlayout condition="Window.IsActive(MyPics.xml)" height="440" width="445">
+          <control type="image">
+            <posx>15</posx>
+            <posy>28</posy>
+            <width>415</width>
+            <height>312</height>
+            <include>ThumbBorderInside</include>
+          </control>
+		  <control type="image">
+            <posx>15</posx>
+            <posy>28</posy>
+            <width>415</width>
+            <height>312</height>
+            <texture background="true">$INFO[ListItem.Icon]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+        </itemlayout>
+        <focusedlayout condition="Window.IsActive(MyPics.xml)" height="440" width="445">
+          <control type="image">
+            <posx>15</posx>
+            <posy>28</posy>
+            <width>415</width>
+            <height>312</height>
+            <include>ThumbBorderInside</include>
+          </control>
+		  <control type="image">
+            <posx>15</posx>
+            <posy>28</posy>
+            <width>415</width>
+            <height>312</height>
+            <texture background="true">$INFO[ListItem.Icon]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>15</posx>
+            <posy>28</posy>
+            <width>415</width>
+            <height>312</height>
+            <texture border="28">img/Frame.png</texture>
+            <bordersize>-28</bordersize>
+            <aspectratio>stretch</aspectratio>
+          </control>
+          <control type="label">
+            <posx>222</posx>
+            <posy>360</posy>
+            <width>445</width>
+            <height>40</height>
             <textcolor>White2</textcolor>
             <align>center</align>
             <label>$INFO[ListItem.Label]</label>

@@ -20,7 +20,6 @@
         <texture>showcase/ShowcaseStageLowInfo.png</texture>
       </control>
       <control type="fixedlist" id="59">
-        <visible>!IsEmpty(Container.FolderName)</visible>
         <animation effect="slide" start="0,0" end="0,-30" time="0" condition="![Container.content(movies) | Container.content(seasons) | Container.content(tvshows)]" reversible="true">Conditional</animation>
         <posx>-69</posx>
         <posy>489</posy>
@@ -102,7 +101,9 @@
       </control>
       <control type="group" description="Metadata">
         <animation effect="slide" start="0,0" end="0,57" time="0" condition="![Container.content(movies) | Container.content(seasons) | Container.content(tvshows)]" reversible="true">Conditional</animation>
-        <control type="image" description="FA">
+        <control type="group" description="All but pics">
+		<visible>!Window.IsActive(MyPics.xml)</visible>
+		<control type="image" description="FA">
           <posx>1049</posx>
           <posy>120</posy>
           <width>731</width>
@@ -117,7 +118,19 @@
           <height>404</height>
           <texture border="3">thumbs/CoverOverlay0.png</texture>
         </control>
-        <control type="group" description="Media info">
+        </control>
+		<control type="image" description="Pictures FA">
+        <visible>Window.IsActive(MyPics.xml)</visible>
+		  <posx>1049</posx>
+          <posy>120</posy>
+          <width>731</width>
+          <height>404</height>
+          <include>Fanart_Fade</include>
+		  <aspectratio>keep</aspectratio>
+		  <include>ThumbBorder</include>
+          <texture background="true">$VAR[Pictures.Art]</texture>
+        </control>
+		<control type="group" description="Media info">
           <visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
           <posx>144</posx>
           <posy>36</posy>

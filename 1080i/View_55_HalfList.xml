@@ -12,7 +12,6 @@
         <texture>common/HalfListOverlay.png</texture>
       </control>
       <control type="list" id="55">
-        <visible>!IsEmpty(Container.FolderName)</visible>
         <posx>1260</posx>
         <posy>474</posy>
         <width>660</width>
