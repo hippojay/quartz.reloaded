@@ -4,53 +4,15 @@
   <allowoverlay>no</allowoverlay>
   <include>OpenClose</include>
   <controls>
-    <include>WeatherBackground</include>
+    <include>Weather_Art</include>
     <control type="image" description="weather">
       <posx>0</posx>
       <posy>0</posy>
       <width>1920</width>
       <height>1080</height>
-      <texture>img/Vignette_57.png</texture>
+      <texture>common/HalfListOverlay.png</texture>
       <animation condition="true" effect="fade" start="100" end="88" time="0" reversible="false">Conditional</animation>
     </control>
-    <control type="label">
-        <posx>49r</posx>
-        <posy>12</posy>
-        <width>500</width>
-        <height>40</height>
-        <align>right</align>
-        
-		<textcolor>Shadow</textcolor>
-        <label>$INFO[System.Date]$INFO[System.Time,  ]</label>
-      </control>
-	  <control type="label">
-        <posx>50r</posx>
-        <posy>12</posy>
-        <width>500</width>
-        <height>40</height>
-        <align>right</align>
-        
-		<textcolor>White</textcolor>
-        <label>[COLOR=Grey3]$INFO[System.Date][/COLOR]$INFO[System.Time,  ]</label>
-      </control>
-	  <control type="label" description="provider">
-        <posx>49</posx>
-        <posy>12</posy>
-        <width>500</width>
-        <height>40</height>
-        <align>left</align>
-       <textcolor>Shadow</textcolor>
-        <label>$VAR[GlobalHeadings]</label>
-      </control>
-	  <control type="label" description="provider">
-        <posx>50</posx>
-        <posy>12</posy>
-        <width>500</width>
-        <height>40</height>
-        <align>left</align>
-       <textcolor>White</textcolor>
-        <label>$VAR[GlobalHeadings]</label>
-      </control>
     <control type="group" description="Bottom NAV">
       <posy>0</posy>
       <posx>0</posx>
@@ -70,24 +32,21 @@
         <texture>icons/reload24.png</texture>
       </control>
       <control type="label" id="11" description="Time of last update">
-        <posx>-105</posx>
+        <posx>50</posx>
         <posy>1020</posy>
         <width>675</width>
         <height>45</height>
         <label>-</label>
-        <align>center</align>
-        <font>size17</font>
-        <textcolor>Silver</textcolor>
+
       </control>
       <control type="label" description="Location">
         <posx>1860</posx>
         <posy>1017</posy>
         <width>675</width>
         <height>45</height>
-        <label>$INFO[Control.GetLabel(3)]</label>
+        <label>$INFO[Window.Property(WeatherProvider)]</label>
         <align>right</align>
-        <font>size17</font>
-        <textcolor>Silver</textcolor>
+        
       </control>
       <control type="group" id="50">
         <visible>!StringCompare(Weather.Plugin,weather.weatherplus)</visible>
@@ -229,7 +188,7 @@
             <align>right</align>
             <height>30</height>
             <font>size24B</font>
-            <textcolor>Silver</textcolor>
+            
             <label>$INFO[Window.Property(Day0.LowTemp)] / $INFO[Window.Property(Day0.HighTemp)]</label>
           </control>
           <control type="label" description="Conditions 0">
@@ -237,7 +196,7 @@
             <height>45</height>
             <width>500</width>
             <info>Window.Property(Day0.Outlook)</info>
-            <textcolor>Silver</textcolor>
+            
             <font>size18</font>
           </control>
           <control type="image" description="Day 0 icon">
@@ -267,7 +226,7 @@
             <align>right</align>
             <height>30</height>
             <font>size24B</font>
-            <textcolor>Silver</textcolor>
+            
             <label>$INFO[Window.Property(Day1.LowTemp)] / $INFO[Window.Property(Day1.HighTemp)]</label>
           </control>
           <control type="label" description="Conditions 1">
@@ -275,7 +234,7 @@
             <height>45</height>
             <width>500</width>
             <info>Window.Property(Day1.Outlook)</info>
-            <textcolor>Silver</textcolor>
+            
             <font>size18</font>
           </control>
           <control type="image" description="Day 1 icon">
@@ -305,7 +264,7 @@
             <align>right</align>
             <height>30</height>
             <font>size24B</font>
-            <textcolor>Silver</textcolor>
+            
             <label>$INFO[Window.Property(Day2.LowTemp)] / $INFO[Window.Property(Day2.HighTemp)]</label>
           </control>
           <control type="label" description="Conditions 1">
@@ -313,7 +272,7 @@
             <height>45</height>
             <width>500</width>
             <info>Window.Property(Day2.Outlook)</info>
-            <textcolor>Silver</textcolor>
+            
             <font>size18</font>
           </control>
           <control type="image" description="Day 1 icon">
@@ -343,7 +302,7 @@
             <align>right</align>
             <height>30</height>
             <font>size24B</font>
-            <textcolor>Silver</textcolor>
+            
             <label>$INFO[Window.Property(Day3.LowTemp)] / $INFO[Window.Property(Day3.HighTemp)]</label>
           </control>
           <control type="label" description="Conditions 3">
@@ -351,7 +310,7 @@
             <height>45</height>
             <width>500</width>
             <info>Window.Property(Day3.Outlook)</info>
-            <textcolor>Silver</textcolor>
+            
             <font>size18</font>
           </control>
           <control type="image" description="Day 3 icon">
@@ -372,47 +331,39 @@
       <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+HourlyForcast</include>
       <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+MapsVideo</include>
     </control>
-    <control type="group" description="9000">
-      <visible>!Skin.HasSetting(ViewOptions_Hide)</visible>
-      <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-      <include>DialogOpenCloseVisible</include>
-      <control type="image" description="List back">
-        <posx>363</posx>
-        <posy>36</posy>
-        <width>1182</width>
-        <height>1023</height>
-        <aspectratio>stretch</aspectratio>
-        <texture border="136,127,128,139">dialogs/DialogBG.png</texture>
-      </control>
+    <control type="group" description="Side menu 9000 group">
+      <include>9000Commons</include>
       <control type="grouplist" id="9000">
-        <posx>600</posx>
-        <posy>216</posy>
-        <width>720</width>
-        <height>720</height>
-        <itemgap>-84</itemgap>
-        <onleft>50</onleft>
-        <onright>50</onright>
-        <onup>9000</onup>
-        <ondown>9000</ondown>
-        <scrolltime>200</scrolltime>
-        <orientation>vertical</orientation>
-        <control type="spincontrolex" id="3" description="Location">
-          <width>720</width>
-          <textoffsetx>60</textoffsetx>
-          <height>162</height>
-          <!--<align>right</align>
-					<aligny>center</aligny>-->
-          <font>size24</font>
-          <disabledcolor>Grey</disabledcolor>
-          <texturenofocus>-</texturenofocus>
-          <alttexturenofocus>-</alttexturenofocus>
-          <texturefocus border="110,0,110,0">img/Slider4.png</texturefocus>
-          <alttexturefocus border="110,0,110,0">img/Slider4.png</alttexturefocus>
-          <label>-</label>
+        <posx>-499</posx>
+		<posy>0</posy>
+		<width>444</width>
+		<height>1120</height>
+		<itemgap>0</itemgap>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<scrolltime>200</scrolltime>
+		<orientation>vertical</orientation>
+       <control type="label" id="9001" description="Heading">
+          <textcolor>Orange</textcolor>
+          <textoffsetx>10</textoffsetx>
+		  <align>left</align>
+		  <include>9000ViewButtons</include>
+		  <label>$LOCALIZE[33063]</label>
+		</control>
+	 	<control type="spincontrolex" id="3" description="Location">
+          <include>9000ViewButtons</include>
+        </control>
+		<control type="button" id="4" description="Settings">
+          <align>right</align>
+		  <include>9000ViewButtons</include>
+          <label>5</label>
+		  <onclick>ActivateWindow(MyWeatherSettings)</onclick>
         </control>
         <control type="button" id="302">
           <description>10 day forcast button</description>
-          <textwidth>352</textwidth>
+          <textwidth>420</textwidth>
           <include>9000Buttons</include>
           <label>31904</label>
           <onclick>ClearProperty(Weather.CurrentView)</onclick>
@@ -420,7 +371,7 @@
         </control>
         <control type="button" id="303">
           <description>36 hour forcast button</description>
-          <textwidth>352</textwidth>
+          <textwidth>420</textwidth>
           <include>9000Buttons</include>
           <label>31901</label>
           <onclick>SetProperty(Weather.CurrentView,36hour)</onclick>
@@ -428,7 +379,7 @@
         </control>
         <control type="button" id="304">
           <description>Weekend forcast button</description>
-          <textwidth>352</textwidth>
+          <textwidth>420</textwidth>
           <include>9000Buttons</include>
           <label>31903</label>
           <onclick>SetProperty(Weather.CurrentView,weekend)</onclick>
@@ -436,7 +387,7 @@
         </control>
         <control type="button" id="305">
           <description>Hourly forcast button</description>
-          <textwidth>352</textwidth>
+          <textwidth>420</textwidth>
           <include>9000Buttons</include>
           <label>31902</label>
           <onclick>SetProperty(Weather.CurrentView,hourly)</onclick>
@@ -444,17 +395,13 @@
         </control>
         <control type="button" id="306">
           <description>Hourly forcast button</description>
-          <textwidth>352</textwidth>
+          <textwidth>420</textwidth>
           <include>9000Buttons</include>
           <label>31906</label>
           <onclick>SetProperty(Weather.CurrentView,maps)</onclick>
           <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
         </control>
-        <control type="button" id="2" description="Refresh">
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-          <include>9000Buttons</include>
-          <label>-</label>
-        </control>
+        
       </control>
     </control>
     <control type="group">
@@ -464,13 +411,10 @@
         <posy>1026</posy>
         <width>900</width>
         <height>30</height>
-        <textcolor>Silver</textcolor>
-        <font>size22</font>
         <align>center</align>
-        <aligny>center</aligny>
         <label>$VAR[WeatherFooter]</label>
       </control>
-      <control type="scrollbar" id="60">
+	  <control type="scrollbar" id="60">
         <visible>Control.IsVisible(50)</visible>
         <posx>60r</posx>
         <posy>432</posy>
@@ -481,5 +425,6 @@
         <orientation>vertical</orientation>
       </control>
     </control>
+	<include>Time</include>
   </controls>
 </window>

@@ -70,14 +70,14 @@
   </variable>
   <variable name="500TopLabel" description="Shown Above Plots and descriptions">
     <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
-    <value condition="Container.content(Albums)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Artist]</value>
-    <value condition="Container.Content(Episodes)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
+    <value condition="Container.content(Albums)">[COLOR=Grey]$LOCALIZE[557]:[/COLOR] $INFO[ListItem.Artist]</value>
+    <value condition="Container.Content(Episodes)">[COLOR=Grey]$LOCALIZE[31978]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
     <value condition="Container.Content(Addons)">[COLOR=Grey]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.Property(Addon.Creator)]</value>
     <value condition="Container.Content(songs)">[COLOR=Grey]$LOCALIZE[558]:[/COLOR] $INFO[ListItem.Album]</value>
 	<value condition="Container.Content(Artists)">[COLOR=Grey]$LOCALIZE[176]:[/COLOR] $INFO[ListItem.Property(artist_style)]</value>
     <value condition="Container.Content(MusicVideos)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.RatingAndVotes, • ] • $LOCALIZE[20410]$INFO[ListItem.MPAA, • ]</value>
-	<value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.RatingAndVotes, • ]$INFO[ListItem.MPAA, • ]</value>
+    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.Rating, • ] • $LOCALIZE[20410]$INFO[ListItem.MPAA, • ]</value>
+	<value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.Rating, • ]$INFO[ListItem.MPAA, • ]</value>
     <value condition="IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]] [COLOR=Orange]$INFO[ListItem.Property(UnWatchedEpisodes), • $LOCALIZE[16101] ][/COLOR]</value>
 	<value condition="!IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
     <value>$INFO[ListItem.Label2]</value>
@@ -139,6 +139,10 @@
   <variable name="Settings.Art" description="Calculate BG to show">
     <value condition="!IsEmpty(Skin.String(Settings.Background))">$INFO[Skin.String(Settings.Background)]</value>
 	<value>special://skin/backgrounds/System.jpg</value>
+  </variable>
+  <variable name="Weather.Art" description="Calculate BG to show">
+    <value condition="!IsEmpty(Skin.String(Weather.Background))">$INFO[Skin.String(Weather.Background)]</value>
+	<value>special://skin/backgrounds/Weather.jpg</value>
   </variable>
   <variable name="Pictures.Art" description="Calculate BG to show">
     <value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>

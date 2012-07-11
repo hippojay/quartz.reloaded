@@ -5,11 +5,11 @@
       <visible>Control.IsVisible(50)</visible>
       <control type="image" description="fa overlay">
         <posx>0</posx>
-        <posy>360</posy>
+        <posy>0</posy>
         <width>1920</width>
-        <height>720</height>
+        <height>1080</height>
         <aspectratio>stretch</aspectratio>
-        <texture>common/ListPanel.png</texture>
+        <texture>common/ListOverlay.png</texture>
       </control>
       <control type="list" id="50">
         <viewtype label="535">List</viewtype>

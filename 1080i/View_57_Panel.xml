@@ -202,14 +202,7 @@
             <label>$INFO[ListItem.Duration,[COLOR=Grey]$LOCALIZE[180]:[/COLOR]  ]</label>
           </control>
         </control>
-        <control type="image" description="Stars">
-          <visible>!container.content(musicvideos)</visible>
-		  <posx>0</posx>
-          <posy>567</posy>
-          <height>27</height>
-          <width>159</width>
-          <texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
-        </control>
+        
       </control>
       <control type="group" description="Media info">
         <animation effect="fade" delay="100" time="300">Visible</animation>
@@ -249,7 +242,6 @@
           <label>$VAR[500TopLabel]</label>
         </control>
         <control type="textbox" description="Plot51">
-          <visible>Window.IsActive(MyVideoNav.xml)</visible>
           <posx>0</posx>
           <posy>206</posy>
           <width>670</width>
@@ -257,19 +249,18 @@
           <include>Plot51Commons</include>
           <label>$VAR[Plots]</label>
         </control>
-        <control type="textbox" description="Plot51">
+        <!--<control type="textbox" description="Plot51">
           <visible>!Window.IsActive(MyVideoNav.xml)</visible>
           <posx>0</posx>
           <posy>196</posy>
           <width>670</width>
-          <height>410</height>
+          <height>336</height>
           <include>Plot51Commons</include>
           <label>$VAR[Plots]</label>
-        </control>
+        </control>-->
       </control>
       <control type="grouplist" description="Flags">
-        <visible>Window.IsActive(MyVideoNav.xml) | container.content(musicvideos)</visible>
-        <posx>50</posx>
+        <posx>60</posx>
         <posy>990</posy>
         <width min="90" max="450">auto</width>
         <height>45</height>
@@ -314,6 +305,21 @@
           <aspectratio>keep</aspectratio>
           <colordiffuse>Silver</colordiffuse>
           <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+		<control type="label">
+          <visible>container.content(albums) | container.content(songs)</visible>
+          <height>45</height>
+          <width>90</width>
+		  <font>Volume</font>
+		  <label>$INFO[ListItem.Year]</label>
+        </control>
+		<control type="image">
+          <visible>container.content(albums) | container.content(songs)</visible>
+          <height>45</height>
+          <width>174</width>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.StarRating]</texture>
         </control>
       </control>
       <control type="image">

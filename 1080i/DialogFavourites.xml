@@ -30,7 +30,6 @@
       <width>600</width>
       <height>60</height>
       <textcolor>Orange</textcolor>
-      <font>Header</font>
       <label>$LOCALIZE[1036]</label>
       <align>left</align>
       <aligny>center</aligny>

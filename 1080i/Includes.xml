@@ -21,7 +21,9 @@
   <include file="View_55_HalfList.xml" />
   <include file="View_56_BannerList.xml" />
   <include file="View_57_Panel.xml" />
-  <include file="View_58_Showcase.xml" />
+  <include file="View_58_ShowcaseLite.xml" />
+  <include file="View_59_Showcase.xml" />
+  <include file="View_500_Slide.xml" />
   <include file="Includes_Shelf.xml" />
   <include file="Includes_WP10DayForecast.xml" />
   <include file="Includes_WP36HourForecast.xml" />

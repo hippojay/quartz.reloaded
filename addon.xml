@@ -1,4 +1,4 @@
-<addon id="skin.quartz.reloaded" version="0.9.0" name="Quartz.Reloaded" provider-name="Pecinko">
+<addon id="skin.quartz.reloaded" version="0.9.1" name="Quartz.Reloaded" provider-name="Pecinko">
   <requires>
     <import addon="xbmc.gui" version="3.00"/>
     <import addon="script.favourites" version="3.2.0"/>

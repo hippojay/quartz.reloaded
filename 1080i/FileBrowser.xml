@@ -23,7 +23,6 @@
       <posx>120</posx>
       <posy>70</posy>
       <width>1200</width>
-      <font>Header</font>
       <textcolor>Orange</textcolor>
     </control>
     <control type="group">

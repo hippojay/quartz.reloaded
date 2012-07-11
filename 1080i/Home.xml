@@ -109,7 +109,7 @@
             <align>center</align>
             <aligny>top</aligny>
             <textoffsety>2</textoffsety>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+            <label>$INFO[ListItem.Label]</label>
             <font>MainMenu</font>
           </control>
         </itemlayout>
@@ -124,7 +124,7 @@
             <align>center</align>
             <aligny>top</aligny>
             <textoffsety>2</textoffsety>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+            <label>$INFO[ListItem.Label]</label>
             <font>MainMenu</font>
           </control>
         </focusedlayout>
@@ -295,7 +295,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <font>Sublist</font>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+            <label>$INFO[ListItem.Label]</label>
             <textcolor>ShadowDark</textcolor>
             <shadowcolor>-</shadowcolor>
           </control>
@@ -307,7 +307,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <font>Sublist</font>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+            <label>$INFO[ListItem.Label]</label>
             <textcolor>Grey2</textcolor>
             <shadowcolor>-</shadowcolor>
           </control>
@@ -321,7 +321,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <font>Sublist</font>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+            <label>$INFO[ListItem.Label]</label>
             <textcolor>ShadowDark</textcolor>
             <shadowcolor>-</shadowcolor>
           </control>
@@ -334,7 +334,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <font>Sublist</font>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+            <label>$INFO[ListItem.Label]</label>
             <textcolor>Grey2</textcolor>
             <shadowcolor>-</shadowcolor>
           </control>
@@ -347,8 +347,8 @@
             <align>center</align>
             <aligny>center</aligny>
             <font>Sublist</font>
-            <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-            <textcolor>White2</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>Orange</textcolor>
             <shadowcolor>-</shadowcolor>
           </control>
         </focusedlayout>

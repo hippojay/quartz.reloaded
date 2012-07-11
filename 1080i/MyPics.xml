@@ -14,7 +14,7 @@
     <include>View_55_HalfList</include>
     <include>View_56_BannerList</include>
     <include>View_57_Panel</include>
-    <include>View_58_Showcase</include>
+    <include>View_58_ShowcaseLite</include>
     <include>View_57</include>
 	  <!--<control type="group" description="List 50">
       <visible>Control.IsVisible(50)</visible>

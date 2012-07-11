@@ -48,5 +48,11 @@
     <imagepath background="true">$VAR[Pictures.Art]</imagepath>
    </control>
   </include>
+  <include name="Weather_Art">
+  <control type="multiimage">
+    <include>BG.Defaults</include>
+    <imagepath background="true">$VAR[Weather.Art]</imagepath>
+   </control>
+  </include>
   
 </includes>
