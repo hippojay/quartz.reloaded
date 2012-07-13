@@ -301,7 +301,7 @@
   </include>
   <include name="9000GrouplistParameters">
     <posx>-499</posx>
-    <posy>0</posy>
+    <posy>-9</posy>
     <width>444</width>
     <height>1120</height>
     <itemgap>0</itemgap>
@@ -368,24 +368,31 @@
       <selected>Control.IsVisible(57)</selected>
       <label>Panel</label>
     </control>
-    <control type="radiobutton" id="9158" description="View 58">
+    <control type="radiobutton" id="9158" description="View 501">
+      <include>9000ViewButtons</include>
+      <onclick>Container.SetViewMode(501)</onclick>
+      <selected>Control.IsVisible(501)</selected>
+      <label>Big Panel</label>
+    </control>
+	<control type="radiobutton" id="9159" description="View 58">
       <include>9000ViewButtons</include>
       <onclick>Container.SetViewMode(58)</onclick>
       <selected>Control.IsVisible(58)</selected>
       <label>Showcase Lite</label>
     </control>
-    <control type="radiobutton" id="9159" description="View 59">
+    <control type="radiobutton" id="9160" description="View 59">
       <include>9000ViewButtons</include>
       <onclick>Container.SetViewMode(59)</onclick>
       <selected>Control.IsVisible(59)</selected>
       <label>Showcase</label>
     </control>
-	<control type="radiobutton" id="9160" description="View 500">
+	<control type="radiobutton" id="9161" description="View 500">
       <include>9000ViewButtons</include>
       <onclick>Container.SetViewMode(500)</onclick>
       <selected>Control.IsVisible(500)</selected>
       <label>Slide</label>
     </control>
+	
 	<!--<control type="label" id="9170">
       <textoffsetx>10</textoffsetx>
       <textcolor>Orange</textcolor>

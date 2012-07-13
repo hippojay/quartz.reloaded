@@ -24,6 +24,7 @@
   <include file="View_58_ShowcaseLite.xml" />
   <include file="View_59_Showcase.xml" />
   <include file="View_500_Slide.xml" />
+  <include file="View_501_BigPanel.xml" />
   <include file="Includes_Shelf.xml" />
   <include file="Includes_WP10DayForecast.xml" />
   <include file="Includes_WP36HourForecast.xml" />

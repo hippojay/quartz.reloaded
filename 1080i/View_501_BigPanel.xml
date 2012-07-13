@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="BigPanelBannerThumb">
+    <posx>210</posx>
+    <posy>12</posy>
+    <width>828</width>
+    <height>168</height>
+    <texture background="true">$INFO[ListItem.Icon]</texture>
+    <include>ThumbBorder</include>
+    <aspectratio>scale</aspectratio>
+  </include>
+  <include name="BigPanelBannerOverlay">
+    <posx>210</posx>
+    <posy>12</posy>
+    <width>828</width>
+    <height>168</height>
+    <texture border="25">img/Frame.png</texture>
+    <bordersize>-18</bordersize>
+  </include>
+  <include name="BigPanelPosterThumb">
+    <posx>24</posx>
+    <posy>10</posy>
+    <width>297</width>
+    <height>445</height>
+    <texture background="true">$INFO[ListItem.Icon]</texture>
+    <include>ThumbBorder</include>
+    <aspectratio>scale</aspectratio>
+  </include>
+  <include name="BigPanelPosterOverlay">
+    <posx>24</posx>
+    <posy>10</posy>
+    <width>297</width>
+    <height>445</height>
+    <texture border="25">img/Frame.png</texture>
+    <bordersize>-18</bordersize>
+  </include>
+  <include name="BigPanelSquareThumb">
+    <posx>24</posx>
+    <posy>10</posy>
+    <width>297</width>
+    <height>297</height>
+    <texture background="true">$INFO[ListItem.Icon]</texture>
+    <include>ThumbBorder</include>
+    <aspectratio aligny="top">scale</aspectratio>
+  </include>
+  <include name="BigPanelSquareOverlay">
+    <posx>24</posx>
+    <posy>10</posy>
+    <width>297</width>
+    <height>297</height>
+    <texture border="25">img/Frame.png</texture>
+    <bordersize>-18</bordersize>
+  </include>
+  <include name="View_501_BigPanel">
+    <control type="group" description="Big Panel">
+      <visible>Control.IsVisible(501)</visible>
+      <control type="image" description="fa overlay">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1920</width>
+        <height>1080</height>
+        <texture>common/FSOverlay.png</texture>
+      </control>
+      <control type="group" description="Container and frame">
+        <control type="panel" id="501" description="Big Panel">
+          <viewtype label="Big Panel">Big Panel</viewtype>
+          <posx>810</posx>
+          <posy>90</posy>
+          <width>1137</width>
+          <height>951</height>
+          <orientation>vertical</orientation>
+          <onleft>9000</onleft>
+          <onright>60</onright>
+          <onup>501</onup>
+          <ondown>501</ondown>
+          <preloaditems>4</preloaditems>
+          <pagecontrol>60</pagecontrol>
+          <scrolltime>400</scrolltime>
+          <itemlayout condition="Container.Content(tvshows)" height="190" width="1062">
+            <control type="image">
+              <include>BigPanelBannerThumb</include>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="Container.Content(TVshows)" height="190" width="1062">
+            <control type="image">
+              <include>BigPanelBannerOverlay</include>
+            </control>
+            <control type="image">
+              <include>BigPanelBannerThumb</include>
+            </control>
+          </focusedlayout>
+		  <itemlayout condition="Container.Content(Movies) | container.content(seasons)" height="475" width="354">
+            <control type="image">
+              <include>BigPanelPosterThumb</include>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="Container.Content(Movies) | container.content(seasons)" height="475" width="354">
+            <control type="image">
+              <include>BigPanelPosterOverlay</include>
+            </control>
+            <control type="image">
+              <include>BigPanelPosterThumb</include>
+            </control>
+          </focusedlayout>
+          <itemlayout condition="container.content(addons) | Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyMusicSongs.xml) | Window.IsActive(MyPics.xml)" height="317" width="354">
+            <control type="image">
+              <include>BigPanelSquareThumb</include>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="container.content(addons) | Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyMusicSongs.xml) | Window.IsActive(MyPics.xml)" height="317" width="354">
+            <control type="image">
+              <include>BigPanelSquareOverlay</include>
+            </control>
+            <control type="image">
+              <include>BigPanelSquareThumb</include>
+            </control>
+          </focusedlayout>
+          <itemlayout condition="container.content(episodes)" height="317" width="354">
+            <control type="image">
+              <posx>10</posx>
+              <posy>10</posy>
+              <width>333</width>
+              <height>270</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <include>ThumbBorder</include>
+			  <aspectratio>scale</aspectratio>
+            </control>
+          </itemlayout>
+          <focusedlayout condition="container.content(episodes)" height="317" width="354">
+            <control type="image">
+              <posx>10</posx>
+              <posy>10</posy>
+              <width>333</width>
+              <height>270</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <include>ThumbBorder</include>
+			  <aspectratio>scale</aspectratio>
+            </control>
+			<control type="image">
+              <posx>10</posx>
+              <posy>10</posy>
+              <width>333</width>
+              <height>270</height>
+              <texture border="25">img/Frame.png</texture>
+              <bordersize>-18</bordersize>
+			</control>
+          </focusedlayout>
+		  <itemlayout height="317" width="354">
+            <control type="image">
+              <posx>2</posx>
+              <posy>12</posy>
+              <width>350</width>
+              <height>290</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <bordertexture border="25">img/FrameNF.png</bordertexture>
+              <bordersize>25</bordersize>
+			  <aspectratio>keep</aspectratio>
+            </control>
+          </itemlayout>
+          <focusedlayout height="317" width="354">
+            <control type="image">
+              <posx>2</posx>
+              <posy>12</posy>
+              <width>350</width>
+              <height>290</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <bordertexture border="25">img/Frame.png</bordertexture>
+              <bordersize>25</bordersize>
+			  <aspectratio>keep</aspectratio>
+            </control>
+		  </focusedlayout>
+        </control>
+      </control>
+      <control type="group" description="Songs and videos">
+        <visible>Container.Content(songs) | Container.Content(musicvideos)</visible>
+        <posx>60</posx>
+        <posy>400</posy>
+        <control type="label" description="Title Label">
+          <posy>6</posy>
+          <width>672</width>
+          <height>90</height>
+          <wrapmultiline>true</wrapmultiline>
+          <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Title]</label>
+        </control>
+        <control type="label" description="Title Label">
+          <posy>186</posy>
+          <width>672</width>
+          <textcolor>White2</textcolor>
+          <include>Genre500Commons</include>
+          <label>$INFO[ListItem.Artist]</label>
+        </control>
+        <control type="grouplist" description="Labels">
+          <posx>0</posx>
+          <posy>264</posy>
+          <width>600</width>
+          <height>500</height>
+          <itemgap>24</itemgap>
+          <orientation>vertical</orientation>
+          <control type="label" description="Type label 1">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.FileExtension,[COLOR=Grey]$LOCALIZE[564]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Genre label 2">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Genre,[COLOR=Grey]$LOCALIZE[515]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Album label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Album,[COLOR=Grey]$LOCALIZE[558]:[/COLOR]  ]</label>
+          </control>
+          <control type="label" description="Duration label 3">
+            <width>600</width>
+            <height>30</height>
+            <label>$INFO[ListItem.Duration,[COLOR=Grey]$LOCALIZE[180]:[/COLOR]  ]</label>
+          </control>
+        </control>
+        
+      </control>
+      <control type="group" description="Media info">
+        <animation effect="fade" delay="100" time="300">Visible</animation>
+        <animation effect="fade" time="0">Hidden</animation>
+        <visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
+        <posx>70</posx>
+        <posy>90</posy>
+        <control type="label" description="Title Label">
+          <posy>12</posy>
+          <width>660</width>
+          <height>50</height>
+		  <aligny>top</aligny>
+		  <textcolor>Orange</textcolor>
+          <include>Genre500Commons</include>
+		  <font>InfoTitle</font>
+		  <wrapmultiline>true</wrapmultiline>
+		  <label>$INFO[ListItem.Label]</label>
+        </control>
+        
+        <control type="label" description="Genre">
+          <posy>105</posy>
+          <width>660</width>
+          <include>Genre500Commons</include>
+          <label>$VAR[Genres]</label>
+        </control>
+        <control type="label" description="Details">
+          <posy>145</posy>
+          <height>33</height>
+          <width>660</width>
+          <include>Genre500Commons</include>
+          <label>$VAR[500TopLabel]</label>
+        </control>
+        <control type="textbox" description="Plot51">
+          <posx>0</posx>
+          <posy>210</posy>
+          <width>660</width>
+          <height>630</height>
+          <include>Plot51Commons</include>
+          <label>$VAR[Plots]</label>
+	    </control>
+      </control>
+	  <control type="grouplist" description="Flags">
+        <posx>70</posx>
+        <posy>975</posy>
+        <width min="90" max="650">auto</width>
+        <height>120</height>
+        <itemgap>30</itemgap>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <aligny>bottom</aligny>
+        <control type="image">
+          <visible>IntegerGreaterThan(ListItem.VideoResolution,710)</visible>
+          <height>45</height>
+          <width>90</width>
+          <posx>0</posx>
+          <posy>0</posy>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoResolution,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.VideoCodec,badges/video/,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+          <height>45</height>
+          <width>90</width>
+          <bordersize>3</bordersize>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+        </control>
+		<control type="label">
+          <visible>container.content(albums) | container.content(songs)</visible>
+          <height>45</height>
+          <width>90</width>
+		  <font>Volume</font>
+		  <label>$INFO[ListItem.Year]</label>
+        </control>
+		<control type="image">
+          <visible>container.content(albums) | container.content(songs)</visible>
+          <height>45</height>
+          <width>174</width>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Silver</colordiffuse>
+          <texture>$INFO[ListItem.StarRating]</texture>
+        </control>
+	  </control>
+	  <control type="image" description="Studios">
+          <visible>!IsEmpty(ListItem.Studio) + [container.content(tvshows) | container.content(seasons)]</visible>
+          <posx>50</posx>
+          <posy>936</posy>
+		  <height>110</height>
+          <width>200</width>
+          <aspectratio aligny="top" align="left">keep</aspectratio>
+          <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
+        </control>
+      <control type="image">
+        <visible>Control.HasFocus(60)</visible>
+        <include>VisibleFadeEffect</include>
+        <posx>28r</posx>
+        <posy>360</posy>
+        <height>700</height>
+        <width>36</width>
+        <aspectratio>stretch</aspectratio>
+        <texture>OSD/LineScroll2.png</texture>
+      </control>
+      <control type="scrollbar" id="60">
+        <animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+        <animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+        <posx>20r</posx>
+        <posy>360</posy>
+        <width>36</width>
+        <height>700</height>
+        <texturesliderbackground>-</texturesliderbackground>
+        <texturesliderbar>-</texturesliderbar>
+        <texturesliderbarfocus>-</texturesliderbarfocus>
+        <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+        <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+        <onleft>501</onleft>
+        <onright>9000</onright>
+      </control>
+    </control>
+  </include>
+</includes>
