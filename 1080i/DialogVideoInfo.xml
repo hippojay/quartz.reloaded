@@ -13,7 +13,7 @@
       <posy>0</posy>
       <width>1192</width>
       <height>1080</height>
-      <texture>$INFO[ListItem.property(fanart_image)]</texture>
+      <texture>$INFO[ListItem.Art(fanart)]</texture>
       <aspectratio aligny="top">keep</aspectratio>
     </control>
     <control type="image">
@@ -81,7 +81,7 @@
         <posx>810</posx>
         <posy>60</posy>
         <control type="label" description="Main Label">
-          <posy>0</posy>
+          <posy>-45</posy>
           <width>800</width>
           <height>60</height>
           <font>InfoTitle</font>
@@ -102,7 +102,7 @@
         </control>
         <control type="image" description="Stars rating">
           <posx>860</posx>
-          <posy>10</posy>
+          <posy>-35</posy>
           <height>50</height>
           <width>139</width>
           <aspectratio aligny="center" align="right">keep</aspectratio>
@@ -110,7 +110,7 @@
         </control>
         <control type="image" description="Line Split">
           <posx>0</posx>
-          <posy>68</posy>
+          <posy>23</posy>
           <width>999</width>
           <height>1</height>
           <texture>img/LineL.png</texture>
@@ -118,7 +118,7 @@
         </control>
         <control type="group" description="List Info">
           <posx>0</posx>
-          <posy>75</posy>
+          <posy>30</posy>
           <control type="group">
             <visible>![container.content(tvshows) | container.content(episodes) | SubString(Container.FolderPath,videodb://3,left)]</visible>
             <include>VisibleFadeEffectDelay</include>
@@ -442,7 +442,7 @@
         <control type="button" id="299" description="Cinema">
           <visible>Container.Content(Movies) + system.hasaddon(script.cinema.experience)</visible>
           <height>54</height>
-          <width>270</width>
+          <width>250</width>
           <align>center</align>
           <font>Details</font>
           <label>Cinema</label>
@@ -455,7 +455,7 @@
         </control>
         <control type="togglebutton" id="8" description="Play/browse to Show">
           <height>54</height>
-          <width>270</width>
+          <width>230</width>
           <align>center</align>
           <font>Details</font>
           <label>208</label>
@@ -468,19 +468,19 @@
         </control>
         <control type="button" id="11" description="Trailer">
           <height>54</height>
-          <width>270</width>
+          <width>230</width>
           <font>Details</font>
           <align>center</align>
           <label>20410</label>
           <textcolor>White</textcolor>
           <focusedcolor>Orange</focusedcolor>
 		  <texturefocus>-</texturefocus>
-          <enable>!IsEmpty(ListItem.Trailer)</enable>
+          <visible>!IsEmpty(ListItem.Trailer)</visible>
           <pulseonselect>true</pulseonselect>
         </control>
         <control type="button" id="9012" description="Actors">
           <height>54</height>
-          <width>270</width>
+          <width>230</width>
           <ondown>50</ondown>
           <align>center</align>
           <font>Details</font>
@@ -493,7 +493,7 @@
         </control>
         <control type="button" id="6" description="Refresh">
           <height>54</height>
-          <width>270</width>
+          <width>230</width>
           <align>center</align>
           <font>Details</font>
           <textcolor>White</textcolor>
@@ -501,24 +501,14 @@
 		  <label>$LOCALIZE[184]</label>
           <texturefocus>-</texturefocus>
         </control>
-        <control type="button" id="10" description="Get Thumb">
+        <control type="button" id="10" description="Get Art">
           <height>54</height>
-          <width>270</width>
+          <width>230</width>
           <align>center</align>
           <font>Details</font>
           <textcolor>White</textcolor>
           <focusedcolor>Orange</focusedcolor>
-		  <label>13405</label>
-          <texturefocus>-</texturefocus>
-        </control>
-        <control type="button" id="12" description="Get FanArt">
-          <height>54</height>
-          <width>270</width>
-          <align>center</align>
-          <font>Details</font>
-          <textcolor>White</textcolor>
-          <focusedcolor>Orange</focusedcolor>
-		  <label>20413</label>
+		  <label>13511</label>
           <texturefocus>-</texturefocus>
         </control>
       </control>
@@ -608,7 +598,7 @@
       <posy>590</posy>
       <width>999</width>
       <height>340</height>
-      <texture>$INFO[ListItem.Property(fanart_image)]</texture>
+      <texture>$INFO[ListItem.Art(fanart)]</texture>
 	  <include>ThumbBorder</include>
       <aspectratio>keep</aspectratio>
     </control>

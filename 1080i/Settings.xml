@@ -101,9 +101,9 @@
               <label>8</label>
               <onclick>activatewindow(WeatherSettings)</onclick>
             </item>
-            <item id="8" description="Network">
-              <label>705</label>
-              <onclick>activatewindow(NetworkSettings)</onclick>
+            <item id="8" description="Service">
+              <label>14036</label>
+            <onclick>activatewindow(ServiceSettings)</onclick>
             </item>
             <item id="9" description="System">
               <label>13000</label>
@@ -111,7 +111,7 @@
             </item>
             <item id="1" description="Skin options">
               <label>166</label>
-              <onclick>activatewindow(56)</onclick>
+              <onclick>activatewindow(SkinSettings)</onclick>
             </item>
             <!--<item id="10" description="Profiles">
             <label>13200</label>

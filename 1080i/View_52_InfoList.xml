@@ -51,7 +51,7 @@
         <width>1218</width>
         <height>920</height>
         <include>Fanart_Fade</include>
-        <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+        <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
         <aspectratio aligny="top">scale</aspectratio>
       </control>
 	  <control type="image" description="fanart">

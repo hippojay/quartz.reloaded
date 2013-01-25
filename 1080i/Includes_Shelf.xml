@@ -210,8 +210,8 @@
         <visible allowhiddenfocus="true">Control.HasFocus(314)</visible>
 		<include>VisibleFadeEffect</include>
 		<onup>-</onup>
-        <ondown>9000</ondown>
-        <onback>9000</onback>
+        <ondown>300</ondown>
+        <onback>300</onback>
         <onleft>314</onleft>
         <onright>314</onright>
         <include>MoviesShortcutsCommons</include>
@@ -307,8 +307,8 @@
         <visible allowhiddenfocus="true">Control.HasFocus(315)</visible>
         <include>VisibleFadeEffect</include>
 		<onup>-</onup>
-        <ondown>9000</ondown>
-        <onback>9000</onback>
+        <ondown>300</ondown>
+        <onback>300</onback>
         <onleft>315</onleft>
         <onright>315</onright>
         <include>EpisodeShortcutsCommons</include>
@@ -423,9 +423,9 @@
       <control type="panel" id="316" description="TOP Shortcuts">
         <visible allowhiddenfocus="true">Control.HasFocus(316)</visible>
 		<include>VisibleFadeEffect</include>
-		<onup>9000</onup>
-        <ondown>9000</ondown>
-        <onback>9000</onback>
+		<onup>300</onup>
+        <ondown>300</ondown>
+        <onback>300</onback>
         <onleft>316</onleft>
         <onright>316</onright>
         <include>MusicShortcutsCommons</include>
@@ -600,9 +600,9 @@
       <control type="panel" id="313" description="TOP Shortcuts">
         <visible allowhiddenfocus="true">Control.HasFocus(313)</visible>
 		<include>VisibleFadeEffect</include>
-		<onup>9000</onup>
-        <ondown>9000</ondown>
-        <onback>9000</onback>
+		<onup>300</onup>
+        <ondown>300</ondown>
+        <onback>300</onback>
         <onleft>313</onleft>
         <onright>313</onright>
         <include>MusicShortcutsCommons</include>
@@ -717,9 +717,9 @@
       <control type="panel" id="312" description="TOP Shortcuts">
         <visible allowhiddenfocus="true">Control.HasFocus(312)</visible>
 		<include>VisibleFadeEffect</include>
-		<onup>9000</onup>
-        <ondown>9000</ondown>
-        <onback>9000</onback>
+		<onup>300</onup>
+        <ondown>300</ondown>
+        <onback>300</onback>
         <onleft>312</onleft>
         <onright>312</onright>
         <include>MusicShortcutsCommons</include>

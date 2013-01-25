@@ -67,7 +67,7 @@
           <width>1050</width>
           <height>207</height>
           <include>Icon_Fade</include>
-          <texture background="true">$INFO[ListItem.Icon]</texture>
+          <texture background="true">$INFO[ListItem.Art(banner)]</texture>
           <include>ThumbBorder</include>
 		  <aspectratio>scale</aspectratio>
         </control>

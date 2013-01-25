@@ -150,7 +150,7 @@
 	<value>special://skin/backgrounds/DefaultBG.jpg</value>
   </variable>
   <variable name="Fanart.Art" description="Calculate BG to show">
-    <value condition="!IsEmpty(ListItem.Property(fanart_image))">$INFO[ListItem.Property(fanart_image)]</value>
+    <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 	<value condition="!IsEmpty(Skin.String(Default.Background))">$INFO[Skin.String(Default.Background)]</value>
 	<value>special://skin/backgrounds/DefaultBG.jpg</value>
   </variable>

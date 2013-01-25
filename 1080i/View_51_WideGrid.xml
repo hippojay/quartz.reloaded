@@ -37,7 +37,7 @@
             <posy>12</posy>
             <width>834</width>
             <height>153</height>
-            <texture background="true">$INFO[ListItem.Icon]</texture>
+            <texture background="true">$INFO[ListItem.Art(banner)]</texture>
             <aspectratio>stretch</aspectratio>
           </control>
         </itemlayout>
@@ -54,7 +54,7 @@
             <posy>12</posy>
             <width>834</width>
             <height>153</height>
-            <texture background="true">$INFO[ListItem.Icon]</texture>
+            <texture background="true">$INFO[ListItem.Art(banner)]</texture>
             <aspectratio>stretch</aspectratio>
           </control>
           <control type="image">

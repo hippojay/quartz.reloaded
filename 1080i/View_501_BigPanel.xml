@@ -5,7 +5,7 @@
     <posy>12</posy>
     <width>828</width>
     <height>168</height>
-    <texture background="true">$INFO[ListItem.Icon]</texture>
+    <texture background="true">$INFO[ListItem.Art(banner)]</texture>
     <include>ThumbBorder</include>
     <aspectratio>scale</aspectratio>
   </include>
