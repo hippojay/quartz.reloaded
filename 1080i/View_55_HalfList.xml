@@ -37,11 +37,12 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image">
-            <posx>630</posx>
+            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
+			<posx>630</posx>
             <posy>0</posy>
             <width>30</width>
             <height>72</height>
-            <info>ListItem.Overlay</info>
+            <texture>$VAR[Overlay]</info>
             <aspectratio>keep</aspectratio>
           </control>
         </itemlayout>
@@ -59,11 +60,12 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
           <control type="image">
-            <posx>630</posx>
+            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
+			<posx>630</posx>
             <posy>0</posy>
             <width>30</width>
             <height>72</height>
-            <info>ListItem.Overlay</info>
+            <texture>$VAR[Overlay]</info>
             <aspectratio>keep</aspectratio>
           </control>
         </focusedlayout>

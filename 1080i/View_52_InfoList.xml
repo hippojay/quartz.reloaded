@@ -34,12 +34,12 @@
     <height>18</height>
   </include>
   <include name="List52Overlay">
-    <visible>![Container.Content(Seasons) | Container.Content(TVShows)]</visible>
+    <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
     <posx>1020</posx>
     <posy>31</posy>
     <height>36</height>
     <width>36</width>
-    <texture>$INFO[ListItem.Overlay]</texture>
+    <texture>$VAR[Overlay]</texture>
   </include>
   <include name="View_52_InfoList">
     <control type="group" description="Large Infolist2">
@@ -51,7 +51,7 @@
         <width>1218</width>
         <height>920</height>
         <include>Fanart_Fade</include>
-        <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+        <texture background="true">$INFO[ListItem.Property(fanart_image)]</texture>
         <aspectratio aligny="top">scale</aspectratio>
       </control>
 	  <control type="image" description="fanart">
