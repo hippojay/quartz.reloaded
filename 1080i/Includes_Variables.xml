@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <includes>
+  <variable name="Overlay" description="Overlay image">
+    <value condition="ListItem.IsResumable | !IsEmpty(ListItem.Property(IsResumable))">$INFO[ListItem.Overlay,overlay/]</value>
+    <value>$INFO[ListItem.Overlay]</value>
+  </variable>
   <variable name="WatchlistParameters">
     <value condition="Library.HasContent(Music) + [Library.HasContent(TVShows) + !Skin.HasSetting(TV5)]">movies=false&amp;episodes=true&amp;albums=true&amp;limit=10</value>
     <value condition="Library.HasContent(Music) + [!Library.HasContent(TVShows) | Skin.HasSetting(TV5)]">movies=false&amp;episodes=false&amp;albums=true&amp;limit=10</value>
