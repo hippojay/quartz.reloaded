@@ -1,4 +1,4 @@
-<addon id="skin.quartz.reloaded" version="0.9.3" name="Quartz.Reloaded" provider-name="Pecinko">
+<addon id="skin.quartz.reloaded" version="0.9.5" name="Quartz.Reloaded" provider-name="Pecinko">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
     <import addon="script.favourites" version="3.2.0"/>
@@ -8,11 +8,10 @@
     defaultthemename="Textures.xbt"
     debugging="false">
     <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
-	
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary></summary>
-    <description>Quartz.Reloaded offers simple to use interface with more accent on  background images than original Quartz release. It is based mostly on Aeon and Aeon Nox textures while using Quartz skin code and views.</description>
+    <description>Quartz.Reloaded offers fast and simple to use interface, based mostly on Aeon and Aeon Nox textures while using Quartz skin code and views.</description>
   </extension>
 </addon>

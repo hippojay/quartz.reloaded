@@ -1,2 +1,6 @@
+0.9.5
+Frodo compatibility changes
+Quartz like watched flags
+
 0.9.0
 Alpha 1 release
