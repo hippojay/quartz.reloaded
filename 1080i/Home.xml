@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="0">
   <defaultcontrol always="true">300</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
   <include>OpenClose</include>
+  <onload condition="Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,skin)</onload>
+  <!--<onload condition="System.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,shelf)</onload>-->
+  <!--<onload condition="System.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,channelShelf)</onload>-->
   <controls>
     <control type="multiimage">
       <include>Dimensions_Fullscreen</include>
       <timeperimage>8000</timeperimage>
       <fadetime>400</fadetime>
-      <imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
+      <imagepath background="true">$INFO[Container(300).ListItem.Thumb]</imagepath>
       <randomize>true</randomize>
       <aspectratio aligny="top">scale</aspectratio>
     </control>
-	<control type="group">
+    <control type="group">
       <posy>30</posy>
       <control type="group" description="Furniture">
         <control type="image" description="Top glass border">
@@ -31,7 +33,15 @@
           <texture flipy="true">common/NavbarGlass.png</texture>
         </control>
         <control type="group" id="700" description="Trigger">
+		  <control type="button" id="550" description="Plexbmc">
+            <visible>System.HasSetting(plexbmc)</visible>
+            <include>TriggerButton</include>
+            <onfocus>ActivateWindow(1120)</onfocus>
+            <onclick>ActivateWindow(1120)</onclick>
+            <label>Shelf</label>
+          </control>
           <control type="button" id="512" description="Addons Panel">
+            <visible>!Skin.HasSetting(plexbmc)</visible>
             <visible>Container(300).HasFocus(2) + Skin.HasSetting(Show.Addons)</visible>
             <include>TriggerButton</include>
             <onfocus>SetFocus(312)</onfocus>
@@ -39,6 +49,7 @@
             <label>13398</label>
           </control>
           <control type="button" id="516" description="RA Panel">
+            <visible>!Skin.HasSetting(plexbmc)</visible>
             <visible>Container(300).HasFocus(6) + Library.HasContent(Music) + Skin.HasSetting(Show.RecentlyAdded)</visible>
             <include>TriggerButton</include>
             <onfocus>SetFocus(316)</onfocus>
@@ -46,6 +57,7 @@
             <label>31020</label>
           </control>
           <control type="button" id="515" description="RA Panel">
+            <visible>!Skin.HasSetting(plexbmc)</visible>
             <visible>Container(300).HasFocus(5) + Skin.HasSetting(Show.RecentlyAdded)</visible>
             <include>TriggerButton</include>
             <onfocus>SetFocus(315)</onfocus>
@@ -53,6 +65,7 @@
             <label>31020</label>
           </control>
           <control type="button" id="513" description="RA Panel">
+            <visible>!Skin.HasSetting(plexbmc)</visible>
             <visible>Container(300).HasFocus(3) + Library.HasContent(MusicVideos) + Skin.HasSetting(Show.RecentlyAdded)</visible>
             <include>TriggerButton</include>
             <onfocus>SetFocus(313)</onfocus>
@@ -60,6 +73,7 @@
             <label>31020</label>
           </control>
           <control type="button" id="514" description="RA Panel">
+            <visible>!Skin.HasSetting(plexbmc)</visible>
             <visible>Container(300).HasFocus(4) + Skin.HasSetting(Show.RecentlyAdded)</visible>
             <include>TriggerButton</include>
             <onfocus>SetFocus(314)</onfocus>
@@ -129,6 +143,118 @@
           </control>
         </focusedlayout>
         <content>
+          <item id="30">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.0.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.0.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.0.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.0.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.0.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.0.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.0.partialpath)]</property>
+          </item>
+          <item id="31">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.1.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.1.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.1.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.1.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.1.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.1.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.1.partialpath)]</property>
+            
+          </item>
+          <item id="32">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.2.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.2.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.2.subtitle)]</label2>
+            <thumb>$INFO[Window.Property(plexbmc.2.art)]</thumb>
+            <onclick>$INFO[Window.Property(plexbmc.2.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.2.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.2.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.2.partialpath)]</property>
+            
+          </item>
+          <item id="33">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.3.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.3.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.3.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.3.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.3.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.3.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.3.partialpath)]</property>
+           </item>
+          <item id="34">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.4.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.4.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.4.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.4.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.4.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.4.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.4.partialpath)]</property>
+            
+          </item>
+          <item id="35">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.5.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.5.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.5.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.5.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.5.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.5.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.5.partialpath)]</property>
+            
+          </item>
+          <item id="36">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.6.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.6.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.6.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.6.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.6.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.6.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.6.partialpath)]</property>
+            
+          </item>
+          <item id="37">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.7.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.7.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.7.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.7.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.7.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.7.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.7.partialpath)]</property>
+            
+          </item>
+          <item id="39">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.8.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.8.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.8.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.8.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.8.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.8.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.8.partialpath)]</property>
+            
+          </item>
+          <item id="40">
+            <visible>Skin.HasSetting(plexbmc) + !IsEmpty(Window.Property(plexbmc.9.title))</visible>
+			<label>$INFO[Window.Property(plexbmc.9.title)]</label>
+            <label2>$INFO[Window.Property(plexbmc.9.subtitle)]</label2>
+            <onclick>$INFO[Window.Property(plexbmc.9.path)]</onclick>
+            <thumb>$INFO[Window.Property(plexbmc.9.art)]</thumb>
+            <property name="type">$INFO[Window.Property(plexbmc.9.type)]</property>
+            <property name="partial">$INFO[Window.Property(plexbmc.9.partialpath)]</property>
+            
+          </item>
+          <item id="41" description="Channels">
+            <visible>Skin.HasSetting(plexbmc)</visible>
+			<label>Channels</label>
+            <onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.plexbmc/?mode=22&amp;url=http://online%2fsystem%2fplugins%2fall&quot;)</onclick>
+            <visible>System.HasSetting(plexbmc)</visible>
+          </item>
+          <item id="42" description="Queue">
+            <visible>Skin.HasSetting(plexbmc)</visible>
+			<label>Queue</label>
+            <thumb fallback="special://skin/backgrounds/Network.jpg">$INFO[Skin.String(Network.Background)]</thumb>
+			<onclick>$INFO[Window.Property(plexbmc.queue)]</onclick>
+            <visible>!IsEmpty(Window.Property(plexbmc.myplex))</visible>
+          </item>
           <item id="21" description="Custom1">
             <visible>!IsEmpty(Skin.String(CustomHome.1.Path))</visible>
             <label>$INFO[Skin.String(CustomHome.1.Label)]</label>
@@ -136,7 +262,8 @@
             <onclick>$INFO[Skin.String(CustomHome.1.Path)]</onclick>
           </item>
           <item id="1" description="Pictures">
-            <visible>!Skin.HasSetting(Pictures.Hide)</visible>
+            <visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>!Skin.HasSetting(Pictures.Hide)</visible>
             <label>1</label>
             <thumb fallback="special://skin/backgrounds/Pictures.jpg">$INFO[Skin.String(Pictures.Background)]</thumb>
             <onclick>ActivateWindow(Pictures,root)</onclick>
@@ -148,7 +275,7 @@
             <onclick>$INFO[Skin.String(CustomHome.2.Path)]</onclick>
           </item>
           <item id="2" description="Addons">
-            <visible>!Skin.HasSetting(Addons.Hide)</visible>
+			<visible>!Skin.HasSetting(Addons.Hide)</visible>
             <label>24001</label>
             <thumb fallback="special://skin/backgrounds/Addons.jpg">$INFO[Skin.String(Addons.Background)]</thumb>
             <onclick>ActivateWindow(AddonBrowser,root)</onclick>
@@ -160,7 +287,8 @@
             <onclick>$INFO[Skin.String(CustomHome.3.Path)]</onclick>
           </item>
           <item id="3" description="Videos">
-            <visible>!Skin.HasSetting(Videos.Hide)</visible>
+            <visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>!Skin.HasSetting(Videos.Hide)</visible>
             <label>3</label>
             <label2>ActivateWindow(Videos,RecentlyAddedMusicVideos,return)</label2>
             <thumb fallback="special://skin/backgrounds/Videos.jpg">$INFO[Skin.String(Videos.Background)]</thumb>
@@ -173,19 +301,22 @@
             <onclick>$INFO[Skin.String(CustomHome.4.Path)]</onclick>
           </item>
           <item id="4" description="MyMovies">
-            <visible>!Skin.HasSetting(Movies.Hide) + Library.HasContent(Movies)</visible>
+            <visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>!Skin.HasSetting(Movies.Hide) + Library.HasContent(Movies)</visible>
             <label>20342</label>
             <thumb fallback="special://skin/backgrounds/Movies.jpg">$INFO[Skin.String(Movies.Background)]</thumb>
             <onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
           </item>
           <item id="5" description="MyTV">
-            <visible>!Skin.HasSetting(TVShows.Hide) + Library.HasContent(TVShows)</visible>
+            <visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>!Skin.HasSetting(TVShows.Hide) + Library.HasContent(TVShows)</visible>
             <label>20343</label>
             <thumb fallback="special://skin/backgrounds/TVShows.jpg">$INFO[Skin.String(TVShows.Background)]</thumb>
             <onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
           </item>
           <item id="6" description="Music">
-            <visible>!Skin.HasSetting(Music.Hide)</visible>
+            <visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>!Skin.HasSetting(Music.Hide)</visible>
             <label>2</label>
             <thumb fallback="special://skin/backgrounds/Music.jpg">$INFO[Skin.String(Music.Background)]</thumb>
             <onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,root)</onclick>
@@ -261,13 +392,19 @@
             <thumb fallback="special://skin/backgrounds/Settings.jpg">$INFO[Skin.String(Settings.Background)]</thumb>
             <onclick>ActivateWindow(Settings)</onclick>
           </item>
-		  <item id="11" description="Quit">
+          <!--<item id="12" description="Servers">
+            <visible>System.HasSetting(plexbmc)</visible>
+            <label>706</label>
+            <thumb fallback="special://skin/backgrounds/Network.jpg">$INFO[Skin.String(Network.Background)]</thumb>
+            <onclick>Skin.ToggleSetting(plexbmc)</onclick>
+          </item>-->
+          <item id="11" description="Quit">
             <visible>!Skin.HasSetting(Quit.Hide)</visible>
             <label fallback="13009">$VAR[QuitLabel2]</label>
             <thumb fallback="special://skin/backgrounds/Quit.jpg">$INFO[Skin.String(Quit.Background)]</thumb>
             <onclick>$VAR[QuitAction]</onclick>
           </item>
-		</content>
+        </content>
       </control>
       <control type="fixedlist" id="9001" description="Submenu Bar">
         <animation effect="slide" start="0,0" end="-128,0" time="0" condition="StringCompare(Container(9001).NumItems,2) | StringCompare(Container(9001).NumItems,4) | StringCompare(Container(9001).NumItems,6)">conditional</animation>
@@ -480,11 +617,41 @@
             <label>12333</label>
             <onclick>xbmc.mastermode</onclick>
           </item>
-	    </content>
+          <item id="51" description="Plexbmc Picture channels">
+            <visible>Container(300).HasFocus(41)</visible>
+            <label>1</label>
+            <onclick>ActivateWindow(pictures,&quot;plugin://plugin.video.plexbmc/?url=http://photo&amp;mode=22&quot;,return)</onclick>
+          </item>
+          <item id="52" description="Plexbmc Video channels">
+            <visible>Container(300).HasFocus(41)</visible>
+            <label>157</label>
+            <onclick>ActivateWindow(Videos,&quot;plugin://plugin.video.plexbmc/?url=http://video&amp;mode=22&quot;,return)</onclick>
+          </item>
+          <item id="53" description="Plexbmc Music channels">
+            <visible>Container(300).HasFocus(41)</visible>
+            <label>2</label>
+            <onclick condition="!Library.HasContent(music)">ActivateWindow(MusicFiles,&quot;plugin://plugin.video.plexbmc/?url=http://music&amp;mode=22&quot;,return)</onclick>
+            <onclick condition="Library.HasContent(music)">ActivateWindow(MusicLibrary,&quot;plugin://plugin.video.plexbmc/?url=http://music&amp;mode=22&quot;,return)</onclick>
+          </item>
+          <item id="54" description="PleXBMC Settings">
+            <visible>System.HasAddon(plugin.video.plexbmc)</visible>
+            <visible>Container(300).HasFocus(10)</visible>
+            <label>PleXBMC settings</label>
+            <onclick>XBMC.RunScript(plugin.video.plexbmc,setting)</onclick>
+          </item>
+		  <item id="55" description="PleXBMC Settings">
+            <visible>System.HasAddon(plugin.video.plexbmc)</visible>
+            <visible>Container(300).HasFocus(10)</visible>
+            <label>Go Plex</label>
+            <onclick>Skin.ToggleSetting(plexbmc)</onclick>
+			<onclick>XBMC.ReloadSkin()</onclick>
+          </item>
+        </content>
       </control>
     </control>
-	<control type="group" description="Shelf items">
-      <posy>-45</posy>
+    <control type="group" description="Shelf items">
+      <visible>!Skin.HasSetting(plexbmc)</visible>
+	  <posy>-45</posy>
       <include>Videos_RA</include>
       <include>Movies_RA</include>
       <include>TV_RA</include>
@@ -515,163 +682,161 @@
     <control type="group">
       <posx>0</posx>
       <posy>-60</posy>
-    <control type="group" description="Music info">
-      <include>VisibleFadeEffect</include>
-	  <animation effect="slide" start="-900,0" end="0,0" time="500" tween="quadratic">Visible</animation>
-	  <animation effect="slide" start="0,0" end="-900,0" time="350" easing="in">Hidden</animation>
-      <visible>Player.HasAudio + Container(300).HasFocus(9)</visible>
-    <control type="image">
-      <posx>51</posx>
-      <posy>100</posy>
-      <width>747</width>
-      <height>267</height>
-      <texture border="6">img/BlackRounded.png</texture>
-    </control>
-	<control type="image">
-      <description>Cover image</description>
-      <posx>60</posx>
-      <posy>111</posy>
-      <width>243</width>
-      <height>243</height>
-	  <texture diffuse="thumbs/DiffuseSquare.png">$INFO[MusicPlayer.Cover]</texture>
-	  <bordertexture>thumbs/ThumbNF.png</bordertexture>
-	  <aspectratio scalediffuse="false">stretch</aspectratio>
-    </control>
-	<control type="group" description="Info">
-    <posx>351</posx>
-	<posy>111</posy>
-	<control type="fadelabel" description="Title">
-      <posy>10</posy>
-      <height>45</height>
-      <width>440</width>
-      <label>$INFO[MusicPlayer.Title]</label>
-      <scrollout>false</scrollout>
-	  <textcolor>Orange</textcolor>
-	  <pauseatend>2000</pauseatend>
-    </control>
-	<control type="label" description="Artist">
-      <posy>66</posy>
-      <height>45</height>
-      <width>440</width>
-      <label>$INFO[MusicPlayer.Artist]</label>
-      <textcolor>White2</textcolor>
-    </control>
-    
-    <control type="label" description="Album">
-      <posy>105</posy>
-      <height>45</height>
-      <width>440</width>
-      <textcolor>White2</textcolor>
-	  <label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-    </control>
-    <control type="label" description="Time">
-      <posy>165</posy>
-      <height>45</height>
-      <width>800</width>
-      <textcolor>White2</textcolor>
-	  <label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
-    </control>
-    <control type="label" description="Next">
-      <posy>204</posy>
-      <height>45</height>
-      <width>440</width>
-      <label>$LOCALIZE[209] : $INFO[MusicPlayer.offset(1).Title]</label>
-      <textcolor>Grey2</textcolor>
-    </control>
-	</control>
-    </control>
-    <control type="group" description="Video Info">
-      <include>VisibleFadeEffect</include>
-      <visible>Player.HasVideo + Container(300).HasFocus(9)</visible>
-      <control type="label" description="Top Label">
-        <include>ShelfTopLabel</include>
-        <label>13350</label>
+      <control type="group" description="Music info">
+        <include>VisibleFadeEffect</include>
+        <animation effect="slide" start="-900,0" end="0,0" time="500" tween="quadratic">Visible</animation>
+        <animation effect="slide" start="0,0" end="-900,0" time="350" easing="in">Hidden</animation>
+        <visible>Player.HasAudio + Container(300).HasFocus(9)</visible>
+        <control type="image">
+          <posx>51</posx>
+          <posy>100</posy>
+          <width>747</width>
+          <height>267</height>
+          <texture border="6">img/BlackRounded.png</texture>
+        </control>
+        <control type="image" description="Cover image">
+          <posx>60</posx>
+          <posy>111</posy>
+          <width>243</width>
+          <height>243</height>
+          <texture diffuse="thumbs/DiffuseSquare.png">$INFO[MusicPlayer.Cover]</texture>
+          <bordertexture>thumbs/ThumbNF.png</bordertexture>
+          <aspectratio scalediffuse="false">stretch</aspectratio>
+        </control>
+        <control type="group" description="Info">
+          <posx>351</posx>
+          <posy>111</posy>
+          <control type="fadelabel" description="Title">
+            <posy>10</posy>
+            <height>45</height>
+            <width>440</width>
+            <label>$INFO[MusicPlayer.Title]</label>
+            <scrollout>false</scrollout>
+            <textcolor>Orange</textcolor>
+            <pauseatend>2000</pauseatend>
+          </control>
+          <control type="label" description="Artist">
+            <posy>66</posy>
+            <height>45</height>
+            <width>440</width>
+            <label>$INFO[MusicPlayer.Artist]</label>
+            <textcolor>White2</textcolor>
+          </control>
+          <control type="label" description="Album">
+            <posy>105</posy>
+            <height>45</height>
+            <width>440</width>
+            <textcolor>White2</textcolor>
+            <label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+          </control>
+          <control type="label" description="Time">
+            <posy>165</posy>
+            <height>45</height>
+            <width>800</width>
+            <textcolor>White2</textcolor>
+            <label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+          </control>
+          <control type="label" description="Next">
+            <posy>204</posy>
+            <height>45</height>
+            <width>440</width>
+            <label>$LOCALIZE[209] : $INFO[MusicPlayer.offset(1).Title]</label>
+            <textcolor>Grey2</textcolor>
+          </control>
+        </control>
       </control>
-	  <control type="image">
-      <description>Cover image</description>
-      <posx>30</posx>
-      <posy>26</posy>
-      <width>195</width>
-      <height>195</height>
-      <aspectratio>keep</aspectratio>
-      <texture>$INFO[VideoPlayer.cover]</texture>
-    </control>
-    <control type="label">
-      <description>Studio label</description>
-      <posx>240</posx>
-      <posy>30</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.Studio]</label>
-      <textcolor>Grey2</textcolor>
-      <visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
-    </control>
-    <control type="label">
-      <description>TV Show Title label</description>
-      <posx>240</posx>
-      <posy>30</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.tvshowtitle]</label>
-      <textcolor>White</textcolor>
-      <visible>videoplayer.content(episodes)</visible>
-    </control>
-    <control type="fadelabel">
-      <description>Music Video Artist label</description>
-      <posx>240</posx>
-      <posy>30</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.Artist]</label>
-      <visible>videoplayer.content(musicvideos)</visible>
-      <scrollout>false</scrollout>
-      <pauseatend>2000</pauseatend>
-    </control>
-    <control type="fadelabel">
-      <description>Title label</description>
-      <posx>240</posx>
-      <posy>64</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.Title]</label>
-      <scrollout>false</scrollout>
-      <pauseatend>2000</pauseatend>
-    </control>
-    <control type="label">
-      <description>Genre label</description>
-      <posx>240</posx>
-      <posy>105</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.Genre]</label>
-      <visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
-    </control>
-    <control type="label">
-      <posx>240</posx>
-      <posy>105</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.Album]</label>
-      <visible>videoplayer.content(musicvideos)</visible>
-    </control>
-    <control type="label">
-      <description>Season and Episode label</description>
-      <posx>240</posx>
-      <posy>105</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
-      <visible>videoplayer.content(episodes)</visible>
-    </control>
-    <control type="label">
-      <description>Time Label</description>
-      <posx>240</posx>
-      <posy>142</posy>
-      <height>45</height>
-      <width>900</width>
-      <label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ]</label>
+      <control type="group" description="Video Info">
+        <include>VisibleFadeEffect</include>
+        <visible>Player.HasVideo + Container(300).HasFocus(9)</visible>
+        <control type="label" description="Top Label">
+          <include>ShelfTopLabel</include>
+          <label>13350</label>
+        </control>
+        <control type="image">
+          <description>Cover image</description>
+          <posx>30</posx>
+          <posy>26</posy>
+          <width>195</width>
+          <height>195</height>
+          <aspectratio>keep</aspectratio>
+          <texture>$INFO[VideoPlayer.cover]</texture>
+        </control>
+        <control type="label">
+          <description>Studio label</description>
+          <posx>240</posx>
+          <posy>30</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.Studio]</label>
+          <textcolor>Grey2</textcolor>
+          <visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
+        </control>
+        <control type="label">
+          <description>TV Show Title label</description>
+          <posx>240</posx>
+          <posy>30</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.tvshowtitle]</label>
+          <textcolor>White</textcolor>
+          <visible>videoplayer.content(episodes)</visible>
+        </control>
+        <control type="fadelabel">
+          <description>Music Video Artist label</description>
+          <posx>240</posx>
+          <posy>30</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.Artist]</label>
+          <visible>videoplayer.content(musicvideos)</visible>
+          <scrollout>false</scrollout>
+          <pauseatend>2000</pauseatend>
+        </control>
+        <control type="fadelabel">
+          <description>Title label</description>
+          <posx>240</posx>
+          <posy>64</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.Title]</label>
+          <scrollout>false</scrollout>
+          <pauseatend>2000</pauseatend>
+        </control>
+        <control type="label">
+          <description>Genre label</description>
+          <posx>240</posx>
+          <posy>105</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.Genre]</label>
+          <visible>!videoplayer.content(episodes) + !videoplayer.content(musicvideos)</visible>
+        </control>
+        <control type="label">
+          <posx>240</posx>
+          <posy>105</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.Album]</label>
+          <visible>videoplayer.content(musicvideos)</visible>
+        </control>
+        <control type="label">
+          <description>Season and Episode label</description>
+          <posx>240</posx>
+          <posy>105</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+          <visible>videoplayer.content(episodes)</visible>
+        </control>
+        <control type="label">
+          <description>Time Label</description>
+          <posx>240</posx>
+          <posy>142</posy>
+          <height>45</height>
+          <width>900</width>
+          <label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ]</label>
+        </control>
       </control>
-    </control>
     </control>
     <control type="group" description="Player Info">
       <visible>Player.HasMedia + !Container(300).HasFocus(9)</visible>
@@ -760,6 +925,6 @@
         </control>
       </control>
     </control>
-	<include>Time</include>
+    <include>Time</include>
   </controls>
 </window>
