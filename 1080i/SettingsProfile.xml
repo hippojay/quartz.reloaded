@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="34">
+<window type="dialog">
   <defaultcontrol always="true">2</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
-  
   <controls>
     <include>Settings_Art</include>
 	<control type="group" description="Content">

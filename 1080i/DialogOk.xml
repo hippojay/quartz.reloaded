@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="2002">
+<window type="dialog">
   <defaultcontrol always="true">10</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
   <include>OpenClose</include>
   <controls>
   	<include>DimBG</include>

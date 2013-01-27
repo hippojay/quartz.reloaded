@@ -264,7 +264,6 @@
     <disabledcolor>Grey</disabledcolor>
   </include>
   <include name="9000ViewButtons">
-    <!--<visible>IsEmpty(Window.Property(SysOptions))</visible>-->
     <height>54</height>
     <width>444</width>
     <font>ViewMenu</font>
@@ -274,7 +273,6 @@
     <radioposx>-20</radioposx>
   </include>
   <include name="9000SysButtons">
-    <!--<visible>!IsEmpty(Window.Property(SysOptions))</visible>-->
     <height>54</height>
     <width>444</width>
     <font>ViewMenu</font>

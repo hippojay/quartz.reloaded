@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="List52Label">
-    <posx>50</posx>
+    <posx>56</posx>
     <posy>0</posy>
     <height>60</height>
     <width>800</width>
@@ -9,7 +9,7 @@
     <aligny>center</aligny>
   </include>
   <include name="List52Label2">
-    <posx>50</posx>
+    <posx>56</posx>
     <posy>33</posy>
     <height>76</height>
     <width>800</width>
@@ -35,10 +35,10 @@
   </include>
   <include name="List52Overlay">
     <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
-    <posx>1020</posx>
-    <posy>31</posy>
-    <height>36</height>
-    <width>36</width>
+    <posx>20</posx>
+    <posy>33</posy>
+    <height>30</height>
+    <width>30</width>
     <texture>$VAR[Overlay]</texture>
   </include>
   <include name="View_52_InfoList">

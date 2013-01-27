@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window id="2005">
-  <defaultcontrol>-</defaultcontrol>
+<window>
   <animation effect="fade" time="500">WindowOpen</animation>
   <animation effect="fade" time="300">WindowClose</animation>
   <onunload>Dialog.close(all,true)</onunload>

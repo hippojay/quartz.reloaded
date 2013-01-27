@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window type="buttonMenu" id="111">
+<window type="buttonmenu" id="111">
   <defaultcontrol always="true">9001</defaultcontrol>
   <include>OpenClose</include>
   <coordinates>

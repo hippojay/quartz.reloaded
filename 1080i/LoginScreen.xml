@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window id="29">
-  <defaultcontrol always="true">52</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
+<window>
+  <defaultcontrol>52</defaultcontrol>
   <include>OpenClose</include>
   <controls>
     <include>Default_Art</include>

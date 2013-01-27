@@ -30,20 +30,20 @@
             <height>72</height>
             <texture flipy="true" border="3">list/ListNF.png</texture>
           </control>
-          <control type="label" description="Main Label">
-            <posx>20</posx>
-            <height>72</height>
-            <width>600</width>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
           <control type="image">
             <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
-			<posx>630</posx>
-            <posy>0</posy>
+            <posx>0</posx>
+            <posy>2</posy>
             <width>30</width>
             <height>72</height>
-            <texture>$VAR[Overlay]</info>
+            <texture>$VAR[Overlay]</texture>
             <aspectratio>keep</aspectratio>
+          </control>
+		  <control type="label" description="Main Label">
+            <posx>32</posx>
+            <height>72</height>
+            <width>580</width>
+            <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
         <focusedlayout height="72">
@@ -53,20 +53,20 @@
             <height>72</height>
             <texture border="0,0,100,0">list/ListFO.png</texture>
           </control>
-          <control type="label" description="Main Label">
-            <posx>20</posx>
-            <height>72</height>
-            <width>600</width>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-          <control type="image">
+		  <control type="image">
             <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
-			<posx>630</posx>
-            <posy>0</posy>
+            <posx>0</posx>
+            <posy>2</posy>
             <width>30</width>
             <height>72</height>
-            <texture>$VAR[Overlay]</info>
+            <texture>$VAR[Overlay]</texture>
             <aspectratio>keep</aspectratio>
+          </control>
+          <control type="label" description="Main Label">
+            <posx>32</posx>
+            <height>72</height>
+            <width>580</width>
+            <label>$INFO[ListItem.Label]</label>
           </control>
         </focusedlayout>
       </control>

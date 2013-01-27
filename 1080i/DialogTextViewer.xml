@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<window id="147">
+<window>
   <defaultcontrol>61</defaultcontrol>
   <include>OpenClose</include>
   <controls>
@@ -47,7 +47,7 @@
         <texturesliderbarfocus>-</texturesliderbarfocus>
         <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
         <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
-        <showonepage>false</showonepage>
+        <showonepage>true</showonepage>
         <orientation>vertical</orientation>
         <onleft>close</onleft>
         <onright>close</onright>
