@@ -639,10 +639,17 @@
             <label>PleXBMC settings</label>
             <onclick>XBMC.RunScript(plugin.video.plexbmc,setting)</onclick>
           </item>
-		  <item id="55" description="PleXBMC Settings">
-            <visible>System.HasAddon(plugin.video.plexbmc)</visible>
+		  <item id="55" description="go PleXBMC">
+            <visible>System.HasAddon(plugin.video.plexbmc) + !Skin.HasSetting(plexbmc)</visible>
             <visible>Container(300).HasFocus(10)</visible>
             <label>Go Plex</label>
+            <onclick>Skin.ToggleSetting(plexbmc)</onclick>
+			<onclick>XBMC.ReloadSkin()</onclick>
+          </item>
+		  <item id="56" description="go XBMC">
+            <visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+            <visible>Container(300).HasFocus(10)</visible>
+            <label>Go XBMC</label>
             <onclick>Skin.ToggleSetting(plexbmc)</onclick>
 			<onclick>XBMC.ReloadSkin()</onclick>
           </item>
