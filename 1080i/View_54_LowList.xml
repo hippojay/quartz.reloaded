@@ -31,21 +31,19 @@
             <texture flipy="true" border="3">list/ListNF.png</texture>
           </control>
           <control type="image">
-            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
-			<posx>0</posx>
+            <posx>0</posx>
             <posy>2</posy>
             <width>30</width>
             <height>72</height>
             <texture>$VAR[Overlay]</texture>
             <aspectratio>keep</aspectratio>
           </control>
-		  <control type="label" description="Main Label">
+          <control type="label" description="Main Label">
             <posx>34</posx>
             <height>72</height>
             <width>580</width>
             <label>$INFO[ListItem.Label]</label>
           </control>
-          
         </itemlayout>
         <focusedlayout height="72">
           <control type="image" description="BG">
@@ -55,21 +53,19 @@
             <texture border="0,0,100,0">list/ListFO.png</texture>
           </control>
           <control type="image">
-            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
-			<posx>0</posx>
+            <posx>0</posx>
             <posy>2</posy>
             <width>30</width>
             <height>72</height>
             <texture>$VAR[Overlay]</texture>
             <aspectratio>keep</aspectratio>
           </control>
-		  <control type="label" description="Main Label">
+          <control type="label" description="Main Label">
             <posx>34</posx>
             <height>72</height>
             <width>580</width>
             <label>$INFO[ListItem.Label]</label>
           </control>
-          
         </focusedlayout>
       </control>
       <control type="image" description="Thumb">
@@ -165,7 +161,7 @@
             <posy>206</posy>
             <width>670</width>
             <height>230</height>
-			<include>Plot51Commons</include>
+            <include>Plot51Commons</include>
             <label>$VAR[Plots]</label>
           </control>
           <control type="textbox" description="Plot51">

@@ -32,7 +32,6 @@
             <texture flipy="true" border="3">list/ListNF.png</texture>
           </control>
 		  <control type="image">
-            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
 			<posx>0</posx>
             <posy>2</posy>
             <width>30</width>
@@ -63,15 +62,6 @@
         </itemlayout>
         <focusedlayout height="60">
           <control type="image">
-            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
-			<posx>0</posx>
-            <posy>2</posy>
-            <width>30</width>
-            <height>60</height>
-            <texture>$VAR[Overlay]</texture>
-            <aspectratio>keep</aspectratio>
-          </control>
-		  <control type="image">
             <posx>0</posx>
             <posy>0</posy>
             <width>1200</width>
@@ -80,7 +70,15 @@
             <visible>Control.HasFocus(50)</visible>
             <include>VisibleFadeEffect</include>
           </control>
-          <control type="label">
+          <control type="image">
+            <posx>0</posx>
+            <posy>2</posy>
+            <width>30</width>
+            <height>60</height>
+            <texture>$VAR[Overlay]</texture>
+            <aspectratio>keep</aspectratio>
+          </control>
+		  <control type="label">
             <posx>35</posx>
             <posy>0</posy>
             <width>1140</width>

@@ -390,19 +390,7 @@
       <selected>Control.IsVisible(500)</selected>
       <label>Slide</label>
     </control>
-	
-	<!--<control type="label" id="9170">
-      <textoffsetx>10</textoffsetx>
-      <textcolor>Orange</textcolor>
-      <align>left</align>
-      <include>9000ViewButtons</include>
-      <label>14018</label>
-    </control>
-    <control type="label" id="9171">
-      <include>9000ViewButtons</include>
-      <label>Dummy</label>
-    </control>-->
-    <control type="label" id="9180">
+	<control type="label" id="9180">
       <textcolor>Orange</textcolor>
       <align>left</align>
       <textoffsetx>10</textoffsetx>

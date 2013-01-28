@@ -36,7 +36,7 @@
         <width>555</width>
         <height>8</height>
         <texturebg>MusicOSD/ProgressBG.png</texturebg>
-        <midtexture>MusicOSD/ProgressMidd.png</midtexture>
+        <midtexture border="0,0,1,0">MusicOSD/ProgressMidd.png</midtexture>
         <righttexture>MusicOSD/ProgressRight.png</righttexture>
         <lefttexture>MusicOSD/ProgressLeft.png</lefttexture>
       </control>

@@ -39,7 +39,7 @@
         <label>$INFO[Player.FinishTime,(,)]</label>
       </control>
       <control type="group">
-        <visible>[Player.Caching | Player.Seeking | player.forwarding | player.rewinding | Player.DisplayAfterSeek | Window.IsActive(videoosd.xml)]</visible>
+        <visible>[Player.Caching | Player.Paused | Player.Seeking | player.forwarding | player.rewinding | Player.DisplayAfterSeek | Window.IsActive(videoosd.xml)]</visible>
 		<animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
         <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		<posy>15</posy>
@@ -79,7 +79,7 @@
           <width>1023</width>
           <height>24</height>
           <texturebg border="8">VideoOSD/VideoProgressBG.png</texturebg>
-          <midtexture border="0">VideoOSD/VideoProgressMidd.png</midtexture>
+          <midtexture border="0,0,1,0">VideoOSD/VideoProgressMidd.png</midtexture>
           <lefttexture border="0">VideoOSD/VideoProgressLeft.png</lefttexture>
           <righttexture border="0">VideoOSD/VideoProgressRight.png</righttexture>
           <info>Player.Progress</info>

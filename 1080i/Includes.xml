@@ -26,11 +26,6 @@
   <include file="View_500_Slide.xml" />
   <include file="View_501_BigPanel.xml" />
   <include file="Includes_Shelf.xml" />
-  <include file="Includes_WP10DayForecast.xml" />
-  <include file="Includes_WP36HourForecast.xml" />
-  <include file="Includes_WPWeekendForecast.xml" />
-  <include file="Includes_WPHourlyForecast.xml" />
-  <include file="Includes_WPMapsVideo.xml" />
   <include name="VisibleFadeEffect">
     <animation effect="fade" time="200">Visible</animation>
     <animation effect="fade" time="200">Hidden</animation>

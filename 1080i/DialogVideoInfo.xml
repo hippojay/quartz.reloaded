@@ -38,25 +38,25 @@
       <posy>0</posy>
       <width>729</width>
       <height>1080</height>
-      <texture fallback="DefaultVideoBigPoster.png" background="true">$INFO[ListItem.Thumb]</texture>
+      <texture fallback="DefaultVideoBigPoster.png" background="true">$INFO[ListItem.Art(poster)]</texture>
       <aspectratio>stretch</aspectratio>
     </control>
-    <control type="image" description="Episodes">
-      <visible>Container.Content(episodes) + !IsEmpty(Container.SeasonThumb)</visible>
+    <control type="image" description="Episodes Season Poster">
+      <visible>Container.Content(episodes) + !IsEmpty(ListItem.Art(season.poster))</visible>
       <posx>0</posx>
       <posy>0</posy>
       <width>729</width>
       <height>1080</height>
-      <texture background="true">$INFO[Container.SeasonThumb]</texture>
+      <texture background="true">$INFO[ListItem.Art(season.poster)]</texture>
       <aspectratio>stretch</aspectratio>
     </control>
-	<control type="image" description="Episodes">
-      <visible>Container.Content(episodes) + IsEmpty(Container.SeasonThumb)</visible>
+	<control type="image" description="Episodes TVShow Poster">
+      <visible>Container.Content(episodes) + IsEmpty(ListItem.Art(season.poster))</visible>
       <posx>0</posx>
       <posy>0</posy>
       <width>729</width>
       <height>1080</height>
-      <texture fallback="DefaultVideoBigPoster.png" background="true">$INFO[Container.TvshowThumb]</texture>
+      <texture fallback="DefaultVideoBigPoster.png" background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
       <aspectratio>stretch</aspectratio>
     </control>
 	<control type="image" description="Episodes">

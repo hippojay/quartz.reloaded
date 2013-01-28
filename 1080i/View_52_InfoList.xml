@@ -34,7 +34,6 @@
     <height>18</height>
   </include>
   <include name="List52Overlay">
-    <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
     <posx>20</posx>
     <posy>33</posy>
     <height>30</height>

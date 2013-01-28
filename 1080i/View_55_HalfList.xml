@@ -31,7 +31,6 @@
             <texture flipy="true" border="3">list/ListNF.png</texture>
           </control>
           <control type="image">
-            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
             <posx>0</posx>
             <posy>2</posy>
             <width>30</width>
@@ -54,7 +53,6 @@
             <texture border="0,0,100,0">list/ListFO.png</texture>
           </control>
 		  <control type="image">
-            <visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(musicvideos)</visible>
             <posx>0</posx>
             <posy>2</posy>
             <width>30</width>
