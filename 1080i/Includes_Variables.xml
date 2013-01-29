@@ -2,7 +2,7 @@
 <includes>
   <variable name="Overlay" description="Overlay image">
     <value condition="ListItem.IsResumable | !IsEmpty(ListItem.Property(IsResumable))">OverlayPartial.png</value>
-    <value condition="container.content(seasons) | container.content(tvshows) | !ListItem.IsFolder">$INFO[ListItem.Overlay]</value>
+    <value condition="!ListItem.IsFolder">$INFO[ListItem.Overlay]</value>
   </variable>
   <variable name="WatchlistParameters">
     <value condition="Library.HasContent(Music) + [Library.HasContent(TVShows) + !Skin.HasSetting(TV5)]">movies=false&amp;episodes=true&amp;albums=true&amp;limit=10</value>
