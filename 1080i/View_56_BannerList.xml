@@ -66,9 +66,9 @@
           <width>1050</width>
           <height>207</height>
           <include>Icon_Fade</include>
-          <texture background="true">$INFO[ListItem.Art(banner)]</texture>
+          <texture background="true">$VAR[Banner]</texture>
           <include>ThumbBorder</include>
-		  <aspectratio>scale</aspectratio>
+		  <aspectratio>keep</aspectratio>
         </control>
         <control type="group" description="Media info">
           <animation effect="fade" delay="100" time="300">Visible</animation>

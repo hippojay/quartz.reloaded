@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="PanelPosterThumb">
-    <posx>30</posx>
-    <posy>18</posy>
-    <width>204</width>
-    <height>294</height>
+    <posx>8</posx>
+    <posy>0</posy>
+    <width>230</width>
+    <height>330</height>
     <texture background="true">$INFO[ListItem.Icon]</texture>
     <include>ThumbBorder</include>
     <aspectratio>scale</aspectratio>
   </include>
   <include name="PanelPosterOverlay">
-    <posx>30</posx>
-    <posy>18</posy>
-    <width>204</width>
-    <height>294</height>
+    <posx>8</posx>
+    <posy>0</posy>
+    <width>230</width>
+    <height>330</height>
     <texture border="25">img/Frame.png</texture>
     <bordersize>-18</bordersize>
   </include>
@@ -71,7 +71,7 @@
             <control type="image">
               <include>PanelPosterThumb</include>
             </control>
-			<control type="label">
+			<!--<control type="label">
               <posx>132</posx>
               <posy>312</posy>
               <width>265</width>
@@ -79,7 +79,7 @@
               <textcolor>White2</textcolor>
               <align>center</align>
               <label>$INFO[ListItem.Label]</label>
-            </control>
+            </control>-->
           </focusedlayout>
           <itemlayout condition="container.content(addons) | Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyMusicSongs.xml) | Window.IsActive(MyPics.xml)" height="350" width="354">
             <control type="image">
