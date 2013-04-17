@@ -1,3 +1,6 @@
+0.9.9
+Pretty up views
+
 0.9.5
 Frodo compatibility changes
 Quartz like watched flags

@@ -37,8 +37,8 @@
             <posy>12</posy>
             <width>834</width>
             <height>153</height>
-            <texture background="true">$INFO[ListItem.Art(banner)]</texture>
-            <aspectratio>stretch</aspectratio>
+            <texture background="true">$VAR[Banner]</texture>
+            <aspectratio>keep</aspectratio>
           </control>
         </itemlayout>
         <focusedlayout condition="Container.Content(TvShows)" height="220" width="890">
@@ -54,8 +54,8 @@
             <posy>12</posy>
             <width>834</width>
             <height>153</height>
-            <texture background="true">$INFO[ListItem.Art(banner)]</texture>
-            <aspectratio>stretch</aspectratio>
+            <texture background="true">$VAR[Banner]</texture>
+            <aspectratio>keep</aspectratio>
           </control>
           <control type="image">
             <posx>26</posx>

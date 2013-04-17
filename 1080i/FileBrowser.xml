@@ -124,6 +124,90 @@
             </control>
           </focusedlayout>
         </control>
+		<control type="panel" id="451" description="Thumbs">
+          <posx>711</posx>
+          <posy>156</posy>
+          <width>820</width>
+          <height>839</height>
+          <pagecontrol>60</pagecontrol>
+          <scrolltime>200</scrolltime>
+          <onleft>-</onleft>
+          <onright>9000</onright>
+          <onup>451</onup>
+          <ondown>451</ondown>
+          <itemlayout height="120" width="820">
+            <control type="image">
+              <posx>0</posx>
+              <posy>0</posy>
+              <height>120</height>
+              <width>820</width>
+              <texture border="3">list/ListNF.png</texture>
+            </control>
+			<control type="image" description="Thumb">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="3">thumbs/ThumbBorder3.png</bordertexture>
+				<bordersize>1</bordersize>
+				<aspectratio>keep</aspectratio>
+		   </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>0</posy>
+              <width>550</width>
+              <height>120</height>
+              <aligny>center</aligny>
+              <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+              <posx>800</posx>
+              <posy>0</posy>
+              <width>795</width>
+              <height>120</height>
+              <aligny>center</aligny>
+              <align>right</align>
+              <info>ListItem.Label2</info>
+            </control>
+          </itemlayout>
+          <focusedlayout height="120" width="820">
+            <control type="image">
+              <posx>0</posx>
+              <posy>0</posy>
+              <width>820</width>
+              <height>120</height>
+              <texture border="2">common/ButtonFO.png</texture>
+            </control>
+			<control type="image" description="Thumb">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="3">thumbs/ThumbBorder3.png</bordertexture>
+				<bordersize>1</bordersize>
+				<aspectratio>keep</aspectratio>
+		   </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>0</posy>
+              <width>550</width>
+              <height>120</height>
+              <aligny>center</aligny>
+              <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+              <posx>800</posx>
+              <posy>0</posy>
+              <width>795</width>
+              <height>120</height>
+              <aligny>center</aligny>
+              <align>right</align>
+              <info>ListItem.Label2</info>
+            </control>
+          </focusedlayout>
+        </control>
         <control type="grouplist" id="9000">
           <posx>1533</posx>
           <posy>156</posy>

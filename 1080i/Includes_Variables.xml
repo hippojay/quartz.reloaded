@@ -2,12 +2,11 @@
 <includes>
   <variable name="Overlay" description="Overlay image">
     <value condition="ListItem.IsResumable | !IsEmpty(ListItem.Property(IsResumable))">OverlayPartial.png</value>
-    <value condition="container.content(seasons) | container.content(tvshows) | !ListItem.IsFolder">$INFO[ListItem.Overlay]</value>
+    <value condition="!ListItem.IsFolder">$INFO[ListItem.Overlay]</value>
   </variable>
-  <variable name="WatchlistParameters">
-    <value condition="Library.HasContent(Music) + [Library.HasContent(TVShows) + !Skin.HasSetting(TV5)]">movies=false&amp;episodes=true&amp;albums=true&amp;limit=10</value>
-    <value condition="Library.HasContent(Music) + [!Library.HasContent(TVShows) | Skin.HasSetting(TV5)]">movies=false&amp;episodes=false&amp;albums=true&amp;limit=10</value>
-    <value condition="!Library.HasContent(Music) + [Library.HasContent(TVShows) + !Skin.HasSetting(TV5)]">movies=false&amp;episodes=true&amp;albums=false&amp;limit=10</value>
+  <variable name="Banner" description="TV Banners">
+    <value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+    <value>$INFO[ListItem.Icon]</value>
   </variable>
   <variable name="ShelfIcon" description="Shelf custom and fallback image">
     <value condition="Control.HasFocus(301) + !Control.IsVisible(311) + Skin.HasSetting(MoviesShelf_Image)">$INFO[Skin.String(MoviesShelf_Icon)]</value>
@@ -73,25 +72,25 @@
     <value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version),Ver. ]$INFO[ListItem.Label2]</value>
   </variable>
   <variable name="500TopLabel" description="Shown Above Plots and descriptions">
-    <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
+    <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
     <value condition="Container.content(Albums)">[COLOR=Grey]$LOCALIZE[557]:[/COLOR] $INFO[ListItem.Artist]</value>
     <value condition="Container.Content(Episodes)">[COLOR=Grey]$LOCALIZE[31978]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
     <value condition="Container.Content(Addons)">[COLOR=Grey]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.Property(Addon.Creator)]</value>
     <value condition="Container.Content(songs)">[COLOR=Grey]$LOCALIZE[558]:[/COLOR] $INFO[ListItem.Album]</value>
 	<value condition="Container.Content(Artists)">[COLOR=Grey]$LOCALIZE[176]:[/COLOR] $INFO[ListItem.Property(artist_style)]</value>
     <value condition="Container.Content(MusicVideos)">$INFO[ListItem.Label]</value>
-    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.Rating, • ] • $LOCALIZE[20410]$INFO[ListItem.MPAA, • ]</value>
-	<value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">[COLOR=Grey]$LOCALIZE[33029]:[/COLOR] $INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.Rating, • ]$INFO[ListItem.MPAA, • ]</value>
+    <value condition="Container.Content(Movies) + !IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.Rating, • ] • $LOCALIZE[20410]$INFO[ListItem.MPAA, • ]</value>
+	<value condition="Container.Content(Movies) + IsEmpty(ListItem.Trailer)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31297]]$INFO[ListItem.Rating, • ]$INFO[ListItem.MPAA, • ]</value>
     <value condition="IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]] [COLOR=Orange]$INFO[ListItem.Property(UnWatchedEpisodes), • $LOCALIZE[16101] ][/COLOR]</value>
 	<value condition="!IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(Seasons) | Container.Content(TVShows)]">$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
     <value>$INFO[ListItem.Label2]</value>
   </variable>
   <variable name="Genres" description="Genres">
     <value condition="Container.content(addons)">[COLOR=Grey]$LOCALIZE[24051][/COLOR] $INFO[ListItem.Property(Addon.Version)]</value>
-    <value condition="Container.Content(artists)">[COLOR=Grey]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Property(Artist_Genre)]</value>
-	<value condition="Window.IsActive(MyPics.xml)">[COLOR=Grey]$LOCALIZE[21805]:[/COLOR] $INFO[ListItem.PictureResolution]</value>
-    <value condition="container.content(episodes)">[COLOR=Grey]$LOCALIZE[20416]:[/COLOR] $INFO[ListItem.Premiered]</value>
-	<value condition="!IsEmpty(ListItem.Genre)">[COLOR=Grey]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</value>
+    <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
+	<value condition="Window.IsActive(MyPics.xml)">$INFO[ListItem.PictureResolution]</value>
+    <value condition="container.content(episodes)">$INFO[ListItem.Premiered]</value>
+	<value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
   </variable>
   <variable name="Plots" description="Plots and descriptions">
     <value condition="Container.content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>

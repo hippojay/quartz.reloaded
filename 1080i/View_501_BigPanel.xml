@@ -5,9 +5,9 @@
     <posy>12</posy>
     <width>828</width>
     <height>168</height>
-    <texture background="true">$INFO[ListItem.Art(banner)]</texture>
+    <texture background="true">$VAR[Banner]</texture>
     <include>ThumbBorder</include>
-    <aspectratio>scale</aspectratio>
+    <aspectratio>keep</aspectratio>
   </include>
   <include name="BigPanelBannerOverlay">
     <posx>210</posx>
@@ -256,14 +256,14 @@
           <posx>0</posx>
           <posy>210</posy>
           <width>660</width>
-          <height>630</height>
+          <height>412</height>
           <include>Plot51Commons</include>
           <label>$VAR[Plots]</label>
 	    </control>
       </control>
 	  <control type="grouplist" description="Flags">
         <posx>70</posx>
-        <posy>975</posy>
+        <posy>976</posy>
         <width min="90" max="650">auto</width>
         <height>120</height>
         <itemgap>30</itemgap>
@@ -325,12 +325,12 @@
         </control>
 	  </control>
 	  <control type="image" description="Studios">
-          <visible>!IsEmpty(ListItem.Studio) + [container.content(tvshows) | container.content(seasons)]</visible>
-          <posx>50</posx>
-          <posy>936</posy>
-		  <height>110</height>
-          <width>200</width>
-          <aspectratio aligny="top" align="left">keep</aspectratio>
+          <visible>!IsEmpty(ListItem.Studio)</visible>
+          <posx>66</posx>
+        <posy>750</posy>
+        <height>180</height>
+        <width>600</width>
+          <aspectratio align="left">keep</aspectratio>
           <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
         </control>
       <control type="image">

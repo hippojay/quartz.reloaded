@@ -75,7 +75,8 @@
         </focusedlayout>
       </control>
       <control type="group" description="Metadata">
-        <control type="group" description="Media info">
+        <posx>360</posx>
+		<control type="group" description="Media info">
           <visible>![Container.Content(songs) | container.content(musicvideos)]</visible>
           <posx>150</posx>
           <posy>558</posy>
@@ -104,7 +105,7 @@
           <control type="textbox" description="Plot51">
             <visible>Window.IsActive(MyVideoNav.xml)</visible>
             <posx>0</posx>
-            <posy>240</posy>
+            <posy>236</posy>
             <width>1020</width>
             <height>154</height>
             <label>$VAR[Plots]</label>
@@ -112,7 +113,7 @@
           <control type="textbox" description="Plot51">
             <visible>!Window.IsActive(MyVideoNav.xml)</visible>
             <posx>0</posx>
-            <posy>240</posy>
+            <posy>236</posy>
             <width>1020</width>
             <height>154</height>
             <label>$VAR[Plots]</label>
@@ -233,11 +234,11 @@
       </control>
       <control type="image" description="Studios">
         <visible>!IsEmpty(ListItem.Studio)</visible>
-        <posx>1350</posx>
-        <posy>810</posy>
+        <posx>0</posx>
+        <posy>680</posy>
         <height>180</height>
-        <width>540</width>
-        <aspectratio align="top">keep</aspectratio>
+        <width>440</width>
+        <aspectratio align="right" aligny="top">keep</aspectratio>
         <texture>$INFO[Listitem.studio,badges/studios/,.png]</texture>
       </control>
       <control type="image">
